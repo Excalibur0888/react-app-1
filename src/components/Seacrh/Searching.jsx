@@ -5,7 +5,7 @@ const Searching = (props) => {
 	const [searchQuery, setsearchQuery] = useState('')
 	const [visible, setvisible] = useState(false)
 	const style = `${visible ? classes.cancel_search : classes.cancel_search_invisible}`
-	const old_arr = ['Apple', 'Orange', 'Banana', 'Pineapple', 'Cherry', 'Tomato', 'Cucumber', 'Melon', 'Watermelon', 'Strawberry', 'Grape', 'Avocado', 'Lime', 'Coconut', 'Lemon']
+	const old_arr = ['Apple', 'Orange (fruit)', 'Banana', 'Pineapple', 'Cherry', 'Mandarin', 'Raspberries', 'Melon', 'Watermelon', 'Strawberry', 'Grape', 'Blackberry', 'Lime', 'Coconut', 'Lemon']
 	function cancel_searching () {
 		props.func(old_arr)
 		setsearchQuery('')

@@ -38,11 +38,11 @@
 	border: 1px solid rgb(199, 7, 64);
 	border-radius: 35%;
 	top: 0;
-	left: 90%;
+	left: 80%;
 	right: 0;
 	bottom: 0;
 	color: white;
-	font-size: 20px;
+	font-size: 0.5em;
 }
 
 .in_link:active {
@@ -61,11 +61,11 @@
 	border: 1px solid rgb(199, 7, 64);
 	border-radius: 35%;
 	top: 0;
-	left: 80%;
+	left: 90%;
 	right: 0;
 	bottom: 0;
 	color: white;
-	font-size: 20px;
+	font-size: 0.5em;
 }
 
 .up_link:active {

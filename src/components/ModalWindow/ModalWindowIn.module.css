@@ -1,0 +1,59 @@
+.wrapper_visible {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	z-index: 5;
+}
+
+.wrapper_invisible {
+	display: none;
+}
+
+.cancel_modal {
+	position: absolute;
+	cursor: pointer;
+	visibility: visible;
+	color: azure;
+	background: inherit;
+	border: 1px solid rgb(252, 251, 251);
+	width: 1.5em;
+	height: 1.5em;
+	left: 75%;
+	top: 15%;
+	right: 0;
+	bottom: 0;
+	font-size: 1.5em;
+	border-radius: 100%;
+	animation: opacity .7s ease;
+}
+
+.cancel_modal:active {
+	transform: scale(.8);
+}
+
+.form {
+	position: absolute;
+	top: 15%;
+	left: 26%;
+	right: 0;
+	bottom: 0;
+	width: 50vw;
+	height: 70vh;
+	background-color: aliceblue;
+	border-radius: 20%;
+	animation: opacity 1s ease;
+}
+
+@keyframes opacity{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,63 @@
+/* задание переменной для ширины */
+:root {
+	--width: calc(9vh + 9vw)
+}
+
+.container {
+  margin-top: 100px;
+  display: grid;
+  gap: 3vw;
+  justify-content: center;
+  text-align: center;
+	font-size: 20px;
+  grid-template-columns: var(--width) calc(var(--width)*1.5) calc(var(--width)/1.3) var(--width) calc(var(--width)*1.4);
+  grid-template-rows: repeat(3, var(--width));
+}
+
+/* адаптив */
+@media (max-width: 1400px ){
+	.container {
+		grid-template-columns: var(--width) calc(var(--width)*1.5) var(--width);
+		grid-template-rows: repeat(5, var(--width));
+	}
+}
+
+@media (max-width: 650px ){
+	.container {
+		grid-template-columns: var(--width) var(--width);
+		grid-template-rows: repeat(8, var(--width));
+	}
+}
+
+.box {
+	border-radius: 30px;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	background-image: url('fon.jpg');
+	position: relative;
+	box-shadow: 0 0 10px 5px blueviolet;
+}
+
+/* надпись, если фрукты не найдены */
+.not_found {
+	text-align: center;
+	position: absolute;
+	text-shadow: 0 0 20px rgba(172, 205, 8, 0.589);
+	animation: opacity 1s ease-in;
+	color: antiquewhite;
+	top: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* анимации */
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

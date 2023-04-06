@@ -1,0 +1,91 @@
+/* стили для поля поиска */
+.wrapper {
+	width: calc((1vw + 1vh)* 15);
+	height: 80%;
+	padding: 15px;
+	border-radius: 100px;
+	position: absolute;
+	top: 6px;
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	left: 3vw;
+	right: 0;
+	bottom: 0;
+	background: inherit;
+}
+
+.search_bar {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+	border-radius: 100px;
+	border: 1px solid rgb(199, 7, 64);
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: inherit;
+}
+
+/* стили кнопки */
+.start_searching_btn {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	background: inherit;
+	border: 1px solid rgb(199, 7, 64);
+	width: 45px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 23px;
+	border-radius: 100%;
+}
+
+.start_searching_btn:active {
+	border: 1px solid white;
+	transform: scale(.9);
+}
+
+/* стили кнопки отмены */
+.cancel_search {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	visibility: visible;
+	color: azure;
+	background: inherit;
+	border: 1px solid rgb(252, 251, 251);
+	width: 30px;
+	height: 30px;
+	left: 100%;
+	top: 17%;
+	right: 0;
+	bottom: 0;
+	font-size: auto;
+	border-radius: 100%;
+	animation: btn_opacity .7s ease;
+}
+
+.cancel_search:active {
+	transform: scale(.8);
+}
+
+.cancel_search_invisible {
+	visibility: hidden;
+}
+
+/* анимации */
+@keyframes btn_opacity{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

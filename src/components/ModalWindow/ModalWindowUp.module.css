@@ -1,3 +1,4 @@
+/* фон формы */
 .wrapper_visible {
 	position: absolute;
 	display: flex;
@@ -17,6 +18,7 @@
 	display: none;
 }
 
+/* кнопка отмены */
 .cancel_modal {
 	position: absolute;
 	cursor: pointer;
@@ -40,6 +42,7 @@
 	transform: scale(.8);
 }
 
+/* форма */
 .form {
 	position: absolute;
 	top: 15%;
@@ -48,11 +51,13 @@
 	bottom: 0;
 	width: 50vw;
 	height: 70vh;
-	background-color: aliceblue;
+	background-image: url('./bg_modal.jpeg');
+	background-size: cover;
 	border-radius: 20%;
 	animation: opacity 1s ease;
 }
 
+/* анимации */
 @keyframes opacity{
 	from {
 		opacity: 0;

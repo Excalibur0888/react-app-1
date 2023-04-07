@@ -7,7 +7,6 @@
 	position: absolute;
 	top: 6px;
 	font-size: 20px;
-	font-family: Arial, sans-serif;
 	left: 3vw;
 	right: 0;
 	bottom: 0;
@@ -24,7 +23,6 @@
 	position: absolute;
 	color: white;
 	font-size: 20px;
-	font-family: Arial, sans-serif;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -63,7 +61,7 @@
 	border: 1px solid rgb(252, 251, 251);
 	width: 30px;
 	height: 30px;
-	left: 100%;
+	left: 101%;
 	top: 17%;
 	right: 0;
 	bottom: 0;

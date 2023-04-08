@@ -10,7 +10,7 @@
 	align-items: center;
 	position: relative;
 	height: 55px;
-	position: fixed;
+	position: absolute;
 	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(13, 105, 154, .5));
 	border-radius: 100px;
 	padding: 0.5vh;

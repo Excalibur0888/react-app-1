@@ -52,6 +52,7 @@
 	height: 70vh;
 	background-image: url('./bg_modal.jpeg');
 	background-size: cover;
+	border: 1px solid rgb(255, 255, 255);
 	border-radius: 20%;
 	animation: opacity 1s ease;
 }
@@ -96,6 +97,7 @@
 	position: absolute;
 	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(245, 27, 19, 0.5));
 	color: white;
+	cursor: pointer;
 	margin-left: 60%;	
 	height: auto;
 	padding: 5px;
@@ -104,17 +106,35 @@
 	border-radius: 80%;
 }
 
+.showing_btn:active{
+	transform: scale(.8);
+}
+
 .remember_checkbox {
 	position: relative;
 	top: 10%;
 	color: white;
 }
 
-/* адаптив для модального окна */
+.submit {
+	position: absolute;
+	font-size: 1.2em;
+	padding: 5px 15px;
+	margin-top: 10%;
+	cursor: pointer;
+	left: 15%;
+	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(245, 27, 19, 0.5));
+	color: white;
+	border: 1px solid white;
+	border-radius: 100px;
+}
 
+.submit:active{
+	transform: scale(.8);
+}
 
 /* анимации */
-@keyframes opacity{
+@keyframes opacity {
 	from {
 		opacity: 0;
 	}

@@ -1,5 +1,6 @@
 import React from "react";
 import classes from './Containers.module.css';
+import myImage from './Apple.jpg'
 
 const Containers = (props) => {
 		if (props.value.length !== 0) {
@@ -9,6 +10,7 @@ const Containers = (props) => {
         <div className={classes.box}>
 					<a href={`https://en.wikipedia.org/wiki/${fruit}`} target="_blank" rel="noreferrer">
           {fruit}
+					<img src={myImage}/>
 					</a>
         </div>
       ))}

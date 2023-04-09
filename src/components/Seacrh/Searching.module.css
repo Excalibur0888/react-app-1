@@ -1,13 +1,13 @@
 /* стили для поля поиска */
 .wrapper {
-	width: calc((1vw + 1vh)* 15);
+	width: calc((1vw + 0.5vh)* 15);
 	height: 80%;
 	padding: 15px;
 	border-radius: 100px;
 	position: absolute;
 	top: 6px;
 	font-size: 20px;
-	left: 3vw;
+	left: 5%;
 	right: 0;
 	bottom: 0;
 	background: inherit;

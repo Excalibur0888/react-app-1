@@ -2,13 +2,12 @@
 .header {
 	top: 10px;
 	right: 0;
-	left: 10px;
+	left: 0;
 	bottom: 0;
-	width: 99%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 	height: 55px;
 	position: absolute;
 	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(13, 105, 154, .5));
@@ -22,10 +21,30 @@
 }
 
 .header__name {
-	text-shadow: 0 0 20px rgba(172, 205, 8, 0.589);
+	text-shadow: 0 0 20px rgba(205, 182, 8, 0.589);
 	color: white;
 	font-weight: bold;
 }
+
+.img_username {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 75%;
+	font-size: 0.8em;
+	color: white;
+	top: 15%;
+	right: 0;
+	bottom: 0;
+}
+
+.img {
+	margin-left: 1%;
+	margin-top: -2%;
+	transform: scale(.8);
+	border-radius: 100%;
+}
+
 /* стили кнопок формы */
 .in_link {
 	display: flex;

@@ -10,7 +10,7 @@ const ModalWindowUp = (props) => {
 	const [confirmPassword, setConfirmPassword] = useState('');
 	function cancel_searching () {
 		props.funcscroll(true)
-		props.func(true)
+		props.funcsetvisup(true)
 	}
 	function show_pass (e) {
 		setShowPassword(!showPassword)
@@ -36,7 +36,7 @@ const ModalWindowUp = (props) => {
 		<div className={style}>
 			<button onClick={cancel_searching} className={classes.cancel_modal}>{props.children}</button>
 			<form className={classes.form} onSubmit={set_cookie}>
-			<h2 className={classes.tip}>First time on our website? Sign up.</h2>
+			<h2 className={classes.tip}>First time here? Sign up.</h2>
 				<input 
 				type="email" 
 				name="email" 
@@ -55,6 +55,7 @@ const ModalWindowUp = (props) => {
 				placeholder="Username" 
 				className={classes.login_input} 
 				minlength="3" 
+				maxlength="10"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required
@@ -67,6 +68,7 @@ const ModalWindowUp = (props) => {
 				placeholder="Password" 
 				className={classes.password_input} 
 				minlength="7" 
+				maxlength="20"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required

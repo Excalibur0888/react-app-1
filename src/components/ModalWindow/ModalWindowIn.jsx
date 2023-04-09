@@ -5,17 +5,19 @@ import { Cookies } from 'react-cookie';
 const ModalWindowIn = (props) => {
 	const style = `${props.value ? classes.wrapper_invisible : classes.wrapper_visible}`
 	const [showPassword, setShowPassword] = useState(false);
-	function cancel_searching () {
+	const [name, setName] = useState('');
+	const [password, setPassword] = useState('')
+	const [rememberMe, setRememberMe] = useState(false);
+
+	function cancel_forming () {
 		props.funcscroll(true)
-		props.func(true)
+		props.funcsetvisin(true)
 	}
 	function show_pass (e) {
 		setShowPassword(!showPassword)
 		e.preventDefault()
 	}
-	const [name, setName] = useState('');
-	const [password, setPassword] = useState('')
-	const [rememberMe, setRememberMe] = useState(false);
+	
 	const handleSubmit = () => {
     if (rememberMe) {
       localStorage.setItem('name', name);
@@ -39,7 +41,9 @@ const ModalWindowIn = (props) => {
 		const cookie_password = cookies.get('Password');
 		if (cookie_login && password) {
 			if (cookie_login === name && cookie_password === password) {
-				alert('ok')
+				props.setheading(name)
+				props.funcsetvisin(true)
+				props.funcscroll(true)
 			}
 			else {
 				alert('no')
@@ -49,7 +53,7 @@ const ModalWindowIn = (props) => {
 
 	return (
 		<div className={style}>
-			<button onClick = {cancel_searching} className={classes.cancel_modal}>{props.children}</button>
+			<button onClick = {cancel_forming} className={classes.cancel_modal}>{props.children}</button>
 			<form className={classes.form} onSubmit={handleSubmitForm}>
 				<h2 className={classes.tip}>Already have an account? Sign in.</h2>
 				<input 
@@ -60,6 +64,7 @@ const ModalWindowIn = (props) => {
 				placeholder="Username" 
 				className={classes.login_input} 
 				minlength="3" 
+				maxlength="10"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required
@@ -72,6 +77,7 @@ const ModalWindowIn = (props) => {
 				placeholder="Password" 
 				className={classes.password_input} 
 				minlength="7" 
+				maxlength="20"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required

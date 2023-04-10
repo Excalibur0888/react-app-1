@@ -70,11 +70,10 @@
 	font-family: 'Times New Roman', Times, serif;
 }
 
-.login_input {
+.input {
 	display: block;
 	position: absolute;
 	color: white;
-	margin-bottom: 20%;
 	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
 	border-radius: 100px;
 	padding: 15px;
@@ -83,16 +82,8 @@
 	font-size: 1.5em;
 }
 
-.password_input {
-	display: block;
-	position: absolute;
-	color: white;
-	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
-	border-radius: 100px;
-	padding: 15px;
-	width: 50%;
-	height: auto;
-	font-size: 1.5em;
+.login {
+	margin-bottom: 20%;
 }
 
 .showing_btn {

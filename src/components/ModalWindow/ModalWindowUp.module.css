@@ -71,60 +71,33 @@
 	font-family: 'Times New Roman', Times, serif;
 }
 
-.email_input {
+.input {
 	display: block;
 	position: absolute;
 	color: white;
+	border: 1px solid white;
+	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
+	border-radius: 100px;
+	padding: 15px;
+	width: 50%;
+	height: auto;
+	font-size: 1.5em;
+}
+
+.email {
 	margin-bottom: 30%;
-	border: 1px solid white;
-	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
-	border-radius: 100px;
-	padding: 15px;
-	width: 50%;
-	height: auto;
-	font-size: 1.5em;
 }
 
-.login_input {
-	display: block;
-	position: absolute;
-	color: white;
+.login {
 	margin-bottom: 10%;
-	border: 1px solid white;
-	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
-	border-radius: 100px;
-	padding: 15px;
-	width: 50%;
-	height: auto;
-	font-size: 1.5em;
 }
 
-.password_input {
-	display: block;
-	position: absolute;
-	color: white;
+.password {
 	margin-top: 10%;
-	border: 1px solid white;
-	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
-	border-radius: 100px;
-	padding: 15px;
-	width: 50%;
-	height: auto;
-	font-size: 1.5em;
 }
 
 .password_confirm {
-	display: block;
-	position: absolute;
-	color: white;
 	margin-top: 30%;
-	border: 1px solid white;
-	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
-	border-radius: 100px;
-	padding: 15px;
-	width: 50%;
-	height: auto;
-	font-size: 1.5em;
 }
 
 .showing_btn {

@@ -62,9 +62,9 @@ const ModalWindowIn = (props) => {
 				value={name} 
 				onChange={e => {setName(e.target.value)}} 
 				placeholder="Username" 
-				className={classes.login_input} 
-				minlength="3" 
-				maxlength="10"
+				className={`${classes.input} ${classes.login}`} 
+				minLength="3" 
+				maxLength="10"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required
@@ -75,9 +75,9 @@ const ModalWindowIn = (props) => {
 				value={password} 
 				onChange={e => {setPassword(e.target.value)}} 
 				placeholder="Password" 
-				className={classes.password_input} 
-				minlength="7" 
-				maxlength="20"
+				className={`${classes.input}`}
+				minLength="7" 
+				maxLength="20"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required
@@ -90,7 +90,7 @@ const ModalWindowIn = (props) => {
 				type="checkbox"
 				checked={rememberMe}
 				onChange={(e) => setRememberMe(e.target.checked)}
-				/><label for="checkbox">Remember me</label><br/>
+				/><label>Remember me</label><br/>
 				<button type="submit" className={classes.submit} onClick={handleSubmit}>Submit</button>
 				</div>
 			</form>

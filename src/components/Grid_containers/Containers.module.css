@@ -11,22 +11,22 @@
   justify-content: center;
   text-align: center;
 	font-size: calc((1vh + 1vw) * 1.2);
-  grid-template-columns: var(--width) calc(var(--width)*1.5) calc(var(--width)/1.3) var(--width) calc(var(--width)*1.4);
-  grid-template-rows: repeat(3, var(--width));
+  grid-template-columns: repeat(5, var(--width));
+  grid-template-rows: repeat(30, var(--width));
 }
 
 /* адаптив */
 @media (max-width: 1400px ){
 	.container {
-		grid-template-columns: var(--width) calc(var(--width)*1.5) var(--width);
-		grid-template-rows: repeat(5, var(--width));
+		grid-template-columns: repeat(3, var(--width));
+		grid-template-rows: repeat(49, var(--width));
 	}
 }
 
 @media (max-width: 650px ){
 	.container {
-		grid-template-columns: var(--width) var(--width);
-		grid-template-rows: repeat(8, var(--width));
+		grid-template-columns: repeat(2, var(--width));
+		grid-template-rows: repeat(74, var(--width));
 	}
 }
 

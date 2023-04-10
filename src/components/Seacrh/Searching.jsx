@@ -5,13 +5,14 @@ const Searching = (props) => {
 	const [searchQuery, setsearchQuery] = useState('')
 	const [visible, setvisible] = useState(false)
 	const style = `${visible ? classes.cancel_search : classes.cancel_search_invisible}`
-	const old_arr = ['Apple', 'Orange (fruit)', 'Banana', 'Pineapple', 'Cherry', 'Mandarin', 'Raspberries', 'Melon', 'Watermelon', 'Strawberry', 'Grape', 'Blackberry', 'Lime', 'Coconut', 'Lemon']
+	
 	function cancel_searching () {
-		props.func(old_arr)
+		props.funcSearching(props.valueCopy)
 		setsearchQuery('')
 	}
 	function find_box () {
-		props.func(props.value.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase())))
+		const found_fruit = props.value.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase()))
+		props.funcSearching(found_fruit)
 	}
 
 	function become_visible () {
@@ -20,9 +21,9 @@ const Searching = (props) => {
 
 	return (
 		<div className={classes.wrapper}>
-		<input type='text' placeholder="Search..." value={searchQuery} onFocus={become_visible} onChange={e => {setsearchQuery(e.target.value)}} className={classes.search_bar}/>
-		<button onClick={find_box} className={classes.start_searching_btn}>🔍</button>
-		<button onClick={cancel_searching} className={style}>✖</button>
+		<input type='text' placeholder="Search for fruit" value={searchQuery} onFocus={become_visible} onChange={e => {setsearchQuery(e.target.value)}} className={classes.search_bar}/>
+		<button type="button" onClick={find_box} className={classes.start_searching_btn} title="cancel">🔍</button>
+		<button type="button" onClick={cancel_searching} className={style}>✖</button>
 		</div>
 	)
 };

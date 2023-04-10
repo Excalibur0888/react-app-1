@@ -43,7 +43,7 @@ const ModalWindowUp = (props) => {
 				placeholder="Email" 
 				value={email} 
 				onChange={e => {setEmail(e.target.value)}}
-				className={classes.email_input}
+				className={`${classes.input} ${classes.email}`}
 				title="Your email"
 				required
 				/>
@@ -53,9 +53,9 @@ const ModalWindowUp = (props) => {
 				value={name} 
 				onChange={e => {setName(e.target.value)}} 
 				placeholder="Username" 
-				className={classes.login_input} 
-				minlength="3" 
-				maxlength="10"
+				className={`${classes.input} ${classes.login}`}
+				minLength="3" 
+				maxLength="10"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required
@@ -66,9 +66,9 @@ const ModalWindowUp = (props) => {
 				value={password} 
 				onChange={e => {setPassword(e.target.value)}} 
 				placeholder="Password" 
-				className={classes.password_input} 
-				minlength="7" 
-				maxlength="20"
+				className={`${classes.input} ${classes.password}`}
+				minLength="7" 
+				maxLength="20"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
 				title="Only English or Russian letters and numbers"
 				required
@@ -79,7 +79,7 @@ const ModalWindowUp = (props) => {
 				value={confirmPassword} 
 				onChange={e => {setConfirmPassword(e.target.value)}} 
 				placeholder="Confirm password"
-				className={classes.password_confirm}
+				className={`${classes.input} ${classes.password_confirm}`}
 				title="Only English or Russian letters and numbers"
 				required
 				/>

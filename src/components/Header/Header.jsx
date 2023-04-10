@@ -34,8 +34,8 @@ const Header = (props) => {
 		<header className={classes.header}>
 		<span className={classes.header__name}>Fruits guide</span>
 		{props.children}
-		<button onClick={handle_modal_window_in} className={classes.in_link}>Sign in</button>
-		<button onClick={handle_modal_window_up} className={classes.up_link}>Sign up</button>
+		<button type="button" onClick={handle_modal_window_in} className={classes.in_link}>Sign in</button>
+		<button type="button" onClick={handle_modal_window_up} className={classes.up_link}>Sign up</button>
 		</header>
 	)
 	}

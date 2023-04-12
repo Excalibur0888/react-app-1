@@ -1,24 +1,23 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
-const cheerio = require('cheerio');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 const app = express();
 
 app.use(cors());
 app.get('/api', async (req, res) => {
-  try {
-    const response = await axios.get('https://simple.wikipedia.org/wiki/List_of_fruits');
-    const $ = cheerio.load(response.data);
-    const fruitList = $('#mw-content-text .div-col ul li');
-		const fruitItems = fruitList.find('a');
-    const fruitNames = fruitItems.map((el) => $(el).text().trim()).get();
-    res.set('Access-Control-Allow-Origin', '*'); 
-    res.json(fruitNames);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal server error');
-  }
+	try {
+		const response = await axios.get('https://simple.m.wikipedia.org/wiki/List_of_fruits');
+		const dom = new JSDOM(response.data);
+		const fruitList = dom.window.document.querySelectorAll('#mw-content-text .div-col ul li a');
+		const fruitNames = Array.from(fruitList).map((el) => el.textContent.trim());
+		res.set('Access-Control-Allow-Origin', '*'); 
+		res.json(fruitNames);
+	} catch (error) {
+		console.error(error);
+	}
 });
 
 const PORT = process.env.PORT || 5000;

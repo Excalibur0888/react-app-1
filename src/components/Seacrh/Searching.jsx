@@ -4,8 +4,9 @@ import classes from './Searching.module.css';
 const Searching = (props) => {
 	const [searchQuery, setsearchQuery] = useState('')
 	const [visible, setvisible] = useState(false)
+
 	const style = `${visible ? classes.cancel_search : classes.cancel_search_invisible}`
-	
+	const style_searching = `${props.visible ? (props.clicked ? classes.wrapper_in_burger: classes.wrapper_hidden) : classes.wrapper}`
 	function cancel_searching () {
 		props.funcSearching(props.valueCopy)
 		setsearchQuery('')
@@ -20,7 +21,7 @@ const Searching = (props) => {
 	}
 
 	return (
-		<div className={classes.wrapper}>
+		<div className={style_searching}>
 		<input type='text' placeholder="Search for fruit" value={searchQuery} onFocus={become_visible} onChange={e => {setsearchQuery(e.target.value)}} className={classes.search_bar}/>
 		<button type="button" onClick={find_box} className={classes.start_searching_btn} title="cancel">🔍</button>
 		<button type="button" onClick={cancel_searching} className={style}>✖</button>

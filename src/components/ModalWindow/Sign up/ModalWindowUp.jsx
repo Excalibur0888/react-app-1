@@ -45,6 +45,7 @@ const ModalWindowUp = (props) => {
 				onChange={e => {setEmail(e.target.value)}}
 				className={`${classes.input} ${classes.email}`}
 				title="Your email"
+				pattern="[a-zA-Z@.]+"
 				required
 				/>
 				<input

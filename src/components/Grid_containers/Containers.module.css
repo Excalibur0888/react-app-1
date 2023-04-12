@@ -5,25 +5,33 @@
 
 /* гриды */
 .container {
-  margin-top: 100px;
-  display: grid;
-  gap: 3vw;
-  justify-content: center;
-  text-align: center;
+	margin-top: 100px;
+	display: grid;
+	gap: 3vw;
+	justify-content: center;
+	text-align: center;
 	font-size: calc((1vh + 1vw) * 1.2);
-  grid-template-columns: repeat(5, var(--width));
-  grid-template-rows: repeat(30, var(--width));
+	grid-template-columns: repeat(5, var(--width));
+	grid-template-rows: repeat(30, var(--width));
+	animation: opacity 1s ease;
 }
 
 /* адаптив */
-@media (max-width: 1400px ){
+@media (max-width: 1300px ){
+	.container {
+		grid-template-columns: repeat(4, var(--width));
+		grid-template-rows: repeat(37, var(--width));
+	}
+}
+
+@media (max-width: 800px ){
 	.container {
 		grid-template-columns: repeat(3, var(--width));
 		grid-template-rows: repeat(49, var(--width));
 	}
 }
 
-@media (max-width: 650px ){
+@media (max-width: 500px ){
 	.container {
 		grid-template-columns: repeat(2, var(--width));
 		grid-template-rows: repeat(74, var(--width));

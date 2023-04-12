@@ -46,7 +46,7 @@ const ModalWindowIn = (props) => {
 				props.funcscroll(true)
 			}
 			else {
-				alert('no')
+				alert('Incorrect email or password')
 			}
 		} 
 	}
@@ -75,7 +75,7 @@ const ModalWindowIn = (props) => {
 				value={password} 
 				onChange={e => {setPassword(e.target.value)}} 
 				placeholder="Password" 
-				className={`${classes.input}`}
+				className={`${classes.input} ${classes.password}`}
 				minLength="7" 
 				maxLength="20"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 

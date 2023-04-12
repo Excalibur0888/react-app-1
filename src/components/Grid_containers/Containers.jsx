@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import classes from './Containers.module.css';
 import axios from 'axios';
-import { useMemo } from 'react';
 
 const Containers = (props) => {
-	const [fruits, setFruits] = useState([]);
 	useEffect(() => {
 		axios.get('http://localhost:5000/api')
 			.then(response => {
-				setFruits(response.data);
 				props.funcsetBoxContent(response.data);
 				props.setValueCopy(response.data)
 			})

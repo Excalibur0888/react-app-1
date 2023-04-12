@@ -1,19 +1,17 @@
 /* фон формы */
 .wrapper_visible {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .9);
 	z-index: 5;
 }
 
 .wrapper_invisible {
-	transition: all 0.5s ease;
-	opacity: 0;
 	display: none;
 }
 
@@ -52,7 +50,7 @@
 	bottom: 0;
 	width: 50vw;
 	height: 70vh;
-	background-image: url('./bg_modal.jpeg');
+	background-image: url('../bg_modal.jpeg');
 	background-size: cover;
 	border: 1px solid rgb(255, 255, 255);
 	border-radius: 20%;
@@ -77,7 +75,7 @@
 	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(245, 27, 19, 0.5));
 	border-radius: 100px;
 	padding: 15px;
-	width: 50%;
+	width: 70%;
 	height: auto;
 	font-size: 1.5em;
 }
@@ -97,6 +95,7 @@
 	font-size: 1em;
 	border: 1px solid white;
 	border-radius: 80%;
+	z-index: 3;
 }
 
 .showing_btn:active{
@@ -107,13 +106,14 @@
 	position: relative;
 	top: 10%;
 	color: white;
+	font-size: 1.2em;
 }
 
 .submit {
 	position: absolute;
 	font-size: 1.2em;
 	padding: 5px 15px;
-	margin-top: 10%;
+	margin-top: 15%;
 	cursor: pointer;
 	left: 15%;
 	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(245, 27, 19, 0.5));
@@ -124,6 +124,92 @@
 
 .submit:active{
 	transform: scale(.8);
+}
+
+/* адаптив для 1000 пикселей */
+@media (max-width: 1200px) {
+	.form {	
+		width: 70vw;
+		left: 15%;
+		height: 60vh;
+		top: 17%;
+	}
+	.tip {
+		top: 8%;
+		font-size: calc((1vh + 1vw) * 1.8);
+	}
+	.cancel_modal {
+		top: 15%;
+		left: 82%;
+	}
+	.login {
+		margin-bottom: 15%;
+	}
+	.input {
+		width: 70%;
+	}
+	.password {
+		margin-top: 10%;
+	}
+	.showing_btn {
+		margin-left: 55%;
+		margin-top: 10%;
+	}
+	.remember_checkbox {
+		margin-top: 10%;
+	}
+	.submit {
+		margin-top: 5%;
+	}
+}
+
+/* адаптив для 700 пикселей */
+@media (max-width: 700px) {
+	.form {
+		width: 80vw;
+		left: 10%;
+	}
+	.tip {
+		top: 10%;
+		font-size: calc((1vh + 1vw) * 2.2);
+	}
+	.cancel_modal {
+		top: 15%;
+		left: 85%;
+	}
+	.login {
+		margin-bottom: 25%;	
+	}
+	.password {
+		margin-top: 10%;
+	}
+
+	.input {
+		width: 80%;
+		padding: 10px;
+	}
+	.showing_btn {
+		font-size: .8em;
+		margin-left: 65%;
+		margin-top: 10%;
+	}
+
+	.remember_checkbox {
+		top: 10%;
+	}
+
+	.submit {
+		padding: 5px 10px;
+		font-size: 1em;
+		margin-top: 5%;
+		left: 20%;
+	}
+}
+
+@media (max-width: 400px) {
+	.login {
+		margin-bottom: 50%;
+	}
 }
 
 /* анимации */

@@ -1,6 +1,6 @@
 /* стили для поля поиска */
 .wrapper {
-	width: calc((1vw + 0.5vh)* 15);
+	width: calc((1vw + 0.5vh)* 20);
 	height: 80%;
 	padding: 15px;
 	border-radius: 100px;
@@ -10,7 +10,25 @@
 	left: 5%;
 	right: 0;
 	bottom: 0;
-	background: inherit;
+	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(13, 105, 154, .5));
+}
+
+.wrapper_in_burger {
+	width: 80%;
+	height: 30%;
+	padding: 15px;
+	border-radius: 100px;
+	position: absolute;
+	top: 60px;
+	font-size: 2em;
+	left: 5%;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(13, 105, 154, .5));
+}
+
+.wrapper_hidden {
+	display: none;
 }
 
 .search_bar {

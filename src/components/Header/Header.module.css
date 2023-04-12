@@ -97,7 +97,7 @@
 	height: 150px;
 	z-index: 8;
 	border-radius: 5%;
-	transition: all 1s ease;
+	transition: all .7s ease;
 }
 
 .burger_menu {
@@ -110,7 +110,7 @@
 	height: 150px;
 	z-index: 8;
 	border-radius: 5%;
-	transition: all 1s ease;
+	transition: all .7s ease;
 }
 
 .header__name {
@@ -145,7 +145,7 @@
 	display: flex;
 	position: relative;
 	align-items: center;
-	justify-content: end;
+	justify-content: center;
 	margin-right: 5px;
 	left: 0;
 	font-size: 1em;
@@ -160,7 +160,6 @@
 	border-radius: 100%;
 }
 
-/* стили кнопок формы */
 .btn {
 	width: 8.5vw;
 	position: absolute;

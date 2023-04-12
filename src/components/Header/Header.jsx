@@ -4,7 +4,7 @@ import myImage from './icon.jpg'
 
 const Header = (props) => {
 	const style_burger = `${props.visible ? (props.clicked ? classes.burger_active : classes.burger) : ''}`
-	const style_burger_menu = `${props.clicked ? classes.burger_menu_active : classes.burger_menu}`
+	const style_burger_menu = `${props.visible ? (props.clicked ? classes.burger_menu_active : classes.burger_menu) : ''}`
 	const style_header = `${props.visible ? classes.header + ' ' + classes.header_mobile : classes.header}`;
 	const style_btn = `${props.visible ? (props.clicked ? classes.btn_burger : classes.btn_hidden) : classes.btn}`;
 	const username = `${props.visible ? (props.clicked ? classes.img_username_burger : classes.img_username_hidden) : classes.img_username}`

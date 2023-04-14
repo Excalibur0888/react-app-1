@@ -15,6 +15,7 @@ function App() {
 	const[clicked, setClicked] = useState(false)
 	const[heading, setHeading] = useState('')
 	const[isScrollingAllowed, setisScrollingAllowed] = useState(true)
+	const[fruitImages, setFruitImages] = useState([])
 
 	return (
 	<div className="App">
@@ -25,7 +26,7 @@ function App() {
 		</Header>
 		<ModalWindowUp value={visup} funcsetvisup={setVisup} funcscroll={setisScrollingAllowed}>✖</ModalWindowUp>
 		<ModalWindowIn value={visin} funcsetvisin={setVisin} funcscroll={setisScrollingAllowed} setheading={setHeading}>✖</ModalWindowIn>
-		<Containers value={boxContent} setValueCopy={setValueCopy} funcsetBoxContent={setBoxContent}></Containers>
+		<Containers fruitImages={fruitImages} setFruitImages={setFruitImages} value={boxContent} valueCopy={valueCopy} setValueCopy={setValueCopy} funcsetBoxContent={setBoxContent}></Containers>
 	</div>
   );
 }

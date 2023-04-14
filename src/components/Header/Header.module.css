@@ -10,7 +10,7 @@
 	align-items: center;
 	height: 55px;
 	position: fixed;
-	background: linear-gradient(45deg, rgba(76, 2, 89, .5), rgba(16, 2, 70, .5), rgba(13, 105, 154, .5));
+	background: linear-gradient(45deg, rgba(76, 2, 89, .9), rgba(16, 2, 70, .9), rgba(13, 105, 154, .9));
 	border-radius: 100px;
 	padding: 0.5vh;
 	font-size: 40px;
@@ -117,7 +117,6 @@
 	text-shadow: 0 0 20px rgba(205, 182, 8, 0.589);
 	color: white;
 	font-weight: bold;
-	margin-right: 3vw;
 }
 
 .img_username {
@@ -139,6 +138,7 @@
 .img_username img {
 	transform: scale(.9);
 	border-radius: 100%;
+	margin-left: 2%;
 }
 
 .img_username_burger {

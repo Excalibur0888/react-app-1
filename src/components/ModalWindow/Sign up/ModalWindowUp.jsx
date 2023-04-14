@@ -58,7 +58,7 @@ const ModalWindowUp = (props) => {
 				minLength="3" 
 				maxLength="10"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
-				title="Only English or Russian letters and numbers"
+				title="Require perhaps 1 English or Russian letter and number"
 				required
 				/>
 				<input 
@@ -71,7 +71,7 @@ const ModalWindowUp = (props) => {
 				minLength="7" 
 				maxLength="20"
 				pattern="[a-zA-Zа-яА-Я0-9]+" 
-				title="Only English or Russian letters and numbers"
+				title="Require perhaps 1 English or Russian letter and number"
 				required
 				/>
 				<input 

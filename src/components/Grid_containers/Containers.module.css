@@ -12,29 +12,32 @@
 	text-align: center;
 	font-size: calc((1vh + 1vw) * 1.2);
 	grid-template-columns: repeat(5, var(--width));
-	grid-template-rows: repeat(30, var(--width));
-	animation: opacity 1s ease;
+	grid-auto-rows: var(--width);
+}
+
+.container__name {
+	position: relative;
+	top: 10vh;
+	text-align: center;
+	color: white;
 }
 
 /* адаптив */
 @media (max-width: 1300px ){
 	.container {
 		grid-template-columns: repeat(4, var(--width));
-		grid-template-rows: repeat(37, var(--width));
 	}
 }
 
 @media (max-width: 800px ){
 	.container {
 		grid-template-columns: repeat(3, var(--width));
-		grid-template-rows: repeat(49, var(--width));
 	}
 }
 
 @media (max-width: 500px ){
 	.container {
 		grid-template-columns: repeat(2, var(--width));
-		grid-template-rows: repeat(74, var(--width));
 	}
 }
 
@@ -42,21 +45,45 @@
 .box {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	background-position: center;
+	border-radius: 30px;
+	padding: 10px;
+	color: white;
+	position: relative;
+	box-shadow: 0 0 10px 5px blueviolet;
+	animation: scale 2s alternate;
+}
+
+.box_filtered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-decoration: none;
 	border-radius: 30px;
 	padding: 10px;
 	color: white;
-	background-image: url('fon.jpg');
 	position: relative;
-	box-shadow: 0 0 10px 5px blueviolet;
+	background: #000000;
+	box-shadow: 0 0 10px 5px rgb(247, 206, 0);
+	animation: opacity 2s alternate;
+}
+
+.box_filtered a {
+	position: relative;
+	text-decoration: none;
+	text-underline-offset: 10px;
+	color: white;
+	text-shadow: 0 0 30px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000;
 }
 
 .box a {
 	position: relative;
-	top: 20px;
 	text-decoration: none;
 	text-underline-offset: 10px;
 	color: white;
+	text-shadow: 0 0 30px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000;
 }
 
 .box a:hover {
@@ -65,9 +92,12 @@
 }
 
 .box img {
-	position: relative;
+	position: absolute;
+	justify-self: flex-start;
 	bottom: 30px;
-	transform: scale(.5);
+	max-width: 15vw;
+	max-height: 15vw;
+	transform: scale(.6);
 	border-radius: 80%;
 }
 
@@ -91,5 +121,14 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes scale {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
 	}
 }

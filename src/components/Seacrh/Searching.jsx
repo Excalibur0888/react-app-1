@@ -12,8 +12,7 @@ const Searching = (props) => {
 		setsearchQuery('')
 	}
 	function find_box () {
-		const found_fruit = props.value.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase()))
-		props.funcSearching(found_fruit)
+		props.funcSearching(props.value.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase())))
 	}
 
 	function become_visible () {

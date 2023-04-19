@@ -4,6 +4,8 @@ const axios = require('axios');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
+const fruitNameReplacements = require('./fruitNameReplacements');
+
 const app = express();
 
 app.use(cors());
@@ -13,17 +15,13 @@ app.get('/api', async (req, res) => {
 		const dom = new JSDOM(response.data);
 		const fruitList = dom.window.document.querySelectorAll('#mw-content-text .div-col ul li a');
 		const fruitNames = Array.from(fruitList).map((el) => el.textContent.trim());
-		const selected = ['Lime', 'Orange', 'Plantain']
-		fruitNames.forEach((element, index) => {
-			if (selected.includes(element)) {
-				fruitNames[index] = element + ' fruit';
+		
+		fruitNames.forEach((fruit, index) => {
+			const replacement = fruitNameReplacements[fruit];
+			if (replacement) {
+				fruitNames[index] = replacement;
 			}
 		});
-		fruitNames[fruitNames.indexOf('Mandarine')] += " orange";
-		fruitNames[fruitNames.indexOf('Date')] += " palm";
-		fruitNames[fruitNames.indexOf('Rose apple')] = "Syzygium aqueum"
-		fruitNames[fruitNames.indexOf('Satsuma')] = "Citrus unshiu"
-		fruitNames[fruitNames.indexOf('Squash')] = "Cucurbita"
 
 		const fruitImages = await Promise.all(
 			fruitNames.map(async (fruit) => {

@@ -1,34 +1,19 @@
-import React, { useState } from "react";
-import './styles/App.css';
-import Header from "./components/Header/Header";
-import Containers from "./components/Grid_containers/Containers";
-import Searching from "./components/Seacrh/Searching";
-import ModalWindowUp from "./components/ModalWindow/Sign up/ModalWindowUp";
-import ModalWindowIn from "./components/ModalWindow/Sign in/ModalWindowIn";
+import React from "react";
+import FruitPage from './Pages/FruitPage/FruitPage'
+import HomePage from './Pages/HomePage/HomePage'
+import LoginPage from "./Pages/Login/LoginPage";
+import RegisterPage from "./Pages/Register/RegisterPage";
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-	const[boxContent, setBoxContent] = useState([])
-	const[valueCopy, setValueCopy] = useState([])
-	const[visup, setVisup] = useState(true)
-	const[visin, setVisin] = useState(true)
-	const[visible, setvisible] = useState('')
-	const[clicked, setClicked] = useState(false)
-	const[heading, setHeading] = useState('')
-	const[isScrollingAllowed, setisScrollingAllowed] = useState(true)
-	const[fruitImages, setFruitImages] = useState([])
-
 	return (
-	<div className="App">
-		<Header setvisible={setvisible} visible={visible} value={visup} funcup={setVisup} funcin={setVisin} 
-		funcscroll={setisScrollingAllowed} scr={isScrollingAllowed} heading={heading} setClicked={setClicked} clicked={clicked}>
-		<Searching visible={visible} value={boxContent} valueCopy={valueCopy} setValueCopy={setValueCopy} 
-		clicked={clicked} funcSearching={setBoxContent}/>
-		</Header>
-		<ModalWindowUp value={visup} funcsetvisup={setVisup} funcscroll={setisScrollingAllowed}>✖</ModalWindowUp>
-		<ModalWindowIn value={visin} funcsetvisin={setVisin} funcscroll={setisScrollingAllowed} setheading={setHeading}>✖</ModalWindowIn>
-		<Containers fruitImages={fruitImages} setFruitImages={setFruitImages} value={boxContent} valueCopy={valueCopy} setValueCopy={setValueCopy} funcsetBoxContent={setBoxContent}></Containers>
-	</div>
-  );
+		<Routes>
+			<Route exact path="/" element={<HomePage />} />
+			<Route exact path="/fruits" element={<FruitPage />} />
+			<Route exact path="/login" element={<LoginPage />} />
+			<Route exact path="/register" element={<RegisterPage />} />
+		</Routes>
+	)
 }
-		
+
 export default App;

@@ -3,7 +3,7 @@ import classes from './RegisterForm.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setUser } from '../../../store/slices/userSlice';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
@@ -26,6 +26,7 @@ const RegisterForm = () => {
 	const handleRegister = (email, password) => {
 		if (password === confirmPassword) {
 		const auth = getAuth();
+		setPersistence(auth, browserSessionPersistence)
 		createUserWithEmailAndPassword(auth, email, password)
 		.then(({user}) => {
 			dispatch(setUser({
@@ -60,7 +61,7 @@ const RegisterForm = () => {
 	return (
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
-		<form action="javascript:void(0)">
+		<form>
 				<h2>Sign up</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>

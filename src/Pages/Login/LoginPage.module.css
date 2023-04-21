@@ -45,10 +45,13 @@ body {
 	height: 2px;
 	background: aliceblue;
 	border-radius: 5px;
+	transition: all .3s ease;
+	transform: translateY(10px);
 	opacity: 0;
 }
 
 .navbar > *:hover::after {
+	transform: translateY(0);
 	opacity: 1;
 }
 

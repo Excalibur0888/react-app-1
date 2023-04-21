@@ -57,7 +57,8 @@
 	transition: .5s ease;
 }
 
-.inputbox input:not(:placeholder-shown) ~ label {
+.inputbox input:not(:placeholder-shown) ~ label,
+.inputbox input:focus ~ label {
   top: -5px;
 }
 

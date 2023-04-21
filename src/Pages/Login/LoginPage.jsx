@@ -23,12 +23,12 @@ const LoginPage = () => {
 		<div className={classes.background}></div>
 		<div className={classes.container}>
 			<div className={classes.content}>
-				<h2 className={classes.logo}><box-icon name="rocket" color='rgba(255,255,255,1)'></box-icon> Silence</h2>
+				<h2 className={classes.logo}><box-icon name="rocket" color='rgba(255,255,255,1)'></box-icon> Silentlib</h2>
 
 				<div className={classes.textsci}>
-					<h2>Welcome!<br/><span>123</span></h2>
+					<h2>Good afternoon<br/><span>Please sign in</span></h2>
 				
-					<p>Aspernatur iste facilis hic amet, vitae accusamus omnis saepe eos sapiente consequatur sunt obcaecati voluptatum at eum? Deserunt possimus sunt rem nostrum!</p>
+					<p>This is an encyclopedia website that provides a vast collection of knowledge on a wide range of topics. The site aims to provide accurate and up-to-date information that is accessible to everyone, making it an invaluable resource for students, researchers, and curious minds alike.</p>
 				
 					<div className={classes.socialicons}>
 						<a href='https://t.me/A1381527' 

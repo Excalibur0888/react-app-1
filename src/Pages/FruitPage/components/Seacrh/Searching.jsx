@@ -23,7 +23,7 @@ const Searching = (props) => {
 	return (
 		<div className={style_searching}>
 		<input type='text' placeholder="Search for fruit" value={searchQuery} onFocus={become_visible} onChange={e => {setsearchQuery(e.target.value)}} className={classes.search_bar}/>
-		<button type="button" onClick={find_box} className={classes.start_searching_btn} title="cancel"><box-icon name='search' color='rgba(255,255,255,1)'></box-icon></button>
+		<button type="button" onClick={find_box} className={classes.start_searching_btn} title="cancel"><box-icon name='search' color='rgb(1, 1, 1)'></box-icon></button>
 		<button type="button" onClick={cancel_searching} className={style}>✖</button>
 		</div>
 	)

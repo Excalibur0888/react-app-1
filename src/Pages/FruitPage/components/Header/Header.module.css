@@ -11,7 +11,7 @@
 	align-items: center;
 	height: 55px;
 	position: fixed;
-	background: linear-gradient(45deg, rgb(51, 50, 50), rgb(149, 145, 145), rgb(51, 50, 50));
+	background: linear-gradient(45deg, rgba(226, 226, 226, 0.5), rgb(195, 195, 195), rgba(226, 226, 226, 0.5));
 	padding: 0.5vh;
 	font-size: 40px;
 	text-align: center;

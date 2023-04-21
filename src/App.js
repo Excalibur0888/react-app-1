@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage/HomePage'
 import LoginPage from "./Pages/Login/LoginPage";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import { Routes, Route } from 'react-router-dom';
+import './App.css'
 
 function App() {
 	return (

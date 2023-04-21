@@ -3,9 +3,8 @@ import classes from './LoginForm.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setUser } from '../../../store/slices/userSlice';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
-import e from "cors";
 
 const LoginForm = () => {
 	const dispatch = useDispatch();
@@ -23,6 +22,7 @@ const LoginForm = () => {
 
 	const handleLogin = (email, password) => {
 		const auth = getAuth();
+		setPersistence(auth, browserSessionPersistence)
 		signInWithEmailAndPassword(auth, email, password)
 			.then(({user}) => {
 				dispatch(setUser({
@@ -55,7 +55,7 @@ const LoginForm = () => {
 	return (
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
-			<form action="#">
+			<form>
 				<h2>Sign in</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>

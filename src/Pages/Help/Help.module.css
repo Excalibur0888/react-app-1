@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@300&display=swap');
+.Help {	
+	position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+	background: url('../../img/help_bg.jpg');
+	background-size: cover;
+	animation: opacity 1s linear;
+}
+
+.header {	
+	position: fixed;
+	align-self: baseline;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	background: rgba(226, 226, 226, 0.5);
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.logo {
+	position: relative;
+	color: white;
+	font-size: 1.5em;
+}
+
+.navbar > * {
+	position: relative;
+	font-size: 16px;
+	color: aliceblue;
+	text-decoration: none;
+	font-weight: 500;
+	margin-right: 30px;
+}
+
+.navbar > *::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 2px;
+	background: aliceblue;
+	border-radius: 5px;
+	transition: all .3s ease;
+	transform: translateY(10px);
+	opacity: 0;
+}
+
+.navbar > *:hover::after {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.loginreg {
+	width: 13%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.loginreg > * {
+	padding: 0 2px;
+	border: 1px solid white;
+}
+
+.loginreg > * > *{
+	text-decoration: none;
+	font-size: 1em;
+	vertical-align: middle;
+	color: white;
+	padding: 10px 2px;
+}
+
+.username {
+	position: relative;
+	text-align: center;
+	padding: 0 10px;
+	cursor: pointer;
+	background: rgba(187, 187, 187, 0.5);
+	border: 1px solid white;
+	font-size: 15px;
+	width: auto;
+	height: 50px;
+}
+
+.username > * {
+	color: white;
+	text-decoration: none;
+}
+
+.Help > h1 {
+	position: relative;
+	text-align: center;
+	font-family: 'Pathway Extreme', sans-serif;
+	top: 10%;
+	font-size: 40px;
+	color: white;
+	animation: transform 1s ease-in-out;
+}
+
+.Help > h2 {
+	position: relative;
+	text-align: center;
+	font-family: 'Pathway Extreme', sans-serif;
+	top: 12%;
+	font-size: 22px;
+	color: white;
+	animation: transform 1s ease-in-out;
+}
+
+.Help > h3 {
+	position: relative;
+	font-family: 'Pathway Extreme', sans-serif;
+	text-align: center;
+	top: 65%;
+	font-size: 22px;
+	color: white;
+	animation: transform 1s ease-in-out;
+}
+
+.containers {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 17%;
+  top: 30%;
+}
+
+.containers > div {
+  position: relative; /* Родительский элемент позиционируется относительно своей обычной позиции */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 3%;
+	animation: scale 1s ease-in-out;
+}
+
+.containers > div > a {
+	font-size: 1.3em;
+	color: #c4103d;
+	text-align: center;
+	text-decoration: none;
+	text-underline-offset: 5px;
+	font-weight: 600;
+	font-family: 'Pathway Extreme', sans-serif;
+	line-height: 40px;
+}
+
+.containers > div > a:hover {
+	font-size: 1.4em;
+}
+
+.div_footer {
+	position: absolute;
+	top: 85%;
+	text-decoration: none;
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid rgb(215, 215, 215);
+	background-color: rgb(233, 233, 233);
+}
+
+.div_footer > div {
+	font-family: 'Pathway Extreme', sans-serif;
+	color: black;	
+	font-weight: 500;
+}
+
+.circle {
+  position: absolute; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -30px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  height: 100px;
+  width: 100px;
+  z-index: 3;
+  border-radius: 100%;
+  background: rgb(255, 255, 255);
+	box-shadow: 0 5px 5px 2px rgb(192, 192, 192);
+}
+
+.circle > img {
+	position: absolute;
+	transform: scale(.25);
+	border-radius: 80%;
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes transform {
+	from {
+		opacity: 0;
+		transform: translateY(80%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes scale {
+	from {
+		transform: scale(0.5);
+	}
+	to {
+		transform: scale(1);
+	}
+}

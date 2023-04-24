@@ -14,15 +14,15 @@ app.get('/api', async (req, res) => {
 		const response = await axios.get('https://simple.m.wikipedia.org/wiki/List_of_fruits');
 		const dom = new JSDOM(response.data);
 		const fruitList = dom.window.document.querySelectorAll('#mw-content-text .div-col ul li a');
-		const fruitNames = Array.from(fruitList).map((el) => el.textContent.trim());
-		
+		const fruitsToRemove = ["Catmon", "Dragonfruit", "Caviar Lime", "Sampaloc"];
+		const fruitNames = (Array.from(fruitList).map((el) => el.textContent.trim())).filter((fruit) => !fruitsToRemove.includes(fruit));;
 		fruitNames.forEach((fruit, index) => {
 			const replacement = fruitNameReplacements[fruit];
 			if (replacement) {
 				fruitNames[index] = replacement;
 			}
 		});
-
+		fruitNames.sort()
 		const fruitImages = await Promise.all(
 			fruitNames.map(async (fruit) => {
 				try {
@@ -42,7 +42,7 @@ app.get('/api', async (req, res) => {
 				}
 			})
 		);
-		res.set('Cache-Control', 'no-cache');
+		
 		res.set('Access-Control-Allow-Origin', '*');
 		res.set('Cache-Control', 'public, max-age=86400'); // Кэшировать на 1 день (86400 секунд)
 		res.json({ fruitNames, fruitImages });
@@ -51,8 +51,6 @@ app.get('/api', async (req, res) => {
 	}
 });
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-	console.log(`Proxy server is listening on port ${PORT}`);
+app.listen(5000, () => {
+	console.log('Proxy server is listening on port 5000');
 });

@@ -12,7 +12,7 @@ const HomePage = () => {
 	return (
 		<div className={classes.HomePage}>
 			<Helmet>
-			<title>Home</title>
+			<title>Silentlib</title>
 			<link rel="icon" type="image/ico" href={favicon} />
 		</Helmet>
 			<Container/>
@@ -21,7 +21,8 @@ const HomePage = () => {
 				<div><h2>Availability</h2><br/>Allows for quick and easy access to the information you need.<br/><img src={img2} alt=''/></div>
 				<div><h2>Informativity</h2><br/>Comprehensive and diverse range of information empowers readers with a wealth of knowledge.<br/><img src={img3} alt=''/></div>
 			</div>
-		</div>	
+			<footer className={classes.footer}>©Silentlib. All rights reserved</footer>
+		</div>
 	)
 }
 

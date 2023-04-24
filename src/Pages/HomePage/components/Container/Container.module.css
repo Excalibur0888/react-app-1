@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Serif&display=swap');
 .container {
 	position: absolute;
 	display: flex;
@@ -33,7 +32,7 @@
 
 .navbar {
 	position: absolute;
-	left: 40%;
+	left: 38%;
 }
 
 .navbar > * {
@@ -87,12 +86,17 @@
 	position: relative;
 	text-align: center;
 	padding: 0 10px;
-	color: white;
+	cursor: pointer;
 	background: rgba(187, 187, 187, 0.5);
 	border: 1px solid white;
 	font-size: 15px;
 	width: auto;
 	height: 50px;
+}
+
+.username > * {
+	color: white;
+	text-decoration: none;
 }
 
 .container > h1 {
@@ -178,7 +182,7 @@
 
 @keyframes bg {
 	from {
-		background-position: 0 20%;
+		background-position: 0 30%;
 	}
 	to {
 		background-position: 0 50%;

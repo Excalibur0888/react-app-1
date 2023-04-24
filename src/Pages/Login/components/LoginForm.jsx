@@ -20,7 +20,8 @@ const LoginForm = () => {
 		localStorage.setItem("password", password);
 	}
 
-	const handleLogin = (email, password) => {
+	const handleLogin = (e, email, password) => {
+		e.preventDefault()
 		const auth = getAuth();
 		setPersistence(auth, browserSessionPersistence)
 		signInWithEmailAndPassword(auth, email, password)
@@ -55,7 +56,7 @@ const LoginForm = () => {
 	return (
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
-			<form>
+			<form action="javascript:void(0)">
 				<h2>Sign in</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -94,7 +95,7 @@ const LoginForm = () => {
 				<button 
 				type='button' 
 				className={classes.btn}
-				onClick={() => handleLogin(email, password)}
+				onClick={(e) => handleLogin(e, email, password)}
 				>Sign in</button>
 				<div className={classes.loginregister}>
 					<p>Don't have an account? <Link to='/register'>Sign up</Link></p>

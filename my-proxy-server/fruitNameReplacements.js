@@ -1,5 +1,3 @@
-// fruitNameReplacements.js
-
 module.exports = {
 	"African Cherry Orange": "African mango",
 	"Atis (Annona Squamosa)": "Sugar apple",
@@ -7,8 +5,7 @@ module.exports = {
 	Orange: "Orange fruit",
 	Plantain: "Plantain fruit",
 	Mandarine: "Mandarin orange",
-	Cacao: "Theobroma_cacao",
-	Sampaloc: "Tamarind",
+	Cacao: "Theobroma cacao",
 	"Grewia asiatica (phalsa or falsa)": "Grewia asiatica",
 	Date: "Date palm",
 	Currant: "Ribes",
@@ -24,7 +21,6 @@ module.exports = {
 	"Japanese plum": "Prunus mume",
 	Honeyberry: "Lonicera caerulea",
 	"Hala Fruit": "Pandanus tectorius",
-	"Caviar Lime": "Citrus australasica",
 	"Chico fruit": "Manilkara zapota",
 	"Sarguelas (Red Mombin)": "Red Mombin",
 	"Tambis (Water Apple)": "Syzygium",

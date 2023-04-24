@@ -30,25 +30,6 @@
 	color: yellow;
 }
 
-/* адаптив */
-@media (max-width: 1400px ){
-	.container {
-		grid-template-columns: repeat(4, var(--width));
-	}
-}
-
-@media (max-width: 1000px ){
-	.container {
-		grid-template-columns: repeat(3, var(--width));
-	}
-}
-
-@media (max-width: 500px ){
-	.container {
-		grid-template-columns: repeat(2, var(--width));
-	}
-}
-
 /* стили блоков */
 .box {
 	display: flex;

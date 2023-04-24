@@ -23,7 +23,8 @@ const RegisterForm = () => {
 		localStorage.setItem("password", password);
 	}
 
-	const handleRegister = (email, password) => {
+	const handleRegister = (e, email, password) => {
+		e.preventDefault()
 		if (password === confirmPassword) {
 		const auth = getAuth();
 		setPersistence(auth, browserSessionPersistence)
@@ -61,7 +62,7 @@ const RegisterForm = () => {
 	return (
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
-		<form>
+		<form action="javascript:void(0)">
 				<h2>Sign up</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -118,7 +119,7 @@ const RegisterForm = () => {
 				<button 
 				type='submit' 
 				className={classes.btn}
-				onClick={() => handleRegister(email, password)}
+				onClick={(e) => handleRegister(e, email, password)}
 				>Sign up</button>
 				<div className={classes.loginregister}>
 					<p>Already have an account? <Link to='/login'>Sign in</Link></p>

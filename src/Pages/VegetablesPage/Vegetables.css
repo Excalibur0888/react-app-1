@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
+.Vegetables {
+	background-image: url('../../img/vegetables_bg.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	animation: opacity 1s linear;
+	min-height: 100vh;
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

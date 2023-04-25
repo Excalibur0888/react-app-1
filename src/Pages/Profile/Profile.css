@@ -1,3 +1,17 @@
 .Profile {
-	background-color: white;
+	min-height: 100vh;
+	background: url('../../img/profilebg.jpg') no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 100vh;
+	animation: 1s opacity linear;
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

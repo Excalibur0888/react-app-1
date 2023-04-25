@@ -1,0 +1,153 @@
+.container {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	height: 85%;
+	width: 85%;
+	top: 10%;
+	left: 8%;
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: 1%;
+	padding: 20px 40px;
+}
+
+.description {
+	left: -40px;
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	position: relative;
+}
+
+.photo {
+	margin-left: 25%;
+	border: 2px dashed white;
+	width: 300px;
+	height: 300px;
+	border-radius: 80%;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+}
+
+.photo:hover {
+	opacity: .7;
+}
+
+.logregbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100% - 48%);
+	height: 100%;
+}
+
+.logregbox .formbox {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(1px);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: aliceblue;
+	animation: bottom 1s ease;
+}
+
+.formbox h2 {
+	font-size: 32px;
+	text-align: center;
+}
+
+.formbox .inputbox {
+	position: relative;
+	width: 440px;
+	height: 55px;
+	border-bottom: 2px solid rgb(255, 240, 240);
+	margin: 30px 0;
+}
+
+.inputbox select {
+	margin-left: -4px;
+}
+
+.inputbox input, select {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	color: aliceblue;
+	font-weight: 500;
+	padding-right: 28px;
+}
+
+option {
+	color: black;
+}
+
+.inputbox label {
+	position: absolute;
+	left: 0;
+	transform: translateY(-50%);
+	font-size: 16px;
+	font-weight: 700;
+	pointer-events: none;
+	transition: .5s ease;
+}
+
+.description > span {
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+	position: relative;
+	border: 1px solid white;
+	width: 60%;
+	margin-left: 20%;
+	padding: 5px 0;
+}
+
+.description > h3 {
+		color: white;
+		font-size: 1.4em;
+		text-align: center;
+		position: relative;
+		margin-top: 30px;
+		width: 60%;
+		margin-left: 20%;
+		padding: 5px 0;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+button {
+	width: 100%;
+	height: 45px;
+	background: #c4103d;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	color: aliceblue;
+	font-weight: 500;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	transition: all .5s ease;
+}
+
+button:hover {
+	transform: scale(1.03);
+}
+
+.logout {
+	margin-top: 5%;
+	margin-left: 25%;
+	width: 50%;
+}

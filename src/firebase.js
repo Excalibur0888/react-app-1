@@ -1,10 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue, orderByKey, query, equalTo, update } from "firebase/database";
+import { getFirestore, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyDLIRIHGpmJQZ-wO2JQM9yyx70uH9Lo5io",
 	authDomain: "react-app-5be9d.firebaseapp.com",
-	databaseURL: "https://react-app-5be9d-default-rtdb.firebaseio.com",
 	projectId: "react-app-5be9d",
 	storageBucket: "react-app-5be9d.appspot.com",
 	messagingSenderId: "901920161133",
@@ -13,24 +13,36 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
 
-export const getUserProfile = (userId) => {
-	const usersRef = ref(database, "users");
-	const userQuery = query(usersRef, orderByKey(), equalTo(userId));
+const db = getFirestore(app);
 
-	return new Promise((resolve, reject) => {
-		onValue(userQuery, (snapshot) => {
-			const userData = snapshot.val();
-			if (userData) {
-				resolve(userData);
-			} else {
-				reject("User not found");
-			}
-		});
-	});
+const storage = getStorage(app);
+
+export const uploadFileAndGetURL = async (file) => {
+  const fileRef = storageRef(storage, file.name);
+  const uploadTask = uploadBytesResumable(fileRef, file);
+  const snapshot = await uploadTask;
+  const downloadURL = await getDownloadURL(snapshot.ref);
+  return downloadURL;
 };
-export const updateUserProfile = (userId, newProfileData) => {
-	const userRef = ref(database, `users/${userId}`);
-	return update(userRef, newProfileData);
+
+export const getUserProfile = async (userId) => {
+	const userRef = doc(db, "users", userId);
+	const docSnap = await getDoc(userRef);
+	if (docSnap.exists()) {
+		return docSnap.data();
+	} else {
+		throw new Error("User not found");
+	}
+};
+
+export const updateUserProfile = async (userId, newProfileData) => {
+	const userRef = doc(db, "users", userId);
+	const docSnap = await getDoc(userRef);
+
+	if (docSnap.exists()) {
+		await updateDoc(userRef, newProfileData);
+	} else {
+		await setDoc(userRef, newProfileData);
+	}
 };

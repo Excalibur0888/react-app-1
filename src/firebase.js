@@ -19,11 +19,11 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 
 export const uploadFileAndGetURL = async (file) => {
-  const fileRef = storageRef(storage, file.name);
-  const uploadTask = uploadBytesResumable(fileRef, file);
-  const snapshot = await uploadTask;
-  const downloadURL = await getDownloadURL(snapshot.ref);
-  return downloadURL;
+	const fileRef = storageRef(storage, file.name);
+	const uploadTask = uploadBytesResumable(fileRef, file);
+	const snapshot = await uploadTask;
+	const downloadURL = await getDownloadURL(snapshot.ref);
+	return downloadURL;
 };
 
 export const getUserProfile = async (userId) => {

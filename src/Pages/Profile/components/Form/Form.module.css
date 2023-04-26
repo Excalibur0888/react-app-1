@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&family=Sniglet&display=swap');
 .container {
 	position: absolute;
 	display: flex;
@@ -7,7 +8,6 @@
 	top: 10%;
 	left: 8%;
 	backdrop-filter: blur(10px);
-	background-color: rgba(255, 255, 255, .2);
 	border-radius: 1%;
 	padding: 20px 40px;
 }
@@ -18,6 +18,14 @@
 	width: 50%;
 	flex-direction: column;
 	position: relative;
+}
+
+.description > h1 {
+	text-align: center;
+	font-family: 'Sniglet', cursive;
+	position: relative;
+	margin-bottom: 3%;
+	color: white;
 }
 
 .photo {
@@ -33,6 +41,7 @@
 
 .photo:hover {
 	opacity: .7;
+	border: 3px dashed white;
 }
 
 .logregbox {
@@ -51,7 +60,7 @@
 	background: transparent;
 	width: 100%;
 	height: 100%;
-	backdrop-filter: blur(1px);
+	background-color: rgba(255, 255, 255, .2);
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 	color: aliceblue;
@@ -99,6 +108,7 @@ option {
 	font-weight: 700;
 	pointer-events: none;
 	transition: .5s ease;
+	text-shadow: 0 0 5px black;
 }
 
 .description > span {
@@ -150,4 +160,29 @@ button:hover {
 	margin-top: 5%;
 	margin-left: 25%;
 	width: 50%;
+}
+
+.loading {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 101;
+}
+
+.loading > div {
+	position: absolute;
+	left: 47%;
+	top: 40%;
+	border: 15px solid #f3f3f3; 
+	border-top: 15px solid #ff9103; 
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

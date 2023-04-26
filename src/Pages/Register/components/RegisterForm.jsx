@@ -90,7 +90,8 @@ const RegisterForm = () => {
 						minLength='6'
 						maxLength='15'
 						placeholder=" "
-						pattern="^[a-zA-Z0-9]+$"
+						pattern="^[a-zA-Z0-9]$"
+						title="Only English letters and numbers"
 						onChange={(e)=>setPassword(e.target.value)}
 						required
 						/>
@@ -106,7 +107,8 @@ const RegisterForm = () => {
 						value={confirmPassword}
 						minLength='6'
 						maxLength='15'
-						pattern="^[a-zA-Z0-9]+$"
+						title="Only English letters and numbers"
+						pattern="^[a-zA-Z0-9]$"
 						placeholder=" "
 						onChange={(e)=>setconfirmPassword(e.target.value)}
 						required

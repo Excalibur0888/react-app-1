@@ -83,7 +83,8 @@ const LoginForm = () => {
 						placeholder=" "
 						minLength='6'
 						maxLength='15'
-						pattern='^[a-zA-Z0-9]+$'
+						pattern='^[a-zA-Z0-9]$'
+						title="Only English letters and numbers"
 						onChange={(e)=>setPassword(e.target.value)}
 						required
 						/>

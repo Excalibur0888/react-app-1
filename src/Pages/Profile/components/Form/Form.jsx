@@ -12,6 +12,8 @@ const Form = () => {
 	const [profile, setProfile] = useState(null);
 	const [file, setFile] = useState(null);
 	const [fileURL, setFileURL] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+	const loading_style = `${isLoading ? classes.loading : null}`
 
 	const auth = getAuth();
 	const {email} = useAuth();
@@ -21,9 +23,11 @@ const Form = () => {
 
 	useEffect (() => {
 		if (uid) {
+			setIsLoading(true);
 			getUserProfile(uid).then((data) => {
 				setProfile(data);
-			});
+			})
+			.finally(() => setIsLoading(false));
 		} 
 	}, []);
 
@@ -61,8 +65,10 @@ const Form = () => {
 	
 	return (
 		<div className={classes.Form}>
+			<div className={loading_style}><div></div></div>
 			<div className={classes.container}>
 			<div className={classes.description}>
+			<h1>My profile</h1>
 				<label className={classes.photo} style={{backgroundImage: `url(${fileURL || profile?.photoURL || user})`}}>
 				<input type="file" name="profilePhoto" onChange={handleFileChange}/>
 				</label>
@@ -74,20 +80,20 @@ const Form = () => {
 				<div className={classes.formbox}>
 				<form>
 				<div className={classes.inputbox}>
-				<label>First name</label>
+				<label>First name:</label>
 				<input type="text" value={profile?.firstName || ''} onChange={(e) => setProfile({ ...profile, firstName: e.target.value })} placeholder=" "/>
 				</div>
 				<div className={classes.inputbox}>
-				<label>Last name</label>
+				<label>Last name:</label>
 				<input type="text" value={profile?.lastName || ''} onChange={(e) => setProfile({ ...profile, lastName: e.target.value })} placeholder=" "/>
 				<div className={classes.inputbox}></div>
 				</div>
 				<div className={classes.inputbox}>
-				<label>Date of birth</label>
+				<label>Date of birth:</label>
 				<input type="date" value={profile?.dateOfBirth || ''} onChange={(e) => setProfile({ ...profile, dateOfBirth: e.target.value })} />
 				</div>
 				<div className={classes.inputbox}>
-				<label>Age</label>
+				<label>Age:</label>
 				<input type="number" value={profile?.age || ''} onChange={(e) => setProfile({ ...profile, age: e.target.value })} placeholder=" "/>
 				</div>
 				<div className={classes.inputbox}>
@@ -99,7 +105,7 @@ const Form = () => {
 			</select>
 				</div>
 				<div className={classes.inputbox}>
-				<label>Country</label>
+				<label>Country:</label>
 				<input type="text" value={profile?.country || ''} onChange={(e) => setProfile({ ...profile, country: e.target.value })} placeholder=" "/>
 				</div>
 				<button onClick={handleSaveChanges}>Save Changes</button>

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto+Serif&display=swap');
 .HomePage {
 	position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
 	background: lightgray;
 	animation: opacity 1s linear;
 	font-family: 'Roboto Serif', serif;
@@ -21,7 +21,7 @@
 	height: 10%;
 	font-size: 1.2em;
 	left: 11%;
-	top: 67%;
+	top: 70%;
 }
 
 .headings > div {
@@ -37,14 +37,83 @@
 	font-family: 'Lato', sans-serif;
 }
 
+.hr {
+	border-radius: 3px;
+	margin-left: 5%;
+	margin-top: 3%;
+	width: 90%;
+	height: 5px;
+	background-color: black;
+}
+
+.tutorial {
+	position: absolute;
+	top: 101%;
+	width: 100%;
+	height: 100%;
+}
+
+.interactive > h2 {
+	color: white;
+	font-size: 2em;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	text-shadow: 0 0 10px black;
+}
+
+.h3 {
+	display: flex;
+	width: 66%;
+	color: white;
+	margin-left: 8%;
+	margin-bottom: 1%;
+	justify-content: space-between;
+}
+
+.h3 > h3 {
+	font-family: 'Lato';
+	font-size: 1.6em;
+	text-shadow: 0 0 10px black;
+}
+
+.containers {
+	display: grid;
+	grid-template-columns: repeat(2, 500px);
+	grid-gap: 200px;
+	justify-content: center;
+}
+
+.interactive {
+	background: url('../../img/homebg.jpg');
+	background-position: 0 100%;
+	padding: 60px;
+	box-shadow: 0 0 10px 1px black;
+	animation: bg 1.5s ease-in-out;
+}
+
+.container {
+	width: 500px;
+	height: 350px;
+	background-position: center;
+	background-size: contain;
+	border-radius: 30px;
+	border: 1px solid gray;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.container:hover {
+	opacity: .8;
+}
+
 .footer {
 	position: absolute;
 	text-align: center;
-	padding: 15px;
+	padding: 17px;
 	width: 100%;
-	height: 50px;
+	bottom: -101%;
+	height: 60px;
 	background: rgb(192, 192, 192);
-	top: 105%;
 }
 
 @keyframes opacity {
@@ -53,5 +122,17 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes scroll {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: -100% 0;
+	}
+	100% {
+		background-position: 0 0;
 	}
 }

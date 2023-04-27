@@ -10,7 +10,7 @@ const RegisterForm = () => {
 	const dispatch = useDispatch();
 	const push = useNavigate();
 	const [email, setEmail] = useState('');
-	const [confirmPassword, setconfirmPassword] = useState('');
+	const [confirmPassword, setconfirmPassword] = useState(''); 
 	const [password, setPassword] = useState('');
 	const [rememberMe, setRememberMe] = useState(false);
 	const [visible, setvisible] = useState(false);

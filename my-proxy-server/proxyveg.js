@@ -48,7 +48,7 @@ app.get('/vegetables', async (req, res) => {
 		res.set('Cache-Control', 'public, max-age=86400'); // Кэшировать на 1 день (86400 секунд)
 		res.json({ vegNames, vegImages });
 	} catch (error) {
-		console.error(error);
+		alert('Something went wrong, please try again later');
 	}
 });
 

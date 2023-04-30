@@ -21,24 +21,16 @@
 	animation: bottom 1s ease;
 }
 
-.error_msg {
-	color: #def607;
-	position: absolute;
-	top: 35%;
-	left: 35%;
-	font-size: 14px;
-	animation: opacity .5s ease;
-}
-
-.error_msg_hidden {
-	display: none;
-}
-
 .p_equal {
-	color: #def607;
+	color: #f60707;
 	position: absolute;
-	top: 50%;
-	left: 48%;
+	text-align: center;
+	padding: 10px;
+	font-weight: 800;
+	top: 0;
+	width: 350px;
+	height: 60px;
+	background-color: #e4e4e4;
 	font-size: 14px;
 	animation: opacity .5s ease;
 }
@@ -151,5 +143,14 @@
 	}
 	to {
 		transform: translateY(0);
+	}
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;;
+	}
+	to {
+		opacity: 1;;
 	}
 }

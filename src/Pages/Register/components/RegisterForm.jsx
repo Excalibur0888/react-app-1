@@ -3,66 +3,76 @@ import classes from './RegisterForm.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setUser } from '../../../store/slices/userSlice';
+import { setEmail, setPassword, setRememberMe, setconfirmPassword } from "../../../store/slices/registerSlice";
+import { useSelector } from "react-redux";
 import { getAuth, createUserWithEmailAndPassword, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
 	const dispatch = useDispatch();
 	const push = useNavigate();
-	const [email, setEmail] = useState('');
-	const [confirmPassword, setconfirmPassword] = useState(''); 
-	const [password, setPassword] = useState('');
-	const [rememberMe, setRememberMe] = useState(false);
+	const { email, password, rememberMe, confirmPassword } = useSelector(state => state.register);
 	const [visible, setvisible] = useState(false);
 	const [visible_equal, setvisible_equal] = useState(false);
-	const styles_err = `${visible ? classes.error_msg : classes.error_msg_hidden}`;
 	const styles_equal = `${visible_equal ? classes.p_equal : classes.p_equal_hidden}`;
+	const text = `${visible ? 'Email already in use' : 'Passwords must be equal and contain at least 1 upper and 1 lower case letter and number'}`
 
 	if (rememberMe) {
-		localStorage.setItem("email", email);
-		localStorage.setItem("password", password);
+		sessionStorage.setItem("email", email);
+		sessionStorage.setItem("password", password);
+	}
+
+	function validatePassword(password) {
+		const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+		return regex.test(password);
 	}
 
 	const handleRegister = (e, email, password) => {
-		e.preventDefault()
-		if (password === confirmPassword) {
-		const auth = getAuth();
-		setPersistence(auth, browserSessionPersistence)
-		createUserWithEmailAndPassword(auth, email, password)
-		.then(({user}) => {
-			dispatch(setUser({
-				email: user.email,
-				id: user.uid,
-				token: user.accessToken,
-			}));
-			push('/')
-		})
-		.catch((error) => {
-			console.error(error);
-			if (error.code.includes('auth/email-already-in-use')) {
-				setvisible(true);
-			}
-		});	
+		e.preventDefault();
+		if (password === confirmPassword && validatePassword(password)) {
+			const auth = getAuth();
+			setPersistence(auth, browserSessionPersistence);
+			createUserWithEmailAndPassword(auth, email, password)
+				.then(({ user }) => {
+					dispatch(
+						setUser({
+							email: user.email,
+							id: user.uid,
+							token: user.accessToken,
+						})
+					);
+					push("/");
+				})
+				.catch((error) => {
+					if (error.code.includes("auth/email-already-in-use")) {
+						setvisible(true);
+						setvisible_equal(true);
+					}
+					else {
+						alert('Something went wrong, please try again later')
+					}
+				});
+		} else {
+			setvisible(false);
+			setvisible_equal(true);
 		}
-		else {
-			setvisible_equal(true)
-		}
-		}
+	};
 
 		useEffect(() => {
-			const storedEmail = localStorage.getItem("email");
-			const storedPassword = localStorage.getItem("password");
+			const storedEmail = sessionStorage.getItem("email");
+			const storedPassword = sessionStorage.getItem("password");
 			if (storedEmail && storedPassword) {
-				setEmail(storedEmail);
-				setPassword(storedPassword);
-				setRememberMe(true);
+				dispatch(setEmail(storedEmail));
+				dispatch(setPassword(storedPassword));
+				dispatch(setRememberMe(true));
 			}
 		}, []);
 
 	return (
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
-		<form action="javascript:void(0)">
+		<form>
+				<div className={styles_equal}>{text}</div>
 				<h2>Sign up</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -72,14 +82,12 @@ const RegisterForm = () => {
 						type='email' 
 						value={email}
 						placeholder=" "
-						pattern='^[a-z0-9@.]+$'
 						maxLength='30'
-						onChange={(e)=>setEmail(e.target.value)}
+						onChange={(e)=>dispatch(setEmail(e.target.value))}
 						required
 						/>
 						<label>Email</label>
 					</div>
-					<p className={styles_err}>User with this email already exists</p>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
 						<box-icon type='solid' name='user' color='rgba(255,255,255,1)'></box-icon>
@@ -90,14 +98,12 @@ const RegisterForm = () => {
 						minLength='6'
 						maxLength='15'
 						placeholder=" "
-						pattern="^[a-zA-Z0-9]$"
 						title="Only English letters and numbers"
-						onChange={(e)=>setPassword(e.target.value)}
+						onChange={(e)=>dispatch(setPassword(e.target.value))}
 						required
 						/>
 						<label>Password</label>
 					</div>
-					<p className={styles_equal}>Passwords must be equal</p>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
 						<box-icon name='lock-alt' type='solid' color='rgba(255,255,255,1)'></box-icon>
@@ -108,15 +114,14 @@ const RegisterForm = () => {
 						minLength='6'
 						maxLength='15'
 						title="Only English letters and numbers"
-						pattern="^[a-zA-Z0-9]$"
 						placeholder=" "
-						onChange={(e)=>setconfirmPassword(e.target.value)}
+						onChange={(e)=> dispatch(setconfirmPassword(e.target.value))}
 						required
 						/>
 						<label>Confirm password</label>
 					</div>
 					<div className={classes.rememberforgot}>
-						<label><input type="checkbox" checked={rememberMe} onChange={e => setRememberMe(e.target.checked)}/>Remember me</label>
+						<label><input type="checkbox" checked={rememberMe} onChange={e => dispatch(setRememberMe(e.target.checked))}/>Remember me</label>
 					</div>
 				<button 
 				type='submit' 

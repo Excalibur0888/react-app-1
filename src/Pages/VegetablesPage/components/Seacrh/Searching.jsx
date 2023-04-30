@@ -1,32 +1,65 @@
-import React, { useState } from "react";
-import classes from './Searching.module.css';
-import 'boxicons'
+import React, { useState, useCallback } from "react";
+import classes from '../../../../styles/Searching.module.css';
+import "boxicons";
+import { useDispatch } from "react-redux";
+import { setBoxContent } from "../../../../store/slices/vegetablesSlice";
+import { useSelector } from "react-redux";
 
-const Searching = (props) => {
-	const [searchQuery, setsearchQuery] = useState('')
-	const [visible, setvisible] = useState(false)
+const Searching = () => {
+	const dispatch = useDispatch();
+	const { boxContent, valueCopy } = useSelector(state => state.vegetables);
+	const [searchQuery, setSearchQuery] = useState("");
 
-	const style = `${visible ? classes.cancel_search : classes.cancel_search_invisible}`
-	const style_searching = `${props.visible ? (props.clicked ? classes.wrapper_in_burger: classes.wrapper_hidden) : classes.wrapper}`
-	function cancel_searching () {
-		props.funcSearching(props.valueCopy)
-		setsearchQuery('')
-	}
-	function find_box () {
-		props.funcSearching(props.value.filter(item => item.toLowerCase().startsWith(searchQuery.toLowerCase())))
-	}
+	const handleCancelSearch = useCallback(() => {
+		dispatch(setBoxContent(valueCopy));
+		setSearchQuery("");
+	}, [valueCopy]);
 
-	function become_visible () {
-		setvisible(true)
-	}
+	const handleSearch = useCallback(() => {
+		dispatch(setBoxContent(
+			boxContent.filter((item) =>
+				item.toLowerCase().startsWith(searchQuery.toLowerCase())
+			)
+		));
+	}, [searchQuery]);
+
+	const handleKeyPress = useCallback(
+		(event) => {
+			if (event.key === "Enter") {
+				handleSearch();
+			}
+		},
+		[handleSearch]
+	);
 
 	return (
-		<div className={style_searching}>
-		<input type='text' placeholder="Search for vegetable" value={searchQuery} onFocus={become_visible} onChange={e => {setsearchQuery(e.target.value)}} className={classes.search_bar}/>
-		<button type="button" onClick={find_box} className={classes.start_searching_btn} title="cancel"><box-icon name='search' color='rgb(1, 1, 1)'></box-icon></button>
-		<button type="button" onClick={cancel_searching} className={style}>✖</button>
+		<div className={classes.wrapper}>
+			<input
+				type="text"
+				placeholder="Search for vegetable"
+				value={searchQuery}
+				onChange={(e) => setSearchQuery(e.target.value)}
+				onKeyDown={handleKeyPress}
+				autoFocus
+				className={classes.search_bar}
+			/>
+			<button
+				type="button"
+				onClick={handleSearch}
+				className={classes.start_searching_btn}
+			>
+				<box-icon name="search" color="rgb(1, 1, 1)"></box-icon>
+			</button>
+			<button
+				type="button"
+				onClick={handleCancelSearch}
+				className={classes.cancel_search}
+				title="cancel"
+			>
+				✖
+			</button>
 		</div>
-	)
+	);
 };
 
 export default Searching;

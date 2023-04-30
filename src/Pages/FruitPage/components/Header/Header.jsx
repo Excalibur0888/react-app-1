@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './Header.module.css';
+import classes from '../../../../styles/Header.module.css';
 import { useAuth } from '../../../../hooks/use-auth'
 import { Link } from 'react-router-dom';
 const Header = (props) => {
@@ -12,6 +12,7 @@ const Header = (props) => {
 			<nav className={classes.navbar}>
 					<Link to='/'>Home</Link>
 					<Link to='/vegetables'>Vegetables</Link>
+					<Link to='/flowers'>Flowers</Link>
 			</nav>
 			<nav className={classes.username}>
 				<Link to='/profile'><div> {email} <box-icon type='solid' name='user' size="30px" color='rgba(255,255,255,1)'></box-icon></div></Link>
@@ -27,6 +28,7 @@ const Header = (props) => {
 			<nav className={classes.navbar}>
 					<Link to='/'>Home</Link>
 					<Link to='/vegetables'>Vegetables</Link>
+					<Link to='/flowers'>Flowers</Link>
 			</nav>
 			<nav className={classes.loginreg}>
 					<div><box-icon name='lock-alt' type='solid' size="20px" color='rgba(255,255,255,1)'></box-icon><Link to='/login'>Sign in</Link></div>

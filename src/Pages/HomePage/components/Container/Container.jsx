@@ -20,6 +20,7 @@ const Container = () => {
 				<Link to='/help'>Help</Link>
 				<Link to='/fruits'>Fruits</Link>
 				<Link to='/vegetables'>Vegetables</Link>
+				<Link to='/flowers'>Flowers</Link>
 				<Link to='/profile'>Profile</Link>
 			</nav>
 			<nav className={classes.username}>
@@ -46,6 +47,7 @@ const Container = () => {
 				<Link to='/help'>Help</Link>
 				<Link to='/fruits'>Fruits</Link>
 				<Link to='/vegetables'>Vegetables</Link>
+				<Link to='/flowers'>Flowers</Link>
 				<Link to='/login'>Profile</Link>
 			</nav>
 			<nav className={classes.loginreg}>

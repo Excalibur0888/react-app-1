@@ -7,11 +7,11 @@ import { removeUser } from '../../../../store/slices/userSlice'
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { getUserProfile, updateUserProfile, uploadFileAndGetURL } from "../../../../firebase";
+import { setProfile, setFile, setFileURL } from "../../../../store/slices/formSlice";
+import { useSelector } from "react-redux";
 
 const Form = () => {
-	const [profile, setProfile] = useState(null);
-	const [file, setFile] = useState(null);
-	const [fileURL, setFileURL] = useState(null);
+	const {	profile, file, fileURL} = useSelector(state => state.form);
 	const [isLoading, setIsLoading] = useState(true);
 	const loading_style = `${isLoading ? classes.loading : null}`
 
@@ -25,7 +25,7 @@ const Form = () => {
 		if (uid) {
 			setIsLoading(true);
 			getUserProfile(uid).then((data) => {
-				setProfile(data);
+				dispatch(setProfile(data));
 			})
 			.finally(() => setIsLoading(false));
 		} 
@@ -33,12 +33,12 @@ const Form = () => {
 
 	const handleFileChange = async (e) => {
 		const selectedFile = e.target.files[0];
-		setFile(selectedFile);
+		dispatch(setFile(selectedFile));
 		if (selectedFile) {
 			const downloadURL = await uploadFileAndGetURL(selectedFile);
-			setFileURL(downloadURL);
+			dispatch(setFileURL(downloadURL));
 		} else {
-			setFileURL(null);
+			dispatch(setFileURL(null));
 		}
 	};
 
@@ -48,7 +48,7 @@ const Form = () => {
 			let newProfileData = {...profile};
 			if (file) {
 				const downloadURL = await uploadFileAndGetURL(file);
-				setFileURL(downloadURL);
+				dispatch(setFileURL(downloadURL));
 				newProfileData.photoURL = downloadURL;
 			}
 			if (fileURL) {
@@ -70,7 +70,7 @@ const Form = () => {
 			<div className={classes.description}>
 			<h1>My profile</h1>
 				<label className={classes.photo} style={{backgroundImage: `url(${fileURL || profile?.photoURL || user})`}}>
-				<input type="file" name="profilePhoto" onChange={handleFileChange}/>
+				<input type="file" name="profilePhoto" accept="image/*" onChange={handleFileChange}/>
 				</label>
 				<h3>Your email:</h3>
 				<span>{email}</span>
@@ -81,24 +81,24 @@ const Form = () => {
 				<form>
 				<div className={classes.inputbox}>
 				<label>First name:</label>
-				<input type="text" value={profile?.firstName || ''} onChange={(e) => setProfile({ ...profile, firstName: e.target.value })} placeholder=" "/>
+				<input type="text" value={profile?.firstName || ''} onChange={(e) => dispatch(setProfile({ ...profile, firstName: e.target.value }))} placeholder=" "/>
 				</div>
 				<div className={classes.inputbox}>
 				<label>Last name:</label>
-				<input type="text" value={profile?.lastName || ''} onChange={(e) => setProfile({ ...profile, lastName: e.target.value })} placeholder=" "/>
+				<input type="text" value={profile?.lastName || ''} onChange={(e) => dispatch(setProfile({ ...profile, lastName: e.target.value }))} placeholder=" "/>
 				<div className={classes.inputbox}></div>
 				</div>
 				<div className={classes.inputbox}>
 				<label>Date of birth:</label>
-				<input type="date" value={profile?.dateOfBirth || ''} onChange={(e) => setProfile({ ...profile, dateOfBirth: e.target.value })} />
+				<input type="date" value={profile?.dateOfBirth || ''} onChange={(e) => dispatch(setProfile({ ...profile, dateOfBirth: e.target.value }))} />
 				</div>
 				<div className={classes.inputbox}>
 				<label>Age:</label>
-				<input type="number" value={profile?.age || ''} onChange={(e) => setProfile({ ...profile, age: e.target.value })} placeholder=" "/>
+				<input type="number" value={profile?.age || ''} onChange={(e) => dispatch(setProfile({ ...profile, age: e.target.value }))} placeholder=" "/>
 				</div>
 				<div className={classes.inputbox}>
 				<label>Gender:</label>
-				<select value={profile?.gender || ''} onChange={(e) => setProfile({ ...profile, gender: e.target.value })}>
+				<select value={profile?.gender || ''} onChange={(e) => dispatch(setProfile({ ...profile, gender: e.target.value }))}>
 				<option value="">Select Gender</option>
 				<option value="male">Male</option>
 				<option value="female">Female</option>
@@ -106,7 +106,7 @@ const Form = () => {
 				</div>
 				<div className={classes.inputbox}>
 				<label>Country:</label>
-				<input type="text" value={profile?.country || ''} onChange={(e) => setProfile({ ...profile, country: e.target.value })} placeholder=" "/>
+				<input type="text" value={profile?.country || ''} onChange={(e) => dispatch(setProfile({ ...profile, country: e.target.value }))} placeholder=" "/>
 				</div>
 				<button onClick={handleSaveChanges}>Save Changes</button>
 			</form>

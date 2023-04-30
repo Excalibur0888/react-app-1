@@ -5,6 +5,10 @@ import { Helmet } from 'react-helmet';
 import Form from "./components/Form/Form";
 
 const Profile = () => {
+	window.addEventListener('beforeunload', (e) => {
+		e.preventDefault();
+		e.returnValue = '';
+	});
 
 	return (
 		<div className="Profile">

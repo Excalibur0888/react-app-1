@@ -34,7 +34,7 @@
 
 .navbar {
 	position: absolute;
-	left: 38%;
+	left: 35%;
 }
 
 .navbar > * {
@@ -165,6 +165,7 @@
 
 .about:hover {
 	border: 1px solid rgb(188, 188, 188);
+	border-bottom: none;
 	height: 60px;
 }
 

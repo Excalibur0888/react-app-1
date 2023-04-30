@@ -100,6 +100,7 @@
 	border: 1px solid gray;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	animation: scale 1s alternate infinite;
 }
 
 .container:hover {
@@ -125,14 +126,12 @@
 	}
 }
 
-@keyframes scroll {
-	0% {
-		background-position: 0 0;
+@keyframes scale {
+	from {
+		transform: scale(1);
 	}
-	50% {
-		background-position: -100% 0;
-	}
-	100% {
-		background-position: 0 0;
+	to {
+		transform: scale(1.007);
 	}
 }
+

@@ -35,9 +35,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev": "concurrently \"npm start\" \"npm run proxy\" \"npm run proxyveg\"",
+    "dev": "concurrently \"npm start\" \"npm run proxy\" \"npm run proxyveg\" \"npm run proxyflowers\"",
     "proxy": "node my-proxy-server/proxy.js",
-    "proxyveg": "node my-proxy-server/proxyveg.js"
+    "proxyveg": "node my-proxy-server/proxyveg.js",
+		"proxyflowers": "node my-proxy-server/proxyflowers.js"
   },
   "eslintConfig": {
     "extends": [

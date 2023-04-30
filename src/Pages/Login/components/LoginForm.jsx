@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setUser } from '../../../store/slices/userSlice';
 import { getAuth, signInWithEmailAndPassword, setPersistence, browserSessionPersistence } from "firebase/auth";
+import { setEmail, setPassword, setRememberMe } from "../../../store/slices/loginSlice";
+import { useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
 	const dispatch = useDispatch();
 	const push = useNavigate();
-	const [visible, setvisible] = useState(false)
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [rememberMe, setRememberMe] = useState(false);
+	const [visible, setIsErrorVisible] = useState(false)
+	const { email, password, rememberMe } = useSelector(state => state.login);
 	const styles_err = `${visible ? classes.error_msg : classes.error_msg_hidden}`
 
 	if (rememberMe) {
-		localStorage.setItem("email", email);
-		localStorage.setItem("password", password);
+		sessionStorage.setItem("email", email);
+		sessionStorage.setItem("password", password);
 	}
 
 	const handleLogin = (e, email, password) => {
@@ -36,7 +36,7 @@ const LoginForm = () => {
 			.catch((error) => {
 				console.error(error);
 				if (error.code.includes('auth/user-not-found') || error.code.includes('auth/wrong-password') || error.code.includes('auth/invalid-email')) {
-					setvisible(true);
+					dispatch(setIsErrorVisible(true));
 				}
 				else if(error.code.includes('auth/quota-exceeded') || error.code.includes('auth/too-many-requests')) {
 					alert('Too many attempts, please try again later')
@@ -45,18 +45,18 @@ const LoginForm = () => {
 		}
 
 		useEffect(() => {
-			const storedEmail = localStorage.getItem("email");
-			const storedPassword = localStorage.getItem("password");
+			const storedEmail = sessionStorage.getItem("email");
+			const storedPassword = sessionStorage.getItem("password");
 			if (storedEmail && storedPassword) {
-				setEmail(storedEmail);
-				setPassword(storedPassword);
-				setRememberMe(true);
+				dispatch(setEmail(storedEmail));
+				dispatch(setPassword(storedPassword));
+				dispatch(setRememberMe(true));
 		}}, []);
 
 	return (
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
-			<form action="javascript:void(0)">
+			<form>
 				<h2>Sign in</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -65,7 +65,7 @@ const LoginForm = () => {
 						<input 
 						type='email' 
 						value={email}
-						onChange={(e)=>setEmail(e.target.value)}
+						onChange={(e)=>dispatch(setEmail(e.target.value))}
 						placeholder=" "
 						pattern='^[a-z0-9@.]+$'
 						required
@@ -85,13 +85,13 @@ const LoginForm = () => {
 						maxLength='15'
 						pattern='^[a-zA-Z0-9]$'
 						title="Only English letters and numbers"
-						onChange={(e)=>setPassword(e.target.value)}
+						onChange={(e)=>dispatch(setPassword(e.target.value))}
 						required
 						/>
 						<label>Password</label>
 					</div>
 					<div className={classes.rememberforgot}>
-						<label><input type="checkbox" onChange={(e) => setRememberMe(e.target.checked)}/>Remember me</label>
+						<label><input type="checkbox" onChange={(e) => dispatch(setRememberMe(e.target.checked))}/>Remember me</label>
 					</div>
 				<button 
 				type='button' 

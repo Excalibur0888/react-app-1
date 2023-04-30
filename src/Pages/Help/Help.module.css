@@ -156,10 +156,6 @@
 	line-height: 40px;
 }
 
-.containers > div > a:hover {
-	font-size: 1.4em;
-}
-
 .div_footer {
 	position: absolute;
 	top: 85%;

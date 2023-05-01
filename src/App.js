@@ -10,7 +10,8 @@ import { setUser } from './store/slices/userSlice';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import './App.css'
 import Vegetables from "./Pages/VegetablesPage/Vegetables";
-import Flowers from "./Pages/FlowersPage/Flowers"
+import Flowers from "./Pages/FlowersPage/Flowers";
+import Trees from "./Pages/TreesPage/Trees"
 import Profile from "./Pages/Profile/Profile";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
 			<Route exact path="/help" element={<Help />} />
 			<Route exact path="/profile" element={<Profile />} />
 			<Route exact path="/flowers" element={<Flowers />} />
+			<Route exact path="/trees" element={<Trees />} />
 		</Routes>
 	)
 }

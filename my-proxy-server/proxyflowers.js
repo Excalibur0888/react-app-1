@@ -57,6 +57,8 @@ app.get('/flowers', async (req, res) => {
 	}
 });
 
-app.listen(5002, () => {
-	console.log('Proxy server is listening on port 5002');
+app.listen(5001, () => {
+	console.log('Proxy server is listening on port 5001');
+}).on('error', (error) => {
+	console.error('Error starting server:', error);
 });

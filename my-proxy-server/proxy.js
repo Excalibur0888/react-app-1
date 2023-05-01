@@ -53,4 +53,6 @@ app.get('/api', async (req, res) => {
 
 app.listen(5000, () => {
 	console.log('Proxy server is listening on port 5000');
+}).on('error', (error) => {
+	console.error('Error starting server:', error);
 });

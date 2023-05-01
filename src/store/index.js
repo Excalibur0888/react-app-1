@@ -4,8 +4,9 @@ import vegetablesReducer from "./slices/vegetablesSlice";
 import fruitsReducer from "./slices/fruitsSlice";
 import flowersReducer from './slices/flowersSlice';
 import formReducer from './slices/formSlice';
-import loginReducer from './slices/loginSlice'
-import registerReducer from './slices/registerSlice'
+import loginReducer from './slices/loginSlice';
+import registerReducer from './slices/registerSlice';
+import treesReducer from './slices/treesSlice'
 
 export const store = configureStore ({
 	reducer: {
@@ -16,5 +17,6 @@ export const store = configureStore ({
 		form: formReducer,
 		login: loginReducer,
 		register: registerReducer,
+		trees: treesReducer,
 	}
 });

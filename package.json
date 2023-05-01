@@ -35,10 +35,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev": "concurrently \"npm start\" \"npm run proxy\" \"npm run proxyveg\" \"npm run proxyflowers\"",
+    "dev": "concurrently \"npm start\" \"npm run proxy\" \"npm run proxyveg\" \"npm run proxyflowers\" \"npm run proxytrees\"",
     "proxy": "node my-proxy-server/proxy.js",
     "proxyveg": "node my-proxy-server/proxyveg.js",
-		"proxyflowers": "node my-proxy-server/proxyflowers.js"
+		"proxyflowers": "node my-proxy-server/proxyflowers.js",
+		"proxytrees":  "node my-proxy-server/proxytrees.js"
   },
   "eslintConfig": {
     "extends": [

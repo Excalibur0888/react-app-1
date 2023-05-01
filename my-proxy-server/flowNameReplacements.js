@@ -38,6 +38,7 @@ module.exports = {
 	"Monsoon lily": "Lilium mackliniae",
 	"Narcissus": "Narcissus (plant)",
 	"Night Blooming Jasmine": "Cestrum nocturnum",
+	"Orange Blossom": "Blossom",
 	"Orange Tiger Lily": "Lilium bulbiferum",
 	"Peacock Flower": "Caesalpinia pulcherrima",
 	"Periwinkle": "Catharanthus",

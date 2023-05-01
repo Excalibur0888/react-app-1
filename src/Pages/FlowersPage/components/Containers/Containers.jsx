@@ -13,7 +13,7 @@ const Containers = () => {
 	const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
-		axios.get('http://localhost:5002/flowers')
+		axios.get('http://localhost:5001/flowers')
 			.then(response => {
 				setIsLoading(false)
 				dispatch(setBoxContent(response.data.flowNames));
@@ -26,7 +26,7 @@ const Containers = () => {
 		if (isLoading) {
 			return (
 				<div className={classes.loading__title}><br/>
-				<h1 className={classes.loading__heading}>flowers is loading, please stand by...</h1>
+				<h1 className={classes.loading__heading}>Flowers is loading, please stand by...</h1>
 				<div className={classes.loading}></div>
 				</div>
 			)
@@ -34,8 +34,7 @@ const Containers = () => {
 			return (
 				<div className='wrapper'>
 				<h3 className={classes.container__name}>
-					Some of this items considered to be flowers, but according to the scientific definition some of them are frutis. <br/>
-					The most popular types of flowers were presented here, a complete list can be found <a href='https://en.wikipedia.org/wiki/List_of_flowers' target='_blank'>here</a></h3>
+					The most popular types of flowers were presented here, a complete list can be found <a href='https://en.wikipedia.org/wiki/Category:Lists_of_flowers' target='_blank'>here</a></h3>
 				<div className={classes.container}>
 					{boxContent.map((flower, index) => (
 						<div

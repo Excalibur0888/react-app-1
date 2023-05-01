@@ -39,6 +39,10 @@
 	margin-right: 30px;
 }
 
+.navbar {
+	margin-left: 5%;
+}
+
 .navbar > *::after {
 	content: '';
 	position: absolute;

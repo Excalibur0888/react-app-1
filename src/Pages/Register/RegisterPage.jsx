@@ -17,6 +17,7 @@ const RegisterPage = () => {
 				<Link to='/fruits'>Fruits</Link>
 				<Link to='/vegetables'>Vegetables</Link>
 				<Link to='/flowers'>Flowers</Link>
+				<Link to='/trees'>Trees</Link>
 				<Link to='/help'>Help</Link>
 			</nav>
 		</header>

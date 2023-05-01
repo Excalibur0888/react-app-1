@@ -4,30 +4,28 @@ const axios = require('axios');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-const vegNameReplacements = require('./vegNameReplacements');
+const treeNameReplacements = require('./treeNameReplacements');
 
 const app = express();
 
 app.use(cors());
-app.get('/vegetables', async (req, res) => {
+app.get('/trees', async (req, res) => {
 	try { 
-		const vegResponse = await axios.get('https://onlymyenglish.com/vegetables-name-english/');
-		const vegDom = new JSDOM(vegResponse.data);
-		const vegList = vegDom.window.document.querySelectorAll('.entry-content .wp-block-table table tbody tr td');
-		const vegNames = (Array.from(vegList).map((el) => el.textContent.trim())).filter(el => el.length > 3);
-
-		vegNames.forEach((veg, index) => {
-			const replacement = vegNameReplacements[veg];
+		const treeResponse = await axios.get('https://homesthetics.net/types-of-trees/');
+		const treeDom = new JSDOM(treeResponse.data);
+		const treeList = treeDom.window.document.querySelectorAll('.entry-content ol li h3 span b');
+		const treeNames = Array.from(treeList).map((el) => el.textContent.trim().replace(/ Tree$/, ''));
+		treeNames.forEach((tree, index) => {
+			const replacement = treeNameReplacements[tree];
 			if (replacement) {
-				vegNames[index] = replacement;
+				treeNames[index] = replacement;
 			}
 		});
-
-		vegNames.sort()
-		const vegImages = await Promise.all(
-			vegNames.map(async (veg) => {
+		treeNames.sort()
+		const treeImages = await Promise.all(
+			treeNames.map(async (tree) => {
 				try {
-					const response_img = await axios.get(`https://en.wikipedia.org/wiki/${veg}`);
+					const response_img = await axios.get(`https://en.wikipedia.org/wiki/${tree}`);
 					const dom_img = new JSDOM(response_img.data);
 					const imageUrl = dom_img.window.document.querySelector('.infobox tbody tr td a img')?.src;
 					const imageUrl_two = dom_img.window.document.querySelector('.thumbimage')?.src;
@@ -46,14 +44,14 @@ app.get('/vegetables', async (req, res) => {
 
 		res.set('Access-Control-Allow-Origin', '*');
 		res.set('Cache-Control', 'public, max-age=86400'); // Кэшировать на 1 день (86400 секунд)
-		res.json({ vegNames, vegImages });
+		res.json({ treeNames, treeImages });
 	} catch (error) {
 		alert('Something went wrong, please try again later');
 	}
 });
 
-app.listen(5002, () => {
-	console.log('Proxy server is listening on port 5002');
+app.listen(5003, () => {
+	console.log('Proxy server is listening on port 5003');
 }).on('error', (error) => {
 	console.error('Error starting server:', error);
 });

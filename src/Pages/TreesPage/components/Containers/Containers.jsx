@@ -2,22 +2,22 @@ import React, { useEffect, useState } from 'react';
 import classes from '../../../../styles/Containers.module.css';
 import axios from 'axios';
 import { useDispatch } from "react-redux";
-import { setValueCopy, setVegetablesImages, setBoxContent } from "../../../../store/slices/vegetablesSlice";
+import { setValueCopy, settreesImages, setBoxContent } from "../../../../store/slices/treesSlice";
 import { useSelector } from "react-redux";
 
 const Containers = () => {
 	const dispatch = useDispatch();
-	const { boxContent, valueCopy, vegetablesImages } = useSelector(state => state.vegetables);
+	const { boxContent, valueCopy, treesImages } = useSelector(state => state.trees);
 	const arr_length = valueCopy.length
 	const styles = `${boxContent.length === arr_length ? classes.box : classes.box_filtered}`
 	const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
-		axios.get('http://localhost:5002/vegetables')
+		axios.get('http://localhost:5003/trees')
 			.then(response => {
-				dispatch(setBoxContent(response.data.vegNames));
-				dispatch(setValueCopy(response.data.vegNames));
-				dispatch(setVegetablesImages(response.data.vegImages));
+				dispatch(setBoxContent(response.data.treeNames));
+				dispatch(setValueCopy(response.data.treeNames));
+				dispatch(settreesImages(response.data.treeImages));
 				setIsLoading(false)
 			})
 			.catch(error => alert('Something went wrong, please try again later', error));
@@ -26,7 +26,7 @@ const Containers = () => {
 	if (isLoading) {
 		return (
 			<div className={classes.loading__title}><br/>
-			<h1 className={classes.loading__heading}>Vegetables is loading, please stand by...</h1>
+			<h1 className={classes.loading__heading}>trees is loading, please stand by...</h1>
 			<div className={classes.loading}></div>
 			</div>
 		)
@@ -34,21 +34,21 @@ const Containers = () => {
 		return (
 			<div className='wrapper'>
 			<h3 className={classes.container__name}>
-				Some of this items are fruits, according to the scientific definition, but sometimes considered to be vegetables. <br/>
-				The most popular types of vegetables were presented here, a complete list can be found <a href='https://en.wikipedia.org/wiki/List_of_culinary_vegetables' target='_blank'>here</a></h3>
+				Some pictures show fruits for a better understanding of which tree we are talking about<br/>
+				The most popular types of trees were presented here, a complete list can be found <a href='https://en.wikipedia.org/wiki/List_of_trees' target='_blank'>here</a></h3>
 			<div className={classes.container}>
-				{boxContent.map((vegetable, index) => (
+				{boxContent.map((tree, index) => (
 					<div
 					className={styles}
 					key={index}
 					style={{
 						...(boxContent.length === arr_length
-							? { backgroundImage: `url(${vegetablesImages[index] || ''})` }
+							? { backgroundImage: `url(${treesImages[index] || ''})` }
 							: { background: 'rgb(65, 65, 65)' }
 						)
 					}}>
-					<a href={`https://en.wikipedia.org/wiki/${vegetable}`} target="_blank" rel="noreferrer">
-						{vegetable}
+					<a href={`https://en.wikipedia.org/wiki/${tree}`} target="_blank" rel="noreferrer">
+						{tree}
 					</a>
 				</div>
 				))}
@@ -57,7 +57,7 @@ const Containers = () => {
 		)
 	} else {
 		return (
-			<h1 className={classes.not_found}>Vegetables not found :(</h1>
+			<h1 className={classes.not_found}>trees not found :(</h1>
 		)
 	}
 };

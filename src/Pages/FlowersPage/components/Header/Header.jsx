@@ -10,9 +10,15 @@ const Header = (props) => {
 			<header className={classes.header}>	
 			<a href={window.location.href} className={classes.header__name}>Flowers guide</a>
 			<nav className={classes.navbar}>
-					<Link to='/'>Home</Link>
-					<Link to='/fruits'>Fruits</Link>
-					<Link to='/vegetables'>Vegetables</Link>
+			<Link to='/'>Home</Link>
+			<div className={classes.dropdown}>
+					<div className={classes.dropbtn}>Choose section</div>
+					<div className={classes.dropdownContent}>
+						<Link to='/fruits'>Fruits</Link>
+						<Link to='/vegetables'>Vegetables</Link>
+						<Link to='/trees'>Trees</Link>
+					</div>
+				</div>
 			</nav>
 			<nav className={classes.username}>
 				<Link to='/profile'><div> {email} <box-icon type='solid' name='user' size="30px" color='rgba(255,255,255,1)'></box-icon></div></Link>
@@ -26,9 +32,15 @@ const Header = (props) => {
 			<header className={classes.header}>	
 			<a href={window.location.href} className={classes.header__name}>Flowers guide</a>
 			<nav className={classes.navbar}>
-					<Link to='/'>Home</Link>
-					<Link to='/fruits'>Fruits</Link>
-					<Link to='/vegetables'>Vegetables</Link>
+			<Link to='/'>Home</Link>
+			<div className={classes.dropdown}>
+					<div className={classes.dropbtn}>Choose section</div>
+					<div className={classes.dropdownContent}>
+						<Link to='/fruits'>Fruits</Link>
+						<Link to='/vegetables'>Vegetables</Link>
+						<Link to='/trees'>Trees</Link>
+					</div>
+				</div>
 			</nav>
 				<nav className={classes.loginreg}>
 					<div><box-icon name='lock-alt' type='solid' size="20px" color='rgba(255,255,255,1)'></box-icon><Link to='/login'>Sign in</Link></div>

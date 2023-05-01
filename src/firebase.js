@@ -32,7 +32,7 @@ export const getUserProfile = async (userId) => {
 	if (docSnap.exists()) {
 		return docSnap.data();
 	} else {
-		throw new Error("User not found");
+		return '';
 	}
 };
 

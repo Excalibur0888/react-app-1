@@ -36,7 +36,7 @@ const LoginForm = () => {
 			.catch((error) => {
 				console.error(error);
 				if (error.code.includes('auth/user-not-found') || error.code.includes('auth/wrong-password') || error.code.includes('auth/invalid-email')) {
-					dispatch(setIsErrorVisible(true));
+					setIsErrorVisible(true);
 				}
 				else if(error.code.includes('auth/quota-exceeded') || error.code.includes('auth/too-many-requests')) {
 					alert('Too many attempts, please try again later')

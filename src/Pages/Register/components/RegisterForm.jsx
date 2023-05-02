@@ -12,10 +12,9 @@ const RegisterForm = () => {
 	const dispatch = useDispatch();
 	const push = useNavigate();
 	const { email, password, rememberMe, confirmPassword } = useSelector(state => state.register);
-	const [visible, setvisible] = useState(false);
 	const [visible_equal, setvisible_equal] = useState(false);
-	const styles_equal = `${visible_equal ? classes.p_equal : classes.p_equal_hidden}`;
-	const text = `${visible ? 'Email already in use' : 'Passwords must be equal and contain at least 1 upper and 1 lower case letter and number'}`
+	const styles_equal = `${visible_equal ? classes.div_equal : classes.div_equal_hidden}`;
+	const [text, settext] = useState('');
 
 	if (rememberMe) {
 		sessionStorage.setItem("email", email);
@@ -45,16 +44,17 @@ const RegisterForm = () => {
 				})
 				.catch((error) => {
 					if (error.code.includes("auth/email-already-in-use")) {
-						setvisible(true);
 						setvisible_equal(true);
+						settext('Email already in use')
 					}
 					else {
-						alert('Something went wrong, please try again later')
+						setvisible_equal(true);
+						settext('Incorrect Email')
 					}
 				});
 		} else {
-			setvisible(false);
 			setvisible_equal(true);
+			settext('Passwords must be equal and contain at least 1 upper and 1 lower case letter and number')
 		}
 	};
 

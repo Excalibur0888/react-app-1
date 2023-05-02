@@ -26,7 +26,7 @@ const Containers = () => {
 	if (isLoading) {
 		return (
 			<div className={classes.loading__title}><br/>
-			<h1 className={classes.loading__heading}>trees is loading, please stand by...</h1>
+			<h1 className={classes.loading__heading}>Trees is loading, please stand by...</h1>
 			<div className={classes.loading}></div>
 			</div>
 		)

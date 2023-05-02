@@ -56,7 +56,7 @@ const Containers = () => {
 			)
 		} else {
 			return (
-				<h1 className={classes.not_found}>flowers not found :(</h1>
+				<h1 className={classes.not_found}>Flowers not found :(</h1>
 			)
 		}
 };

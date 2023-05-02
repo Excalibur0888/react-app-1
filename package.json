@@ -16,7 +16,6 @@
     "js-cookie": "^3.0.1",
     "jsdom": "^21.1.1",
     "lodash": "^4.17.21",
-    "mysql2": "^3.2.1",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
@@ -38,8 +37,8 @@
     "dev": "concurrently \"npm start\" \"npm run proxy\" \"npm run proxyveg\" \"npm run proxyflowers\" \"npm run proxytrees\"",
     "proxy": "node my-proxy-server/proxy.js",
     "proxyveg": "node my-proxy-server/proxyveg.js",
-		"proxyflowers": "node my-proxy-server/proxyflowers.js",
-		"proxytrees":  "node my-proxy-server/proxytrees.js"
+    "proxyflowers": "node my-proxy-server/proxyflowers.js",
+    "proxytrees": "node my-proxy-server/proxytrees.js"
   },
   "eslintConfig": {
     "extends": [

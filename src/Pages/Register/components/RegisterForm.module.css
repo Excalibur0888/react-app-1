@@ -21,21 +21,23 @@
 	animation: bottom 1s ease;
 }
 
-.p_equal {
+.div_equal {
+	display: flex;
 	color: #f60707;
 	position: absolute;
-	text-align: center;
+	justify-content: center;
+	align-items: center;
 	padding: 10px;
 	font-weight: 800;
 	top: 0;
 	width: 350px;
 	height: 60px;
-	background-color: #e4e4e4;
+	background-color: rgba(255, 255, 255, 0.5);
 	font-size: 14px;
 	animation: opacity .5s ease;
 }
 
-.p_equal_hidden {
+.div_equal_hidden {
 	display: none;
 }
 

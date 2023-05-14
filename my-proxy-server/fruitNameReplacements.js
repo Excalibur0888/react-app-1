@@ -5,6 +5,7 @@ module.exports = {
 	Orange: "Orange fruit",
 	Plantain: "Plantain fruit",
 	Mandarine: "Mandarin orange",
+	"Gac Fruit": "Gac",
 	Cacao: "Theobroma cacao",
 	"Grewia asiatica (phalsa or falsa)": "Grewia asiatica",
 	Date: "Date palm",

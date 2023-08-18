@@ -36,11 +36,15 @@ app.get('/flowers', async (req, res) => {
 					const dom_img = new JSDOM(response_img.data);
 					const imageUrl = dom_img.window.document.querySelector('.infobox tbody tr td a img')?.src;
 					const imageUrl_two = dom_img.window.document.querySelector('.thumbimage')?.src;
+					const imageUrl_three = dom_img.window.document.querySelector('.mw-file-element')?.src;
 					if (imageUrl) {
 						return imageUrl;
 					}
-					else {
+					else if (imageUrl_two) {
 						return imageUrl_two;
+					}
+					else {
+						return imageUrl_three
 					}
 				} catch (error) {
 					console.error(error);

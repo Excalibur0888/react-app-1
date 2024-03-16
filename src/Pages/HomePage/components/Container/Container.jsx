@@ -3,6 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import { useAuth } from '../../../../hooks/use-auth'
 import classes from './Container.module.css';
 import 'boxicons'
+import Nav from "../../../Nav";
 
 const Container = () => {
 	const navigate = useNavigate();
@@ -52,14 +53,11 @@ const Container = () => {
 				<Link to='/trees'>Trees</Link>
 				<Link to='/login'>Profile</Link>
 			</nav>
-			<nav className={classes.loginreg}>
-				<div><box-icon name='lock-alt' type='solid' size="20px" color='rgba(255,255,255,1)'></box-icon><Link to='/login'>Sign in</Link></div>
-				<div><box-icon name='lock-alt' type='solid' size="20px" color='rgba(255,255,255,1)'></box-icon><Link to='/register'>Sign up</Link></div>
-			</nav>
+			<Nav/>
 			</header>
 			<h1>Welcome to <box-icon name="rocket" size="4em" color='rgba(255,255,255,1)'></box-icon>Silentlib</h1>
 			<h2>Unlock the world's knowledge</h2>
-			<button onClick={() => navigate('/register')}><box-icon name='lock-alt' type='solid' size="15px" color='rgba(255,255,255,1)'></box-icon> SIGN UP FREE</button>
+			<button onClick={() => navigate('/register')}><box-icon name='lock-alt' type='solid' size="15px" color='rgba(255,255,255,1)'></box-icon> Sign up</button>
 			<div className={classes.about} onClick={() => navigate('/help')}>Contact support <box-icon name='message-rounded' size="23px" color='rgba(255,255,255,1)'></box-icon></div>
 		</div>
 	)

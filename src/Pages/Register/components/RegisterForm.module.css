@@ -21,26 +21,6 @@
 	animation: bottom 1s ease;
 }
 
-.div_equal {
-	display: flex;
-	color: #f60707;
-	position: absolute;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
-	font-weight: 800;
-	top: 0;
-	width: 350px;
-	height: 60px;
-	background-color: rgba(255, 255, 255, 0.5);
-	font-size: 14px;
-	animation: opacity .5s ease;
-}
-
-.div_equal_hidden {
-	display: none;
-}
-
 .formbox h2 {
 	font-size: 32px;
 	text-align: center;
@@ -82,7 +62,6 @@
   top: -5px;
 }
 
-
 .inputbox .icon {
 	position: absolute;
 	top: 13px;
@@ -101,6 +80,16 @@
 .rememberforgot label input {
 	accent-color: #e4e4e4;
 	margin-right: 3px;
+}
+
+.error_msg {
+	color: #def607;
+	font-size: 1cem;
+	animation: opacity .5s ease;
+}
+
+.error_msg_hidden {
+	display: none;
 }
 
 .btn {

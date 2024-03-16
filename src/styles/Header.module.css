@@ -1,19 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&family=Sniglet&display=swap');
 /* стили заголовка */
 .header{
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 55px;
 	position: fixed;
-	background: linear-gradient(45deg, rgba(179, 178, 178, 0.7), rgb(195, 195, 195), rgba(179, 178, 178, 0.7));
-	padding: 5px;
+	padding: 15px;
 	font-size: 40px;
+	background: rgba(162, 162, 162, .7);
 	box-shadow: 0 0 10px 0 rgb(63, 63, 63);
 	z-index: 4;
 }
@@ -38,8 +34,7 @@
 }
 
 .navbar {
-	position: absolute;
-	left: 65%;
+	margin-left: 40%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -85,20 +80,18 @@
 
 .dropdownContent a {
 	color: black;
+	background: rgba(162, 162, 162, .7);
 	padding: 12px 16px;
 	color: white;
-	background-color: rgb(180, 180, 180);
 	text-decoration: none;
 	display: block;
 }
 
 .dropdownContent a:hover {
-	background-color: rgb(154, 154, 154)
+	opacity: .8;
 }
 
 .header__name {
-	position: absolute;
-	left: 41.5%;
 	font-family: 'Sniglet', cursive;
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
 	color: white;
@@ -107,9 +100,6 @@
 }
 
 .username {
-	position: absolute;
-	top: 5%;
-	left: 80%;
 	text-align: center;
 	padding: 0 10px;
 	color: white;
@@ -126,19 +116,13 @@
 }
 
 .loginreg {
-	position: absolute;
-	left: 86%;
-	width: 13%;
+	width: 150px;
+	gap: 10px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.loginreg > * {
-	padding: 0 2px;
-	border: 1px solid white;
-}
-
-.loginreg > * > *{
+.loginreg > *{
 	text-decoration: none;
 	font-size: 17px;
 	vertical-align: middle;

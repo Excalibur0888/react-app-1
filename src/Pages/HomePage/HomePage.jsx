@@ -1,7 +1,5 @@
 import React from 'react';
 import classes from './HomePage.module.css';
-import { Helmet } from 'react-helmet';
-import favicon from '../../img/favicon.jpg';
 import { Link } from 'react-router-dom';
 import Container from './components/Container/Container';
 import TypingText from './components/TypingText/TypingText'
@@ -14,10 +12,6 @@ import img5 from '../../img/Screenshot_2.png'
 const HomePage = () => {
 	return (
 		<div className={classes.HomePage}>
-			<Helmet>
-				<title>Silentlib</title>
-				<link rel="icon" type="image/ico" href={favicon} />
-			</Helmet>
 			<Container />
 			<div className={classes.headings}>
 				<div>
@@ -62,7 +56,7 @@ const HomePage = () => {
 					<TypingText phr1="All this guides are linked to Wikipedia." phr2="Moreover it's comfortable to learn and free."/>
 				</div>
 			</div>
-			<footer className={classes.footer}>Copyright 2023. ©Silentlib. All rights reserved</footer>
+			<footer className={classes.footer}>Copyright 2024. ©Silentlib. All rights reserved</footer>
 		</div>
 	);
 };

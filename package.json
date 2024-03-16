@@ -8,13 +8,14 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.3.5",
+    "axios": "^1.6.8",
     "boxicons": "^2.1.4",
     "cors": "^2.8.5",
+    "express": "^4.18.3",
     "firebase": "^9.20.0",
     "http-proxy-middleware": "^2.0.6",
-    "js-cookie": "^3.0.1",
-    "jsdom": "^21.1.1",
+    "js-cookie": "^3.0.5",
+    "jsdom": "^21.1.2",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
@@ -23,7 +24,7 @@
     "react-helmet": "^6.1.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.5",
     "redux": "^4.2.1",
     "request": "^2.88.2",
@@ -59,6 +60,6 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^8.0.1"
+    "concurrently": "^8.2.2"
   }
 }

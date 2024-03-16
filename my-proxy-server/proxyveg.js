@@ -14,7 +14,7 @@ app.get('/vegetables', async (req, res) => {
 		const vegResponse = await axios.get('https://onlymyenglish.com/vegetables-name-english/');
 		const vegDom = new JSDOM(vegResponse.data);
 		const vegList = vegDom.window.document.querySelectorAll('.entry-content .wp-block-table table tbody tr td');
-		const vegNames = (Array.from(vegList).map((el) => el.textContent.trim())).filter(el => el.length > 3);
+		const vegNames = (Array.from(vegList).map((el) => el.textContent.trim())).filter(el => el.length>3);
 
 		vegNames.forEach((veg, index) => {
 			const replacement = vegNameReplacements[veg];

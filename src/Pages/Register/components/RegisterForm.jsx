@@ -12,17 +12,21 @@ const RegisterForm = () => {
 	const dispatch = useDispatch();
 	const push = useNavigate();
 	const { email, password, rememberMe, confirmPassword } = useSelector(state => state.register);
-	const [visible_equal, setvisible_equal] = useState(false);
-	const styles_equal = `${visible_equal ? classes.div_equal : classes.div_equal_hidden}`;
+	const [visible, setvisible] = useState(false);
+	const styles_err = `${visible ? classes.error_msg : classes.error_msg_hidden}`
 	const [text, settext] = useState('');
 
 	if (rememberMe) {
 		sessionStorage.setItem("email", email);
 		sessionStorage.setItem("password", password);
 	}
+	else {
+		sessionStorage.removeItem(email);
+		sessionStorage.removeItem(password);
+	}
 
 	function validatePassword(password) {
-		const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+		const regex = /^[a-zA-Z\d\W_]{8,}$/;
 		return regex.test(password);
 	}
 
@@ -44,17 +48,20 @@ const RegisterForm = () => {
 				})
 				.catch((error) => {
 					if (error.code.includes("auth/email-already-in-use")) {
-						setvisible_equal(true);
+						setvisible(true);
 						settext('Email already in use')
 					}
 					else {
-						setvisible_equal(true);
+						setvisible(true);
 						settext('Incorrect Email')
 					}
 				});
+		} else if (password !== confirmPassword) {
+			setvisible(true);
+			settext('Passwords must be equal')
 		} else {
-			setvisible_equal(true);
-			settext('Passwords must be equal and contain at least 1 upper and 1 lower case letter and number')
+			setvisible(true);
+			settext('Password must be at least 8 characters');
 		}
 	};
 
@@ -72,7 +79,6 @@ const RegisterForm = () => {
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
 		<form>
-				<div className={styles_equal}>{text}</div>
 				<h2>Sign up</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -103,6 +109,7 @@ const RegisterForm = () => {
 						required
 						/>
 						<label>Password</label>
+						<p className={styles_err}>{text}</p>
 					</div>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>

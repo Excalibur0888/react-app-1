@@ -20,7 +20,7 @@ const Containers = () => {
 				dispatch(settreesImages(response.data.treeImages));
 				setIsLoading(false)
 			})
-			.catch(error => alert('Something went wrong, please try again later', error));
+			.catch(error => null);
 	}, []);
 
 	if (isLoading) {

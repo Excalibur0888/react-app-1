@@ -2,6 +2,7 @@ import React from "react";
 import classes from '../../../../styles/Header.module.css';
 import { useAuth } from '../../../../hooks/use-auth'
 import { Link } from 'react-router-dom';
+import Nav from "../../../Nav";
 const Header = (props) => {
 	const {isAuth, email} = useAuth();
 
@@ -42,10 +43,7 @@ const Header = (props) => {
 					</div>
 				</div>
 			</nav>
-			<nav className={classes.loginreg}>
-				<div><box-icon name='lock-alt' type='solid' size="20px" color='rgba(255,255,255,1)'></box-icon><Link to='/login'>Sign in</Link></div>
-				<div><box-icon name='lock-alt' type='solid' size="20px" color='rgba(255,255,255,1)'></box-icon><Link to='/register'>Sign up</Link></div>
-			</nav>
+			<Nav/>
 			{props.children}
 			</header>
 		)

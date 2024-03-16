@@ -28,7 +28,7 @@ const RegisterPage = () => {
 			<h2 className={classes.logo}><box-icon name="rocket" color='rgba(255,255,255,1)'></box-icon> Silentlib</h2>
 
 				<div className={classes.textsci}>
-					<h2>Good afternoon<br/><span>Please sign up</span></h2>
+					<h2>Hello<br/><span>Please sign up</span></h2>
 				
 					<p>This is an encyclopedia website that provides a vast collection of knowledge on a wide range of topics. The site aims to provide accurate and up-to-date information that is accessible to everyone, making it an invaluable resource for students, researchers, and curious minds alike.</p>
 				

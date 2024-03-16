@@ -1,4 +1,3 @@
-
 module.exports = {
 	"Lady’s finger" : "Okra",
 	"Chilli" : "Chilli pepper",

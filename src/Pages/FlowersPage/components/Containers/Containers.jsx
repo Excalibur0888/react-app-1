@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import classes from '../../../../styles/Containers.module.css';
 import axios from 'axios';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setValueCopy, setFlowersImages, setBoxContent } from "../../../../store/slices/flowersSlice";
-import { useSelector } from "react-redux";
 
 const Containers = () => {
 	const dispatch = useDispatch();
@@ -34,7 +33,7 @@ const Containers = () => {
 			return (
 				<div className='wrapper'>
 				<h3 className={classes.container__name}>
-					The most popular types of flowers were presented here, a complete list can be found <a href='https://en.wikipedia.org/wiki/Category:Lists_of_flowers' target='_blank'>here</a></h3>
+					The most popular types of flowers were presented here, a complete list can be found <a href='https://en.wikipedia.org/wiki/Category:Lists_of_flowers' target='_blank' rel='noreferrer'>here</a></h3>
 				<div className={classes.container}>
 					{boxContent.map((flower, index) => (
 						<div

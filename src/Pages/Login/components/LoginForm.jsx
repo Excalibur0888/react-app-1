@@ -19,6 +19,10 @@ const LoginForm = () => {
 		sessionStorage.setItem("email", email);
 		sessionStorage.setItem("password", password);
 	}
+	else {
+		sessionStorage.removeItem(email);
+		sessionStorage.removeItem(password);
+	}
 
 	const handleLogin = (e, email, password) => {
 		e.preventDefault()

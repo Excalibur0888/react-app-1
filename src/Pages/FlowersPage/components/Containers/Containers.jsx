@@ -3,6 +3,7 @@ import classes from '../../../../styles/Containers.module.css';
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 import { setValueCopy, setFlowersImages, setBoxContent } from "../../../../store/slices/flowersSlice";
+import LoadingPage from '../../../LoadingPage/LoadingPage';
 
 const Containers = () => {
 	const dispatch = useDispatch();
@@ -24,10 +25,7 @@ const Containers = () => {
 
 		if (isLoading) {
 			return (
-				<div className={classes.loading__title}><br/>
-				<h1 className={classes.loading__heading}>Flowers is loading, please stand by...</h1>
-				<div className={classes.loading}></div>
-				</div>
+				<LoadingPage title={"Flowers"}/>
 			)
 		} else if (boxContent.length !== 0) {
 			return (

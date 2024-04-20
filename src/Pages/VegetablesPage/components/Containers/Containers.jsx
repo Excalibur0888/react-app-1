@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useDispatch } from "react-redux";
 import { setValueCopy, setVegetablesImages, setBoxContent } from "../../../../store/slices/vegetablesSlice";
 import { useSelector } from "react-redux";
+import LoadingPage from '../../../LoadingPage/LoadingPage';
 
 const Containers = () => {
 	const dispatch = useDispatch();
@@ -25,10 +26,7 @@ const Containers = () => {
 
 	if (isLoading) {
 		return (
-			<div className={classes.loading__title}><br/>
-			<h1 className={classes.loading__heading}>Vegetables is loading, please stand by...</h1>
-			<div className={classes.loading}></div>
-			</div>
+			<LoadingPage title={"Vegetables"}/>
 		)
 	} else if (boxContent.length !== 0) {
 		return (

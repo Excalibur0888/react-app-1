@@ -37,14 +37,14 @@ function App() {
 	return (
 		<Routes>
 			<Route exact path="/" element={<HomePage />} />
-			<Route exact path="/fruits" element={<FruitPage />} />
-			<Route exact path="/vegetables" element={<Vegetables />} />
+			<Route exact path="/about" element={<FruitPage />} />
+			<Route exact path="/gallery" element={<Vegetables />} />
 			<Route exact path="/login" element={<LoginPage />} />
 			<Route exact path="/register" element={<RegisterPage />} />
 			<Route exact path="/help" element={<Help />} />
 			<Route exact path="/profile" element={<Profile />} />
-			<Route exact path="/flowers" element={<Flowers />} />
-			<Route exact path="/trees" element={<Trees />} />
+			<Route exact path="/services" element={<Flowers />} />
+			<Route exact path="/reviews" element={<Trees />} />
 		</Routes>
 	)
 }

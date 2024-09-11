@@ -3,8 +3,7 @@
 }
 
 .Vegetables {
-	background-image: url('../../img/vegetables_bg.jpg');
-	padding: 1px;
+	background: black;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50%;

@@ -72,7 +72,7 @@
 }
 
 .interactive {
-	background: url('../../img/homebg.jpg');
+	background: black;
 	background-position: 0 100%;
 	padding: 60px;
 	box-shadow: 0 0 10px 1px black;

@@ -11,7 +11,8 @@ const Containers = () => {
 	const { boxContent, valueCopy, fruitsImages } = useSelector(state => state.fruits);
 	const arr_length = valueCopy.length
 	const styles = `${boxContent.length === arr_length ? classes.box : classes.box_filtered}`
-	const [isLoading, setIsLoading] = useState(true)
+	const [isLoading, setIsLoading] = useState(true);
+	const [loadingPageTitle, setLoadingPageTitle] = useState("Fruits is loading, please stand by")
 
 	useEffect(() => {
 		axios.get('http://localhost:5000/api')
@@ -21,12 +22,12 @@ const Containers = () => {
 				dispatch(setFruitsImages(response.data.fruitImages));
 				setIsLoading(false)
 			})
-			.catch(error => alert('Something went wrong, please try again later', error));
+			.catch(() => setLoadingPageTitle("An error occured, please try again later"));
 	}, []);
 
 	if (isLoading) {
 		return (
-			<LoadingPage title={"Fruits"}/>
+			<LoadingPage title={loadingPageTitle}/>
 		)
 	} else if (boxContent.length !== 0) {
 		return (
@@ -55,7 +56,7 @@ const Containers = () => {
 		)
 	} else {
 		return (
-			<h1 className={classes.not_found}>Fruits not found :(</h1>
+			<h1 className={classes.not_found}>Fruits not found</h1>
 		)
 	}
 };

@@ -6,7 +6,8 @@ import { useAuth } from "../../hooks/use-auth";
 import tg from '../../img/telegram.png'
 import vk from '../../img/vk.png'
 import phone from '../../img/phone.png'
-import Nav from "../Nav";
+import Nav from "../../components/Nav";
+import Header from "../../components/Header";
 
 const Help = () => {
 	const {isAuth, email} = useAuth()
@@ -16,18 +17,7 @@ const Help = () => {
 		<Helmet>
 			<title>Help</title>
 		</Helmet>
-			<header className={classes.header}>
-			<div className={classes.logo}>
-			<box-icon name="rocket" size="1.4em" color='rgba(255,255,255,1)'></box-icon>
-			Silentlib
-			</div>
-			<nav className={classes.navbar}>
-				<Link to='/'>Home</Link>
-				</nav>
-			<nav className={classes.username}>
-				<Link to='/profile'><div> {email} <ion-icon name="person"></ion-icon></div></Link>
-				</nav>
-			</header>
+			<Header/>
 			<h1>Contact support</h1>
 			<h2>Get in touch and let us know how we can help</h2>
 			<div className={classes.containers}>
@@ -42,16 +32,7 @@ const Help = () => {
 	else {
 		return (
 		<div className={classes.Help}>
-		<header className={classes.header}>
-			<div className={classes.logo}>
-			<box-icon name="rocket" size="1.4em" color='rgba(255,255,255,1)'></box-icon>
-			Silentlib
-			</div>
-			<nav className={classes.navbar}>
-				<Link to='/'>Home</Link>
-			</nav>
-			<Nav/>
-		</header>
+		<Header/>
 			<h1>Contact support</h1>
 			<h2>Get in touch and let us know how we can help</h2>
 			<div className={classes.containers}>

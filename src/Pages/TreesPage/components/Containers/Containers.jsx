@@ -12,6 +12,7 @@ const Containers = () => {
 	const arr_length = valueCopy.length
 	const styles = `${boxContent.length === arr_length ? classes.box : classes.box_filtered}`
 	const [isLoading, setIsLoading] = useState(true)
+	const [loadingPageTitle, setLoadingPageTitle] = useState("Trees is loading, please stand by")
 
 	useEffect(() => {
 		axios.get('http://localhost:5003/trees')
@@ -21,12 +22,12 @@ const Containers = () => {
 				dispatch(settreesImages(response.data.treeImages));
 				setIsLoading(false)
 			})
-			.catch(error => null);
+			.catch(() => setLoadingPageTitle("An error occured, please try again later"));
 	}, []);
 
 	if (isLoading) {
 		return (
-			<LoadingPage title={"Trees"}/>
+			<LoadingPage title={loadingPageTitle}/>
 		)
 	} else if (boxContent.length !== 0) {
 		return (

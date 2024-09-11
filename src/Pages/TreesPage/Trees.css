@@ -3,8 +3,7 @@
 }
 
 .Trees {
-	background-image: url('../../img/trees_bg.jpg');
-	padding: 1px;
+	background: black;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50%;

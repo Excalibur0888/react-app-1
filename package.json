@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@grpc/grpc-js": "^1.11.2",
     "@react-native-firebase/app": "^17.4.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,7 +13,7 @@
     "boxicons": "^2.1.4",
     "cors": "^2.8.5",
     "express": "^4.18.3",
-    "firebase": "^9.20.0",
+    "firebase": "^10.13.1",
     "http-proxy-middleware": "^2.0.6",
     "js-cookie": "^3.0.5",
     "jsdom": "^21.1.2",
@@ -24,7 +25,7 @@
     "react-helmet": "^6.1.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "react-transition-group": "^4.4.5",
     "redux": "^4.2.1",
     "request": "^2.88.2",
@@ -35,7 +36,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev": "concurrently \"npm start\" \"npm run proxy\" \"npm run proxyveg\" \"npm run proxyflowers\" \"npm run proxytrees\"",
+    "dev": "npm-run-all --parallel start proxy proxyveg proxyflowers proxytrees",
     "proxy": "node my-proxy-server/proxy.js",
     "proxyveg": "node my-proxy-server/proxyveg.js",
     "proxyflowers": "node my-proxy-server/proxyflowers.js",
@@ -60,6 +61,6 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "npm-run-all": "^4.1.5"
   }
 }

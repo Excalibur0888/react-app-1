@@ -64,10 +64,8 @@
 
 .error_msg {
 	color: #def607;
-	position: absolute;
-	left: 43%;
-	top: 43%;
-	font-size: 14px;
+	text-align: center;
+	font-size: 1em;
 	animation: opacity .5s ease;
 }
 

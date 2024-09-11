@@ -1,6 +1,6 @@
 import React from "react";
 import './Trees.css';
-import Header from "./components/Header/Header";
+import Header from "../../components/Header";
 import Containers from "./components/Containers/Containers";
 import Searching from "./components/Seacrh/Searching";
 import { Helmet } from 'react-helmet';

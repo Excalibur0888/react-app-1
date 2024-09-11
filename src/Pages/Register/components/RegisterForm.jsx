@@ -79,6 +79,7 @@ const RegisterForm = () => {
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
 		<form>
+				<p className={styles_err}>{text}</p>
 				<h2>Sign up</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -109,7 +110,6 @@ const RegisterForm = () => {
 						required
 						/>
 						<label>Password</label>
-						<p className={styles_err}>{text}</p>
 					</div>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>

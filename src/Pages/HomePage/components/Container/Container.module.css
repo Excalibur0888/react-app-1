@@ -1,68 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: url('../../../../img/homebg.jpg') no-repeat;
-	background-size: cover;
-	background-position: 0 30%;
-	height: 470px;
-	box-shadow: 0 0 10px 1px black;
-	animation: bg 1.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 470px;
+  width: 100%;
+  overflow: hidden;
+	text-align: center;
 }
 
-.header {	
-	left: 0;
-	top: 0;
-	right: 0;
-	position: fixed;
-	align-self: baseline;
-	display: flex;
-	width: 100%;
-	height: 55px;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px;
-	background: rgba(162, 162, 162, .7);
-	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-	z-index: 4;
+.container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
-.logo {
-	display: block;
-	color: white;
-	font-size: 1.5em;
-}
-
-.navbar {
-	margin-left: 100px;
-}
-
-.navbar > * {
-	position: relative;
-	font-size: 16px;
-	color: aliceblue;
-	text-decoration: none;
-	font-weight: 500;
-	margin-right: 30px;
-}
-
-.navbar > *::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: -6px;
-	width: 100%;
-	height: 2px;
-	background: aliceblue;
-	border-radius: 5px;
-	transition: all .3s ease;
-	transform: translateY(10px);
-	opacity: 0;
-}
-
-.navbar > *:hover::after {
-	opacity: 1;
-	transform: translateY(0);
+.container div {
+  z-index: 2;
 }
 
 .loginreg {
@@ -71,12 +32,12 @@
 	justify-content: space-between;
 }
 
-.loginreg > * {
+.loginreg * {
 	padding: 0 2px;
 	border: 1px solid white;
 }
 
-.loginreg > * > *{
+.loginreg * *{
 	text-decoration: none;
 	font-size: 1em;
 	vertical-align: middle;
@@ -101,47 +62,303 @@
 	text-decoration: none;
 }
 
-.container > h1 {
-	position: absolute;
+.container h1 {
+		font-family: "Oleo Script", cursive;
+		font-size: 3.5rem;
+		color: white;
+		font-weight: bold;
+		text-decoration: none;
+		margin-top: -15%;
+		text-shadow: -3px 3px 0px #FF1D25;
+}
+
+h1::before, h2::before, .button::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 26%;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.3); /* черный с прозрачностью */
+  transform: skew(30deg);
+  z-index: -1;
+}
+
+.container h1::first-letter {
+	color:#FF0000;
+	font-size: 4.6rem;
+}
+
+.container h2 {
 	color: white;
-	margin-bottom: 10%;
-	font-size: 4.5em;
-	animation: transform 1s linear;
+	font-size: 1.8em;
 	text-shadow: 0 0 20px black;
 }
 
-.container > h2 {
+/* .container h3 {
 	position: absolute;
 	color: white;
-	font-size: 2em;
-	animation: transform 1s linear;
-}
-
-.container > h3 {
-	position: absolute;
-	color: white;
-	margin-top: 7%;
+	bottom: 0;
+	left: 0;
+  font-family: "Caveat", cursive;
+	font-optical-sizing: auto;
 	font-size: 1.5em;
-	animation: transform 1s linear;
+	margin: 10px;
+	text-shadow: 0 0 20px black;
+} */
+ 
+.button {
+  position: absolute;
+  padding: 3px;
+  width: 260px;
+  border: 1px solid #4F4F4F;
+  margin-top: 20px;
+  z-index: 10;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.container > button {
-	color: white;
-	padding: 5px;
-	font-size: 1em;
-	cursor: pointer;
-	font-weight: 1000;
-	margin-top: 10%;
-	height: 50px;
-	width: 220px;
-	border-radius: 4px;
-	background: #c4103d;
-	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-	transition: all .5s ease;
+.button:hover {
+  border-color: #FF0000;
 }
 
-.container > button:hover {
-	transform: scale(1.05);
+.button:hover:before {
+  width: 0px;
+}
+
+.button:hover:after {
+  width: 0px;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  width: 59px;
+  height: 1px;
+  background: #080808;
+  top: -1px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  left: 8px;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  width: 59px;
+  height: 1px;
+  background: #010101;
+  bottom: -1px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  right: 8px;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: #FF0000;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: #FF0000;
+  }
+}
+
+.btn {
+  width: 240px;
+  height: 56px;
+	font-weight: 8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: normal;
+  padding-left: 10px;
+  overflow: hidden;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.btn:hover p {
+  color: #FF0000;
+}
+
+.btn p {
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.item1 {
+  position: absolute;
+  width: 78px;
+  height: 57px;
+  -webkit-transform: skew(20deg);
+  transform: skew(-8deg);
+  background: #390000;
+  right: -9px;
+  z-index: 1;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-animation-name: back;
+          animation-name: back;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes back {
+  40% {
+    width: 82px;
+  }
+}
+
+@keyframes back {
+  40% {
+    width: 82px;
+  }
+}
+
+@-webkit-keyframes back-2 {
+  15% {
+    width: 82px;
+  }
+}
+
+@keyframes back-2 {
+  15% {
+    width: 82px;
+  }
+}
+
+@-webkit-keyframes back-3 {
+  10% {
+    width: 82px;
+  }
+}
+
+@keyframes back-3 {
+  10% {
+    width: 82px;
+  }
+}
+
+@-webkit-keyframes back-4 {
+  5% {
+    width: 82px;
+  }
+}
+
+@keyframes back-4 {
+  5% {
+    width: 82px;
+  }
+}
+
+.item2 {
+  position: absolute;
+  width: 78px;
+  height: 57px;
+  -webkit-transform: skew(20deg);
+  transform: skew(-8deg);
+  background: #620101;
+  right: -15px;
+  z-index: 2;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-animation-name: back-2;
+          animation-name: back-2;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.item3 {
+  position: absolute;
+  width: 78px;
+  height: 57px;
+  -webkit-transform: skew(20deg);
+  transform: skew(-8deg);
+  background: #7A0303;
+  right: -22px;
+  z-index: 3;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-animation-name: back-3;
+          animation-name: back-3;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.item4 {
+  position: absolute;
+  width: 78px;
+  height: 57px;
+  -webkit-transform: skew(20deg);
+  transform: skew(-8deg);
+  background: #FF0000;
+  right: -28px;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-animation-name: back-4;
+          animation-name: back-4;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.item4:before {
+  content: '';
+  position: absolute;
+  background: url(../../../../img/btn.png) no-repeat;
+  width: 32px;
+  height: 19px;
+  left: 10px;
 }
 
 .about {

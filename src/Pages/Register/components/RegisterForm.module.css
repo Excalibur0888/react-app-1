@@ -84,7 +84,8 @@
 
 .error_msg {
 	color: #def607;
-	font-size: 1cem;
+	text-align: center;
+	font-size: 1em;
 	animation: opacity .5s ease;
 }
 

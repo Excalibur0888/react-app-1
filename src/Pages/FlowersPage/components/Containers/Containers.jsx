@@ -11,6 +11,7 @@ const Containers = () => {
 	const arr_length = valueCopy.length
 	const styles = `${boxContent.length === arr_length ? classes.box : classes.box_filtered}`
 	const [isLoading, setIsLoading] = useState(true)
+	const [loadingPageTitle, setLoadingPageTitle] = useState("Flowers is loading, please stand by")
 
 	useEffect(() => {
 		axios.get('http://localhost:5001/flowers')
@@ -20,12 +21,12 @@ const Containers = () => {
 				dispatch(setValueCopy(response.data.flowNames));
 				dispatch(setFlowersImages(response.data.flowImages));
 			})
-			.catch(error => alert('Something went wrong, please try again later', error));
+			.catch(() => setLoadingPageTitle("An error occured, please try again later"));
 	}, []);
 
 		if (isLoading) {
 			return (
-				<LoadingPage title={"Flowers"}/>
+				<LoadingPage title={loadingPageTitle}/>
 			)
 		} else if (boxContent.length !== 0) {
 			return (

@@ -33,7 +33,7 @@ const LoginPage = () => {
 					<p>This is an encyclopedia website that provides a vast collection of knowledge on a wide range of topics. The site aims to provide accurate and up-to-date information that is accessible to everyone, making it an invaluable resource for students, researchers, and curious minds alike.</p>
 				
 					<div className={classes.socialicons}>
-						<a href='https://t.me/A1381527' 
+						<a href='https://t.me/EdgeOfEternity85' 
 						target='_blank' 
 						rel="noreferrer"><box-icon name='telegram' type='logo' color='rgba(255,255,255,1)'></box-icon></a>
 						<a 

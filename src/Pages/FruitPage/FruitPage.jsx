@@ -1,6 +1,6 @@
 import React from "react";
 import './FruitPage.css';
-import Header from "./components/Header/Header";
+import Header from "../../components/Header";
 import Containers from "./components/Grid_containers/Containers";
 import Searching from "./components/Seacrh/Searching";
 import { Helmet } from 'react-helmet';

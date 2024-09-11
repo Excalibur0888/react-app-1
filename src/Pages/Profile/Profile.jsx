@@ -1,8 +1,8 @@
 import React from "react";
 import './Profile.css';
-import Header from "./components/Header/Header";
+import Header from "../../components/Header";
 import { Helmet } from 'react-helmet';
-import Form from "./components/Form/Form";
+import Form from "./Form/Form";
 
 const Profile = () => {
 	window.addEventListener('beforeunload', (e) => {

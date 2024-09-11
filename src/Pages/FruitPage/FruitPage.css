@@ -3,8 +3,7 @@
 }
 
 .FruitPage {
-	padding: 1px;
-	background-image: url('../../img/fon.jpg');
+	background: black;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50%;

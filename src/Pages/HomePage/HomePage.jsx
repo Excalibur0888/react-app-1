@@ -6,8 +6,6 @@ import TypingText from './components/TypingText/TypingText'
 import img1 from '../../img/flex.png';
 import img2 from '../../img/24.png';
 import img3 from '../../img/inform.png';
-import img4 from '../../img/Screenshot_1.png'
-import img5 from '../../img/Screenshot_2.png'
 
 const HomePage = () => {
 	return (
@@ -50,8 +48,8 @@ const HomePage = () => {
 						</h3>
 					</div>
 					<div className={classes.containers}>
-						<Link to="/fruits"><div className={classes.container} style={{backgroundImage: `url(${img4})`}}></div></Link>
-						<Link to="/vegetables"><div className={classes.container} style={{backgroundImage: `url(${img5})`}}></div></Link>
+						<Link to="/fruits"><div className={classes.container}></div></Link>
+						<Link to="/vegetables"><div className={classes.container}></div></Link>
 					</div>
 					<TypingText phr1="All this guides are linked to Wikipedia." phr2="Moreover it's comfortable to learn and free."/>
 				</div>

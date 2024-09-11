@@ -3,8 +3,7 @@
 }
 
 .Flowers {
-	background-image: url('../../img/flowers_bg.jpg');
-	padding: 1px;
+	background: black;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 50%;

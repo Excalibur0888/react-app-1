@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -59,7 +59,7 @@ body {
 	width: 100%;
 	color: aliceblue;
 	height: 100vh;
-	background: url('../../img/background.jpg') no-repeat;
+	background: black;
 	background-size: cover;
 	background-position: center;
 	filter: blur(10px);
@@ -72,7 +72,7 @@ body {
 	transform: translate(-50%, -50%);
 	width: 75%;
 	height: 550px;
-	background: url('../../img/background.jpg') no-repeat;
+	background: black;
 	background-size: cover;
 	background-position: center;
 	border-radius: 10px;

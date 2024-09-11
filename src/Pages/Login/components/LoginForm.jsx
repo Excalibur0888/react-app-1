@@ -61,6 +61,7 @@ const LoginForm = () => {
 		<div className={classes.logregbox}>
 		<div className={classes.formbox}>
 			<form>
+				<p className={styles_err}>Incorrect email or password</p>
 				<h2>Sign in</h2>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
@@ -76,7 +77,6 @@ const LoginForm = () => {
 						/>
 						<label>Email</label>
 					</div>
-					<p className={styles_err}>Incorrect email or password</p>
 					<div className={classes.inputbox}>
 						<span className={classes.icon}>
 						<box-icon name='lock-alt' type='solid' color='rgba(255,255,255,1)'></box-icon>

@@ -8,23 +8,9 @@
 	align-items: center;
 	width: 100%;
 	height: 100vh;
-	background: url('../../img/help_bg.jpg');
+	background: black;
 	background-size: cover;
 	animation: opacity 1s linear;
-}
-
-.header {	
-	position: fixed;
-	top: 0;
-	align-self: baseline;
-	display: flex;
-	width: 100%;
-	height: 50px;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px;
-	background: rgba(162, 162, 162, .7);
-	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .logo {

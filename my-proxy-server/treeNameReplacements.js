@@ -34,7 +34,7 @@ module.exports = {
 	"Purple Magnolia": "Magnolia macrophylla",
 	"Red Spruce": "Spruce",
 	"Sassafras": "Ocotea odorifera",
-	"Scotch Pine Trees": "Pinus sylvestris",
+	"Scotch Pine Reviews": "Pinus sylvestris",
 	"Serviceberry": "Amelanchier asiatica",
 	"Sour Cherry": "Cherry blossom",
 	"Southern Live Oak": "Live oak",

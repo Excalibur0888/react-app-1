@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 	boxContent: [],
 	valueCopy: [],
-	vegetablesImages: [],
+	GalleryImages: [],
 };
 
-export const vegetablesSlice = createSlice({
-	name: "vegetables",
+export const GallerySlice = createSlice({
+	name: "Gallery",
 	initialState,
 	reducers: {
 		setBoxContent: (state, action) => {
@@ -16,8 +16,8 @@ export const vegetablesSlice = createSlice({
 		setValueCopy: (state, action) => {
 			state.valueCopy = action.payload;
 		},
-		setVegetablesImages: (state, action) => {
-			state.vegetablesImages = action.payload;
+		setGalleryImages: (state, action) => {
+			state.GalleryImages = action.payload;
 		},
 	},
 });
@@ -25,7 +25,7 @@ export const vegetablesSlice = createSlice({
 export const {
 	setBoxContent,
 	setValueCopy,
-	setVegetablesImages,
-} = vegetablesSlice.actions;
+	setGalleryImages,
+} = GallerySlice.actions;
 
-export default vegetablesSlice.reducer;
+export default GallerySlice.reducer;

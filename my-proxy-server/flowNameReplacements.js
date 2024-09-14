@@ -20,7 +20,7 @@ module.exports = {
 	"Common White Frangipani": "Plumeria",
 	"Cone Flower": "Echinacea purpurea",
 	"Crape Jasmine": "Tabernaemontana divaricata",
-	"Creeper Flowers": "Campsis radicans",
+	"Creeper Services": "Campsis radicans",
 	"Cypress Vine, Star Glory": "Ipomoea quamoclit",
 	"Daisy": "Bellis perennis",
 	"Forest Ghost Flower": "Aeginetia indica",

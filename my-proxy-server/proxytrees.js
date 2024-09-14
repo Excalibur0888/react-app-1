@@ -9,9 +9,9 @@ const treeNameReplacements = require('./treeNameReplacements');
 const app = express();
 
 app.use(cors());
-app.get('/trees', async (req, res) => {
+app.get('/Reviews', async (req, res) => {
 	try { 
-		const treeResponse = await axios.get('https://homesthetics.net/types-of-trees/');
+		const treeResponse = await axios.get('https://homesthetics.net/types-of-Reviews/');
 		const treeDom = new JSDOM(treeResponse.data);
 		const treeList = treeDom.window.document.querySelectorAll('.entry-content ol li h3 span b');
 		const treeNames = Array.from(treeList).map((el) => el.textContent.trim().replace(/ Tree$/, ''));

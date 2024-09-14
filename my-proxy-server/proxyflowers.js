@@ -9,13 +9,13 @@ const flowNameReplacements = require('./flowNameReplacements');
 const app = express();
 
 app.use(cors());
-app.get('/flowers', async (req, res) => {
+app.get('/Services', async (req, res) => {
 	try { 
-		const flowResponse = await axios.get('https://onlymyenglish.com/flowers-name-english/');
+		const flowResponse = await axios.get('https://onlymyenglish.com/Services-name-english/');
 		const flowDom = new JSDOM(flowResponse.data);
 		const flowList = flowDom.window.document.querySelectorAll('.entry-content .wp-block-table table tbody tr td');
-		const flowersToRemove = ["Apple Flower", "Ashok Flower", "Cobra Saffron", "Common crape Mrytle", "Dandelion Dewdrop", "Sweet Jasmine", "Tuberose Flower", "Papaya Flower"];
-		const flowNames = ((Array.from(flowList).map((el) => el.textContent.trim())).filter(el => !el.includes('.') && el.length>3).filter((flower) => !flowersToRemove.includes(flower)));
+		const ServicesToRemove = ["Apple Flower", "Ashok Flower", "Cobra Saffron", "Common crape Mrytle", "Dandelion Dewdrop", "Sweet Jasmine", "Tuberose Flower", "Papaya Flower"];
+		const flowNames = ((Array.from(flowList).map((el) => el.textContent.trim())).filter(el => !el.includes('.') && el.length>3).filter((flower) => !ServicesToRemove.includes(flower)));
 		flowNames.forEach((flower, index) => {
 			const replacement = flowNameReplacements[flower];
 			if (replacement) {

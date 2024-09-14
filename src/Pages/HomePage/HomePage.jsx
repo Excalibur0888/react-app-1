@@ -1,62 +1,59 @@
-import React from 'react';
-import classes from './HomePage.module.css';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import './HomePage.css';
+import classes from '../../styles/Button.module.css';
 import Container from './components/Container/Container';
-import TypingText from './components/TypingText/TypingText'
-import img1 from '../../img/flex.png';
-import img2 from '../../img/24.png';
-import img3 from '../../img/inform.png';
+import Headings from './components/Headings/Headings';
+import { Helmet } from "react-helmet";
+import Links from './components/Links/Links';
+import logo from '../../img/logo.png';
 
 const HomePage = () => {
-	return (
-		<div className={classes.HomePage}>
-			<Container />
-			<div className={classes.headings}>
-				<div>
-					<h2>Flexibility</h2>
-					<br />
-					Allows for easy access to a vast amount of information on a wide range of topics.
-					<br />
-					<img src={img1} alt="" />
-				</div>
-				<div>
-					<h2>Availability</h2>
-					<br />
-					Allows for quick and easy access to the information you need.
-					<br />
-					<img src={img2} alt="" />
-				</div>
-				<div>
-					<h2>Informativity</h2>
-					<br />
-					Comprehensive and diverse range of information empowers readers with a wealth of knowledge.
-					<br />
-					<img src={img3} alt="" />
-				</div>
-			</div>
-			<div className={classes.tutorial}>
-				<div className={classes.hr}></div>
-				<br />
-				<div className={classes.interactive}>
-					<h2>Check our new sections!</h2>
-					<div className={classes.h3}>
-						<h3>
-							Fruits guide <box-icon name="lemon" color="rgba(255, 255, 255)"></box-icon>
-						</h3>
-						<h3>
-							Vegetables guide <box-icon name="leaf" color="rgba(255, 255, 255)"></box-icon>
-						</h3>
-					</div>
-					<div className={classes.containers}>
-						<Link to="/fruits"><div className={classes.container}></div></Link>
-						<Link to="/vegetables"><div className={classes.container}></div></Link>
-					</div>
-					<TypingText phr1="All this guides are linked to Wikipedia." phr2="Moreover it's comfortable to learn and free."/>
-				</div>
-			</div>
-			<footer className={classes.footer}>Copyright 2024. ©Silentlib. All rights reserved</footer>
-		</div>
-	);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+	
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  return (
+    <div className="HomePage">
+      <Helmet>
+        <title>4MOTION</title>
+				<link rel="icon" type="image/png" href={logo} />
+      </Helmet>
+			<Links/>
+      <Container />
+      <Headings />
+      <div
+        className={`${classes.up} ${showScrollButton ? classes.active : ''}`}
+        id="scroll_to_up"
+        onClick={scrollToTop}
+      >
+        <span className={classes.item1}></span>
+        <span className={classes.item2}></span>
+        <span className={classes.item3}></span>
+        <span className={classes.item4}></span>
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;

@@ -1,0 +1,128 @@
+.HomePage {
+	background: black;
+	animation: opacity 2s linear;
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.sticky_social {
+  position: fixed;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 560;
+}
+
+.sticky_social .sticky_social_btn i {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #de0108;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,1);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sticky_social .sticky_social_link i {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #de0108;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.65);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .3s ease-out;
+}
+
+.sticky_social_btn {
+  position: absolute;
+  border: none;
+  z-index: 10;
+  transition: outline .25s;
+}
+
+.sticky_social .item {
+  position: absolute;
+  list-style: none;
+  transition: transform .5s;
+  transition-delay: var(--d);
+}
+
+.item_container .item {
+  position: relative;
+}
+
+.sticky_social .sticky_social_link i:hover {
+  opacity: .7;
+}
+
+.sticky_social.active .item:nth-child(1) {
+  transform: translateY(-65px);
+}
+
+.sticky_social.active .item:nth-child(2) {
+  transform: translateY(-65px) translateX(-65px);
+}
+
+.sticky_social.active .item:nth-child(3) {
+  transform: translateX(-65px);
+}
+
+.sticky_social.active .item:nth-child(4) {
+  transform: translateY(65px) translateX(-65px);
+}
+
+.sticky_social.active .item:nth-child(5) {
+  transform: translateY(65px);
+}
+
+i.close-icon {
+  background-image: url(../../img/icon-close.svg);
+  -webkit-background-size: 80%;
+  background-size: 80%;
+}
+
+i.link-icon {
+  background-image: url(../../img/link_icon.svg);
+  -webkit-background-size: 60%;
+  background-size: 60%;
+}
+
+i.telegram-icon {
+	background-image: url(../../img/telegram.svg);
+  -webkit-background-size: 60%;
+  background-size: 60%;
+}
+
+i.wa-icon {
+	background-image: url(../../img/whatsapp.svg);
+  -webkit-background-size: 60%;
+  background-size: 60%;
+}
+
+i.yt-icon {
+	background-image: url(../../img/yt.svg);
+  -webkit-background-size: 60%;
+  background-size: 60%;
+}
+
+i.vk-icon {
+	background-image: url(../../img/vk.svg);
+  -webkit-background-size: 70%;
+  background-size: 70%;
+}
+
+i.inst-icon {
+	background-image: url(../../img/instagram.svg);
+	-webkit-background-size: 60%;
+  background-size: 60%;
+}

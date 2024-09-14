@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 	boxContent: [],
 	valueCopy: [],
-	flowersImages: [],
+	ServicesImages: [],
 };
 
-export const flowersSlice = createSlice({
-	name: "flowers",
+export const ServicesSlice = createSlice({
+	name: "Services",
 	initialState,
 	reducers: {
 		setBoxContent: (state, action) => {
@@ -16,8 +16,8 @@ export const flowersSlice = createSlice({
 		setValueCopy: (state, action) => {
 			state.valueCopy = action.payload;
 		},
-		setFlowersImages: (state, action) => {
-			state.flowersImages = action.payload;
+		setServicesImages: (state, action) => {
+			state.ServicesImages = action.payload;
 		},
 	},
 });
@@ -25,7 +25,7 @@ export const flowersSlice = createSlice({
 export const {
 	setBoxContent,
 	setValueCopy,
-	setFlowersImages,
-} = flowersSlice.actions;
+	setServicesImages,
+} = ServicesSlice.actions;
 
-export default flowersSlice.reducer;
+export default ServicesSlice.reducer;

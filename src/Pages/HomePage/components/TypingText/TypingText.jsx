@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import './TypingText.css'
 
 const TypingText = (props) => {
 	const [text, setText] = useState("");
@@ -22,13 +21,13 @@ const TypingText = (props) => {
 				} else {
 					setText((prev) => phrases[index].slice(0, prev.length + 1));
 				}
-			}, 50);
+			}, 35);
 		}
 	
 		return () => clearInterval(intervalId);
 	}, [index, isDeleting, phrases, text]);
 
-	return <h4 className="text">{text}</h4>;
+	return <h4 className={props.className}>{text}</h4>;
 };
 
 export default TypingText;

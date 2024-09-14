@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 	boxContent: [],
 	valueCopy: [],
-	treesImages: [],
+	ReviewsImages: [],
 };
 
-export const treesSlice = createSlice({
-	name: "trees",
+export const ReviewsSlice = createSlice({
+	name: "Reviews",
 	initialState,
 	reducers: {
 		setBoxContent: (state, action) => {
@@ -16,8 +16,8 @@ export const treesSlice = createSlice({
 		setValueCopy: (state, action) => {
 			state.valueCopy = action.payload;
 		},
-		settreesImages: (state, action) => {
-			state.treesImages = action.payload;
+		setReviewsImages: (state, action) => {
+			state.ReviewsImages = action.payload;
 		},
 	},
 });
@@ -25,7 +25,7 @@ export const treesSlice = createSlice({
 export const {
 	setBoxContent,
 	setValueCopy,
-	settreesImages,
-} = treesSlice.actions;
+	setReviewsImages,
+} = ReviewsSlice.actions;
 
-export default treesSlice.reducer;
+export default ReviewsSlice.reducer;

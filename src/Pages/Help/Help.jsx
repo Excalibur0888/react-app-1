@@ -1,7 +1,5 @@
 import React from "react";
 import classes from './Help.module.css';
-import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 import { useAuth } from "../../hooks/use-auth";
 import tg from '../../img/telegram.png'
 import vk from '../../img/vk.png'
@@ -14,9 +12,6 @@ const Help = () => {
 	if (isAuth) {
 	return (
 		<div className={classes.Help}>
-		<Helmet>
-			<title>Help</title>
-		</Helmet>
 			<Header/>
 			<h1>Contact support</h1>
 			<h2>Get in touch and let us know how we can help</h2>

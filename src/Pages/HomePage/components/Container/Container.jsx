@@ -1,47 +1,25 @@
 import React from "react";
-import { useAuth } from '../../../../hooks/use-auth'
 import classes from './Container.module.css';
 import 'boxicons'
 import Header from "../../../../components/Header";
+import TypingText from '../TypingText/TypingText';
+import Button from "../../../../components/Button";
 
 const Container = () => {
-  const { isAuth, email } = useAuth();
-
   return (
     <div className={classes.container}>
       <video autoPlay loop muted>
-        <source src={'https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2024/Models/Tourbillon/01_Intro/comp/Bugatti_Tourbillon_01_PP_Intro_d.mp4'} type="video/mp4" />
+				{/*https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2024/Models/Tourbillon/01_Intro/comp/Bugatti_Tourbillon_01_PP_Intro_d.mp4*/}
+        <source src={'https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2023/Bugatti-Models/W16-Mistral/mistral-iv-1-desktop.mp4'} type="video/mp4" />
       </video>
       <Header />
-      {isAuth ? (
         <div>
-				<h1>4Motion - life has a style</h1>
-				<h2>Лучший тюнинг-салон России</h2>
-				<div className={classes.button}>
-				<a className={classes.btn} href="javascript:;" data-fancybox="" data-src="#contacts-modal">
-					<p>Сделай этот шаг</p>
-					<span className={classes.item1}></span>
-					<span className={classes.item2}></span>
-					<span className={classes.item3}></span>      
-					<span className={classes.item4}></span>                 
-				</a>
-				</div>
-			</div>
-      ) : (
-        <div>
-          <h1>4Motion - life has a style</h1>
-          <h2>Лучший тюнинг-салон России</h2>
-					<div className={classes.button}>
-					<a className={classes.btn} href="javascript:;" data-fancybox="" data-src="#contacts-modal">
-						<p>Сделай этот шаг</p>
-						<span className={classes.item1}></span>
-						<span className={classes.item2}></span>
-						<span className={classes.item3}></span>      
-						<span className={classes.item4}></span>                 
-					</a>
-					</div>
+					<h2>ЛУЧШИЙ ТЮНИНГ-САЛОН РОССИИ</h2>
+					<h1>4MOTION</h1>
+					<h3>Мы не просто делаем автомобили лучше, мы превращаем их в что-то поистине впечатляющее, что не оставит равнодушным случайного прохожего и подарит незабываемые впечатления водителю.</h3>
+					<Button/>
         </div>
-      )}
+				<TypingText className={classes.typing} phr1="Если не можешь быть лучшим - будь уникальным. ©Айртон Сенна" phr2="Если у тебя есть мечта, ты должен сделать всё возможное, чтобы её достичь. ©Михаэль Шумахер" />
     </div>
   );
 };

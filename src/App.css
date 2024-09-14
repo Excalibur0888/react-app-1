@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
 	box-sizing: border-box;
-	font-family: 'Roboto Serif', serif;
+	font-family: "Roboto Condensed", serif;
+	font-weight: 400;
 }
 /* Ширина и цвет полосы прокрутки */
 ::-webkit-scrollbar {
@@ -11,5 +14,43 @@
 /* Стилизация полосы прокрутки */
 ::-webkit-scrollbar-thumb {
 	background: #FF0000;
-  border-radius: 5px;
+}
+body {
+	cursor: none;
+}
+
+button, a {
+	cursor: none; /* Отключаем стандартный курсор на кнопках и ссылках */
+}
+
+
+.cursor {
+	background-color: blue; /* Задаём синий цвет для курсора */
+	border-radius: 50%; /* Круглый курсор */
+	width: 16px;
+	height: 16px;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 1000000;
+}
+
+.cursor-follower {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 999999;
+	transition: transform 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33),
+		opacity 0.3s cubic-bezier(0.75, -0.27, 0.3, 1.33);
+}
+
+@media only screen and (max-width: 767px) {
+	.cursor,
+	.cursor-follower {
+		display: none;
+	}
 }

@@ -4,6 +4,7 @@ import RegisterForm from './components/RegisterForm';
 import classes from './RegisterPage.module.css';
 import 'boxicons'
 import { Helmet } from 'react-helmet';
+import Header from '../../components/Header';
 
 const RegisterPage = () => {
 	return (
@@ -11,16 +12,7 @@ const RegisterPage = () => {
 		<Helmet>
 			<title>Sign up</title>
 		</Helmet>
-		<header className={classes.header}>
-			<nav className={classes.navbar}>
-				<Link to='/'>Home</Link>
-				<Link to='/fruits'>Fruits</Link>
-				<Link to='/vegetables'>Vegetables</Link>
-				<Link to='/flowers'>Flowers</Link>
-				<Link to='/trees'>Trees</Link>
-				<Link to='/help'>Help</Link>
-			</nav>
-		</header>
+		<Header/>
 
 		<div className={classes.background}></div>
 		<div className={classes.container}>

@@ -25,7 +25,7 @@
     "react-helmet": "^6.1.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.5",
     "redux": "^4.2.1",
     "request": "^2.88.2",
@@ -36,11 +36,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev": "npm-run-all --parallel start proxy proxyveg proxyflowers proxytrees",
+    "dev": "npm-run-all --parallel start proxy proxyveg proxyServices proxyReviews",
     "proxy": "node my-proxy-server/proxy.js",
     "proxyveg": "node my-proxy-server/proxyveg.js",
-    "proxyflowers": "node my-proxy-server/proxyflowers.js",
-    "proxytrees": "node my-proxy-server/proxytrees.js"
+    "proxyServices": "node my-proxy-server/proxyServices.js",
+    "proxyReviews": "node my-proxy-server/proxyReviews.js"
   },
   "eslintConfig": {
     "extends": [

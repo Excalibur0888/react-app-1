@@ -68,20 +68,7 @@
 		color: white;
 		font-weight: bold;
 		text-decoration: none;
-		margin-top: -15%;
-		text-shadow: -3px 3px 0px #FF1D25;
-}
-
-h1::before, h2::before, .button::before {
-  content: '';
-  position: absolute;
-  top: 25%;
-  left: 26%;
-  width: 50%;
-  height: 50%;
-  background-color: rgba(0, 0, 0, 0.3); /* черный с прозрачностью */
-  transform: skew(30deg);
-  z-index: -1;
+		animation: transform 0.8s ease-in-out;
 }
 
 .container h1::first-letter {
@@ -91,7 +78,19 @@ h1::before, h2::before, .button::before {
 
 .container h2 {
 	color: white;
-	font-size: 1.8em;
+	margin-top: -10%;
+	font-weight: 400;
+	font-size: 1.3em;
+	text-shadow: 0 0 20px black;
+	animation: transform 0.8s ease-in-out;
+}
+
+.container h3 {
+	color: white;
+	line-height: 30px;
+	padding: 0 25% 0 25%;
+	font-weight: 400;
+	font-size: 1.4em;
 	text-shadow: 0 0 20px black;
 	animation: transform 0.8s ease-in-out;
 }

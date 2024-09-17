@@ -1,0 +1,252 @@
+.gridContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  grid-gap: 70px;
+  overflow-x: hidden;
+  padding: 50px 20px 20px 20px;
+  background: no-repeat url("../../../../img/carbon.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+
+.productsTitle {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 260px;
+}
+
+.productsTitle h2 {
+  margin: 0;
+  font-weight: normal;
+  position: relative;
+  line-height: 1;
+  border-left: 3px solid #FF0000;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productsTitle h2 span {
+  font-size: 1.4em;
+  color: #FFF;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+}
+
+.productsTitle h2 span:first-letter {
+  color: #FF0000;
+}
+
+.productsTitle h2 span:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #FF0000;
+  left: 183px;
+  top: 10px;
+}
+
+.productsTitle h2 span:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #FF0000;
+  left: 183px;
+  top: 21px;
+}
+
+.productsTitle h2 b {
+  display: block;
+  font-size: 57px;
+  font-weight: 800;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.pairContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 75%;
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.pairContainer.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.leftAlign {
+  justify-content: flex-start;
+  margin-left: 5%;
+  margin-right: auto;
+  text-align: left;
+}
+
+.rightAlign {
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 5%;
+  text-align: right;
+  transform: translateX(80px);
+}
+
+.videoItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoItem video {
+  width: 500px;
+  height: auto;
+  border: 1px dashed #FF0000;
+}
+
+.textItem {
+  font-size: 1.3em;
+  max-width: 55%;
+  color: #fff;
+  padding: 20px;
+}
+
+.textItem h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.videoItem1::before {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  top: -35px;
+  left: -31px;
+  z-index: 0;
+}
+
+.videoItem1::after {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 20px;
+  height: 170px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  top: -80px;
+  left: -115px;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+
+.videoItem2::before {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 ';
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  top: -35px;
+  right: 0px;
+  z-index: 0;
+}
+
+.videoItem2::after {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 20px;
+  height: 170px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  top: -80px;
+  right: 40px;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+
+.videoItem3::before {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  bottom: -40px;
+  left: -31px;
+  z-index: 0;
+}
+
+.videoItem3:after {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 20px;
+  height: 170px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  left: -115px;
+  bottom: 120px;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+
+.videoItem4:before {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  bottom: -40px;
+  right: 0px;
+  z-index: 0;
+}
+
+.videoItem4:after {
+  content: '\2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022 \2022';
+  position: absolute;
+  width: 20px;
+  height: 170px;
+  font-size: 15px;
+  color: #FFF;
+  letter-spacing: 19px;
+  bottom: 120px;
+  right: 41px;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+
+.V16Button {
+	position: relative;
+	margin-top: -70px;
+	left: 10%;
+	opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.visible .V16Button {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -79,6 +79,7 @@
 .container h2 {
 	color: white;
 	margin-top: -10%;
+	font-family: "Roboto Condensed", cursive;
 	font-weight: 400;
 	font-size: 1.3em;
 	text-shadow: 0 0 20px black;
@@ -86,12 +87,14 @@
 }
 
 .container h3 {
+	font-family: "Roboto Condensed", cursive;
 	color: white;
 	line-height: 30px;
 	padding: 0 25% 0 25%;
 	font-weight: 400;
 	font-size: 1.4em;
 	text-shadow: 0 0 20px black;
+	margin-bottom: 20px;
 	animation: transform 0.8s ease-in-out;
 }
 

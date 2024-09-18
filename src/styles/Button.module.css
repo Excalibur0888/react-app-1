@@ -3,7 +3,6 @@
   padding: 3px;
   width: 260px;
   border: 1px solid #4F4F4F;
-  margin-top: 20px;
 	text-decoration: none;
   z-index: 10;
   -webkit-transition: 0.7s;
@@ -224,6 +223,7 @@
   -webkit-transform: skew(20deg);
   transform: skew(-8deg);
   background: #FF0000;
+	overflow: hidden;
   right: -28px;
   z-index: 4;
   display: -webkit-box;
@@ -258,8 +258,8 @@
 	width: 50px;
   background-size: cover;
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 25px;
+  bottom: 40px;
   transform: rotate(-90deg);
   z-index: 99;
   visibility: hidden;

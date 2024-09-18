@@ -69,6 +69,16 @@
   margin-top: 15px;
 }
 
+.productsTitle::before {
+	content: '';
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 5.7%;
+	height: 1px;
+	background-color: rgb(20, 20, 20);
+}
+
 .pairContainer {
   display: flex;
   align-items: center;
@@ -109,6 +119,61 @@
   width: 500px;
   height: auto;
   border: 1px dashed #FF0000;
+}
+
+.videoItem {
+  position: relative;
+	display: inline-block;
+}
+
+.corner {
+  position: absolute;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+}
+
+.corner::before {
+  content: '';
+  position: absolute;
+  background-color: #FFF;
+  height: 4px; /* Толщина линии */
+  width: 45px; /* Длина линии */
+}
+
+.corner::after {
+  content: '';
+  position: absolute;
+  background-color: #FFF;
+  width: 4px;
+  height: 45px;
+}
+
+.topRight::before {
+  top: 0;
+  right: 0;
+}
+
+.topRight::after {
+  top: 0;
+  right: 0;
+}
+
+.bottomLeft::before {
+  bottom: 0;
+  left: 0;
+}
+
+.bottomLeft::after {
+  bottom: 0;
+  left: 0;
 }
 
 .textItem {

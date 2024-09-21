@@ -6,7 +6,8 @@ import Headings from './components/Headings/Headings';
 import { Helmet } from "react-helmet";
 import Links from './components/Links/Links';
 import logo from '../../img/logo.png';
-import V16Engine from './components/V16Engine/V16Engine';
+import Suggestions from './components/Suggestions/Suggestions';
+import Works from './components/Works/Works';
 
 const HomePage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -53,7 +54,8 @@ const HomePage = () => {
         <span className={classes.item3}></span>
         <span className={classes.item4}></span>
       </div>
-			<V16Engine/>
+			<Suggestions/>
+			<Works/>
     </div>
   );
 };

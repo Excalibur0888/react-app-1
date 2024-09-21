@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './V16Engine.module.css';
+import classes from './Suggestions.module.css';
 
 export default function PairContainer({ align, videoSrc, title, text, videoClass, refElement }) {
   return (

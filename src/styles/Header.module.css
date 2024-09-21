@@ -49,8 +49,8 @@
 }
 
 .header__name {
-	font-family: "Oleo Script", cursive;
 	font-size: 1.8rem;
+	font-style: italic;
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
 	color: white;
 	font-weight: bold;

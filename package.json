@@ -29,6 +29,7 @@
     "react-transition-group": "^4.4.5",
     "redux": "^4.2.1",
     "request": "^2.88.2",
+    "swiper": "^11.1.14",
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28"
   },

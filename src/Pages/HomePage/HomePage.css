@@ -2,6 +2,7 @@
 	background: black;
 	position: relative;
 	animation: opacity 2s linear;
+	overflow-x: hidden;
 }
 
 @keyframes opacity {

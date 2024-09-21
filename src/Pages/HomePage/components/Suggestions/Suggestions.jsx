@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import classes from './V16Engine.module.css';
+import classes from './Suggestions.module.css';
 import Button from '../../../../components/Button';
 import { Link } from "react-router-dom";
 import PairContainer from './PairContainer';
 
-export default function V16Engine() {
+export default function Suggestions() {
   const pairRef = useRef([]);
 
   useEffect(() => {

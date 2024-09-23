@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import Button from '../../../../components/Button'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './Works.css';
@@ -23,7 +24,7 @@ export default function Works() {
   const images = Array.from({ length: 11 }, (_, i) => require(`./img/work${i + 1}.webp`));
 
   return (
-    <div className="container">
+    <div className="works__container">
       <h2 className="works__title">
         <p>Наши <span>свежие</span></p>
         <b>Проекты</b>
@@ -52,6 +53,7 @@ export default function Works() {
           </SwiperSlide>
         ))}
       </Swiper>
+			<Button className="works__button" title="Все проекты"/>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Links from './components/Links/Links';
 import logo from '../../img/logo.png';
 import Suggestions from './components/Suggestions/Suggestions';
 import Works from './components/Works/Works';
+import Contacts from '../../components/Contacts/Contacts'
 
 const HomePage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -56,6 +57,7 @@ const HomePage = () => {
       </div>
 			<Suggestions/>
 			<Works/>
+			<Contacts/>
     </div>
   );
 };

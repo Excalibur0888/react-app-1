@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
 import LoginForm from './components/LoginForm';
 import classes from './LoginPage.module.css';
-import 'boxicons'
 import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 

@@ -1,6 +1,5 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import classes from '../../../../styles/Searching.module.css';
-import 'boxicons'
 
 const Searching = () => {
 	return (
@@ -15,7 +14,6 @@ const Searching = () => {
 				type="button"
 				className={classes.start_searching_btn}
 			>
-				<box-icon name="search" color="rgb(1, 1, 1)"></box-icon>
 			</button>
 			<button
 				type="button"

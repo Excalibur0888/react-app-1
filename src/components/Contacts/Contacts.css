@@ -1,13 +1,24 @@
 .contacts__container {
 	position: relative;
-	width: 100%;
+	margin: 0 auto;
 	height: 100%;
-  max-width: 1200px;
   padding: 20px;
+	text-transform: uppercase;
+	background: url('../../img/partners.jpg') no-repeat top center;
+}
+
+.contacts__container::before {
+	content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+	height: 236px;
+  width: 100%;
+	background: url(../../img/work-backpng.png) no-repeat top center;
 }
 
 .contacts-swiper {
-  padding: 20px 0;
+	width: 70%;
 }
 
 .contacts-slide {
@@ -17,22 +28,22 @@
 
 .contacts__item {
   width: 250px;
-  padding: 20px;
   text-align: center;
   position: relative;
 }
 
 .contacts__image {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   background-size: cover;
   background-position: center;
   margin: 0 auto 20px;
   border-radius: 50%;
+	border: 2px #FF0000 solid;
 }
 
 .contacts__name {
-  font-size: 18px;
+  font-size: 1.3em;
 	color: #fff;
   font-weight: bold;
   margin: 10px 0;
@@ -41,7 +52,7 @@
 }
 
 .contacts__name:before {
-  content: '........................................................................';
+  content: '...............................................................................';
   position: absolute;
   left: 50%;
   top: 0px;
@@ -67,19 +78,43 @@
 }
 
 .contacts__description {
-  margin: 20px 0 10px;
-  font-size: 14px;
+  margin: 10px 0 10px;
+  font-size: 0.9em;
   color: #555;
 }
 
 .contacts__hours {
-  font-size: 14px;
+  font-size: 1em;
+	font-weight: 700;
   color: #777;
 }
 
+.phone__container {
+	display: flex;
+	margin-top: 5px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
 .contacts__phone {
-  font-size: 16px;
+  font-size: 1.3em;
   font-weight: bold;
-  margin-top: 10px;
-  color: #333;
+  color: #d1d1d1;
+}
+
+.whatsapp__icon {
+	position: relative;
+	background-image: url(../../img/whatsapp.svg);
+  -webkit-background-size: 60%;
+  background-size: 60%;
+	margin-right: 5px;
+	width: 30px;
+  height: 30px;
+  border: 2px solid #de0108;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.65);
+  background-repeat: no-repeat;
+  background-position: center;
 }

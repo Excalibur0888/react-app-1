@@ -469,11 +469,11 @@
 }
 
 .swiper-button-next:hover:before{
-  animation-name: slide10
+  animation-name: slide10;
 }
 
 .swiper-button-next:hover:after{
-  animation-name: slide11
+  animation-name: slide11;
 }
 
 .works__button {
@@ -481,3 +481,35 @@
 	margin-top: 40px;
 	left: 85%;
 } 
+
+.line-background {
+  position: absolute;
+  z-index: 0;
+  width: 570px;
+  height: 852px;
+  border-bottom: 1px solid #1A1A1B;
+  top: 0;
+  left: 300px;
+}
+
+.line-background:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 218px;
+  width: 1px;
+  height: 852px;
+  background: #1A1A1B;
+  z-index: 0;
+}
+
+.line-background:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 238px;
+  width: 1px;
+  height: 852px;
+  background: #1A1A1B;
+  z-index: 0;
+}

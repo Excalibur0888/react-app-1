@@ -54,6 +54,7 @@ export default function Works() {
         ))}
       </Swiper>
 			<Button className="works__button" title="Все проекты"/>
+			<div class="line-background"></div>
     </div>
   );
 }

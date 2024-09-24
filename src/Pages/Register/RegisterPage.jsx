@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
 import RegisterForm from './components/RegisterForm';
 import classes from './RegisterPage.module.css';
-import 'boxicons'
 import { Helmet } from 'react-helmet';
 import Header from '../../components/Header';
 
@@ -17,7 +15,7 @@ const RegisterPage = () => {
 		<div className={classes.background}></div>
 		<div className={classes.container}>
 			<div className={classes.content}>
-			<h2 className={classes.logo}><box-icon name="rocket" color='rgba(255,255,255,1)'></box-icon> 4Motion</h2>
+			<h2 className={classes.logo}> 4Motion</h2>
 
 				<div className={classes.textsci}>
 					<h2>Hello<br/><span>Please sign up</span></h2>

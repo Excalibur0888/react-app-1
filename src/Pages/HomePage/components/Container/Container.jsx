@@ -1,6 +1,5 @@
 import React from "react";
 import classes from './Container.module.css';
-import 'boxicons'
 import Header from "../../../../components/Header";
 import TypingText from '../TypingText/TypingText';
 import Button from "../../../../components/Button";

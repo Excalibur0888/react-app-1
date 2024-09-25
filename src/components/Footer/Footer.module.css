@@ -27,13 +27,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-          position: relative;
-          z-index: 2;
-            font-family: 'HRoman';
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+	z-index: 2;
 }
-
 
 .footer__menu li a {
   font-size: 16px;
@@ -53,14 +51,119 @@
   color: #FFF;
 }
 
-.footer__phone a {
-  margin: 0;
-  font-size: 22px;
-  color: #FFF;
-  text-decoration: none;
+.social {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-top: 40px
 }
 
-.footer__phone a span {
-  display: inline-block;
-  font-size: 49px;
+.icon {
+	position: relative;
+  -webkit-background-size: 60%;
+  background-size: 60%;
+	margin-right: 5px;
+	width: 45px;
+  height: 45px;
+  border: 2px solid #de0108;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.65);
+  background-repeat: no-repeat;
+  background-position: center;
+	transition: all ease .3s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.icon:hover {
+	-webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: headShake;
+  animation-name: headShake;
+}
+
+@keyframes headShake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  6.5% {
+    -webkit-transform: translateX(-6px) rotateY(-9deg);
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    -webkit-transform: translateX(5px) rotateY(7deg);
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    -webkit-transform: translateX(-3px) rotateY(-5deg);
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    -webkit-transform: translateX(2px) rotateY(3deg);
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.wa_icon {
+	background-image: url(../../img/whatsapp.svg);
+}
+
+.yt_icon {
+	background-image: url(../../img/yt.svg);
+}
+
+.tg_icon {
+	background-image: url(../../img/telegram.svg);
+}
+
+.pay {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+	width: 100%;
+	height: 10%;
+	justify-content: center;
+  align-items: center;
+	margin-top: 40px;
+}
+
+.pay span{
+  color: #fff;
+  text-align: right;
+  line-height: 140%;
+  margin-right: 10px;
+}
+
+.pay div img {
+	width: auto;
+	height: auto;
+	margin-right: 10px;
+}
+
+.mastercard {
+	background: url(./img/pay1.webp) no-repeat;
+}
+
+.visa {
+	background: url(./img/pay2.webp) no-repeat;
+}
+
+.mir {
+	background: url(./img/pay3.webp) no-repeat;
 }

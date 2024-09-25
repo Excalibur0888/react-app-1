@@ -15,6 +15,29 @@ export default function Footer() {
 				<li><Link to='/reviews'>Отзывы</Link></li>
 				<li><Link to='/help'>Контакты</Link></li>
 			</ul>
+			<ul className={classes.social}>
+				<li>
+					<img src={require('./img/d2.webp')} alt="Drive2"/>
+				</li>
+				<li>
+					<i className={`${classes.icon} ${classes.wa_icon}`}></i>
+				</li>
+				<li>
+					<i className={`${classes.icon} ${classes.yt_icon}`}></i>
+				</li>
+				<li>
+					<i className={`${classes.icon} ${classes.tg_icon}`}></i>
+				</li>
+			</ul>
+			<div className={classes.pay}>
+				<span>Принимаем к оплате:<br/>
+				А так же безналичный расчет</span>
+				<div>
+				<img src={require('./img/pay1.webp')} alt="mastercard"/>
+				<img src={require('./img/pay2.webp')} alt="visa"/>
+				<img src={require('./img/pay3.webp')} alt="mir"/>
+				</div>
+			</div>
 		</footer>
 	)
 }

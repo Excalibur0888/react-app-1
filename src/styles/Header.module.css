@@ -17,8 +17,9 @@
 }
 
 .navbar {
-	margin-left: 80px;
+	margin-left: 100px;
 	z-index: 99;
+	text-transform: uppercase;
 }
 
 .navbar * {
@@ -80,6 +81,7 @@
 
 .loginreg {
 	width: auto;
+	text-transform: uppercase;
 	gap: 30px;
 	display: flex;
 	justify-content: space-between;
@@ -92,7 +94,6 @@
 	text-decoration: none;
 	font-weight: 500;
 }
-
 
 .loginreg > *::after {
 	content: '';

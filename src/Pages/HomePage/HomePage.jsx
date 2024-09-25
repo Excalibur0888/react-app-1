@@ -10,6 +10,7 @@ import Suggestions from './components/Suggestions/Suggestions';
 import Works from './components/Works/Works';
 import Contacts from '../../components/Contacts/Contacts'
 import HomeReviews from './components/HomeReviews/HomeReviews';
+import Footer from '../../components/Footer/Footer';
 
 const HomePage = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -60,6 +61,7 @@ const HomePage = () => {
 			<Works/>
 			<HomeReviews/>
 			<Contacts/>
+			<Footer/>
     </div>
   );
 };

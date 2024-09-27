@@ -1,6 +1,7 @@
 import React from "react";
 import classes from './Footer.module.css'
 import { Link } from "react-router-dom";
+import Button from '../../components/Button'
 
 export default function Footer() {
 	return (
@@ -30,6 +31,7 @@ export default function Footer() {
 				</li>
 			</ul>
 			<div className={classes.pay}>
+				<Button title="Найти нас на Яндекс.Картах" className={classes.footer__btn}/>
 				<span>Принимаем к оплате:<br/>
 				А так же безналичный расчет</span>
 				<div>

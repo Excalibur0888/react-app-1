@@ -3,6 +3,7 @@ import classes from './Container.module.css';
 import Header from "../../../../components/Header";
 import TypingText from '../TypingText/TypingText';
 import Button from "../../../../components/Button";
+import { Link } from "react-router-dom";
 
 const Container = () => {
   return (
@@ -18,7 +19,7 @@ const Container = () => {
 					<h2>ЛУЧШИЙ ТЮНИНГ-САЛОН РОССИИ</h2>
 					<h1>4MOTION</h1>
 					<h3>Мы не просто делаем автомобили лучше, мы превращаем их в что-то поистине впечатляющее, что не оставит равнодушным случайного прохожего и подарит незабываемые впечатления водителю.</h3>
-					<Button title="Сделай этот шаг"/>
+					<Link to="/help"><Button title="Сделай этот шаг"/></Link>
         </div>
 				<TypingText className={classes.typing} phr1="Если не можешь быть лучшим - будь уникальным. ©Айртон Сенна" phr2="Если у тебя есть мечта, ты должен сделать всё возможное, чтобы её достичь. ©Михаэль Шумахер" />
     </div>

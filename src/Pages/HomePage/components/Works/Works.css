@@ -491,6 +491,10 @@
 	left: 85%;
 } 
 
+.works__link {
+	text-decoration: none;
+}
+
 .line-background {
   position: absolute;
   z-index: 0;

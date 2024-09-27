@@ -5,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Button from '../../../../components/Button';
+import { Link } from "react-router-dom";
 
 export default function HomeReviews() {
   const images = Array.from({ length: 5 }, (_, i) => require(`./img/otziv${i + 1}.webp`));
@@ -79,7 +80,7 @@ export default function HomeReviews() {
         <div className="button button__reviews"></div>
         <br/>
       </div>
-      <Button title="Все отзывы" className="HomeReviews__button" />
+      <Link to="/reviews" className="HomeReviews__link"><Button title="Все отзывы" className="HomeReviews__button" /></Link>
     </div>
   );
 }

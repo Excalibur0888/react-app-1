@@ -5,6 +5,7 @@ import Button from '../../../../components/Button';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './Works.css';
+import { Link } from 'react-router-dom';
 
 export default function Works() {
   const projects = [
@@ -90,7 +91,7 @@ export default function Works() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Button className="works__button" title="Все проекты" />
+      <Link to="/gallery" className="works__link"><Button className="works__button" title="Все проекты" /></Link>
       <div className="line-background"></div>
     </div>
   );

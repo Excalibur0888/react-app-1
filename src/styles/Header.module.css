@@ -7,7 +7,7 @@
 	position: fixed;
 	align-self: baseline;
 	display: flex;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.05));
 	width: 100%;
 	height: 55px;
 	justify-content: space-between;
@@ -24,7 +24,7 @@
 
 .navbar * {
 	position: relative;
-	font-size: 16px;
+	font-size: 1em;
 	color: aliceblue;
 	text-decoration: none;
 	font-weight: 500;
@@ -69,7 +69,7 @@
 	text-align: center;
 	padding: 0 10px;
 	color: white;
-	font-size: 15px;
+	font-size: 1em;
 	width: auto;
 	height: 50px;
 }
@@ -89,7 +89,7 @@
 
 .loginreg > *{
 	position: relative;
-	font-size: 16px;
+	font-size: 1em;
 	color: aliceblue;
 	text-decoration: none;
 	font-weight: 500;

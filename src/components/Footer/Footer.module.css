@@ -167,3 +167,8 @@
 .mir {
 	background: url(./img/pay3.webp) no-repeat;
 }
+
+.footer__btn {
+	position: relative;
+	left: 8%;
+}

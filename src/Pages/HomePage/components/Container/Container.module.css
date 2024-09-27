@@ -34,42 +34,6 @@
 	text-align: center;
 }
 
-.loginreg {
-	width: 13%;
-	display: flex;
-	justify-content: space-between;
-}
-
-.loginreg * {
-	padding: 0 2px;
-	border: 1px solid white;
-}
-
-.loginreg * *{
-	text-decoration: none;
-	font-size: 1em;
-	vertical-align: middle;
-	color: white;
-	padding: 10px 2px;
-}
-
-.username {
-	position: relative;
-	text-align: center;
-	padding: 0 10px;
-	cursor: pointer;
-	background: rgba(187, 187, 187, 0.5);
-	border: 1px solid white;
-	font-size: 15px;
-	width: auto;
-	height: 50px;
-}
-
-.username * {
-	color: white;
-	text-decoration: none;
-}
-
 .container h1 {
 		font-family: "Roboto Condensed", cursive;
 		font-size: 4rem;

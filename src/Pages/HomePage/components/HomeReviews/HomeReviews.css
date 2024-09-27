@@ -161,3 +161,7 @@
   opacity: 1; /* Псевдоэлемент скрыт у всех слайдов, кроме активного */
   transition: 0.7s all ease;
 }
+
+.HomeReviews__link {
+	text-decoration: none;
+}

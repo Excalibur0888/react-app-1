@@ -9,7 +9,7 @@
 	background-position: 50%;
 	background-repeat: no-repeat;
 	font-family: Arial, Helvetica, sans-serif;
-	animation: opacity 1s linear;
+	animation: opacity 0.5s linear;
 	min-height: 100vh;
 }
 

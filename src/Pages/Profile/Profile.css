@@ -4,7 +4,7 @@
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: 100vh;
-	animation: 1s opacity linear;
+	animation: opacity 0.5s linear;
 }
 
 @keyframes opacity {

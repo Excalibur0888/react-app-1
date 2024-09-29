@@ -4,7 +4,6 @@
 * {
 	box-sizing: border-box;
 	font-family: "Roboto", serif;
-	font-weight: 400;
 }
 /* Ширина и цвет полосы прокрутки */
 ::-webkit-scrollbar {
@@ -17,13 +16,13 @@
 	background: #FF0000;
 }
 body {
+	background-color: black;
 	cursor: none;
 }
 
 button, a {
 	cursor: none; /* Отключаем стандартный курсор на кнопках и ссылках */
 }
-
 
 .cursor {
 	background-color: blue; /* Задаём синий цвет для курсора */
@@ -54,9 +53,6 @@ button, a {
 	.cursor-follower {
 		display: none;
 	}
-}
-body {
-	cursor: none;
 }
 
 button, a {

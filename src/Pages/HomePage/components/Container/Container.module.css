@@ -35,11 +35,11 @@
 }
 
 .container h1 {
-		font-family: "Roboto Condensed", cursive;
-		font-size: 4rem;
-		color: white;
-		font-weight: bold;
-		text-decoration: none;
+	font-family: "Roboto Condensed", cursive;
+	font-size: 4rem;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .container h1::first-letter {

@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 export default function Nav() {
 	return (
 		<nav className={classes.loginreg}>
-			<Link to='/login'>Войти</Link>
-			<Link to='/register'>Регистрация</Link>
+			<Link to='/auth/login'>Войти</Link>
+			<Link to='/auth/register'>Регистрация</Link>
 		</nav>
+
 	)
 }

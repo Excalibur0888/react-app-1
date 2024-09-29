@@ -4,6 +4,7 @@
 	right: 0;
 	width: calc(100% - 58%);
 	height: 100%;
+	overflow: hidden;
 }
 
 .logregbox .formbox {
@@ -18,7 +19,7 @@
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 	color: aliceblue;
-	animation: bottom 1s ease;
+	animation: right 1s ease;
 }
 
 .formbox h2 {
@@ -30,7 +31,7 @@
 	position: relative;
 	width: 340px;
 	height: 50px;
-	border-bottom: 2px solid rgb(255, 240, 240);
+	border-bottom: 2px solid aliceblue;
 	margin: 30px 0;
 }
 
@@ -62,17 +63,6 @@
   top: -5px;
 }
 
-.error_msg {
-	color: #def607;
-	text-align: center;
-	font-size: 1em;
-	animation: opacity .5s ease;
-}
-
-.error_msg_hidden {
-	display: none;
-}
-
 .inputbox .icon {
 	position: absolute;
 	top: 13px;
@@ -91,6 +81,20 @@
 .rememberforgot label input {
 	accent-color: #e4e4e4;
 	margin-right: 3px;
+}
+
+.error_msg_hidden {
+	display: none;
+}
+
+.error_msg {
+	display: block;
+	position: absolute;
+	transition: all .5s ease;
+	right: 0;
+	top: -20px;
+	color: #fff;
+	z-index: 2;
 }
 
 .btn {
@@ -129,20 +133,20 @@
 	text-decoration: underline;
 }
 
-@keyframes bottom {
+@keyframes right {
 	from {
-		transform: translateY(-100%);
+		transform: translateX(100%);
 	}
 	to {
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 }
 
 @keyframes opacity {
 	from {
-		opacity: 0;
+		opacity: 0;;
 	}
 	to {
-		opacity: 1;
+		opacity: 1;;
 	}
 }

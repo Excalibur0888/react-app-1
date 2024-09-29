@@ -10,7 +10,7 @@
 	height: 100vh;
 	background: black;
 	background-size: cover;
-	animation: opacity 1s linear;
+	animation: opacity 0.5s linear;
 }
 
 .logo {

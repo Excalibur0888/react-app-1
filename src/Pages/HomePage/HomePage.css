@@ -1,7 +1,7 @@
 .HomePage {
 	background: black;
 	position: relative;
-	animation: opacity 1s linear;
+	animation: opacity 0.5s linear;
 	overflow-x: hidden;
 }
 

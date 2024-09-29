@@ -7,7 +7,7 @@
 	position: fixed;
 	align-self: baseline;
 	display: flex;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.05));
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
 	width: 100%;
 	height: 55px;
 	justify-content: space-between;
@@ -27,7 +27,7 @@
 	font-size: 1em;
 	color: aliceblue;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 400;
 	margin-right: 30px;
 }
 
@@ -56,8 +56,9 @@
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
 	color: white;
 	font-weight: bold;
+	font-family: 'Oleo Script', cursive;
 	text-decoration: none;
-	text-shadow: -1.5px 1.5px 0px #FF1D25;
+	text-shadow: -1.5px 1.5px 0px #FF0000;
 }
 
 .header__name::first-letter {
@@ -66,12 +67,12 @@
 }
 
 .username {
-	text-align: center;
 	padding: 0 10px;
 	color: white;
 	font-size: 1em;
+	font-weight: 400;
 	width: auto;
-	height: 50px;
+	height: 100%;
 }
 
 .username > * {
@@ -92,7 +93,7 @@
 	font-size: 1em;
 	color: aliceblue;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .loginreg > *::after {

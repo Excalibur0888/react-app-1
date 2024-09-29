@@ -3,6 +3,10 @@ import classes from './Headings.module.css'
 import img1 from '../../../../img/cert.png';
 import img2 from '../../../../img/24.png';
 import img3 from '../../../../img/speed.png';
+import BorderLB from "../../../../components/LineBorders/BorderLB";
+import BorderRB from "../../../../components/LineBorders/BorderRB";
+import BorderRT from "../../../../components/LineBorders/BorderRT";
+import BorderLT from "../../../../components/LineBorders/BorderLT";
 
 const Headings = () => {
 	const headingsRef = useRef([]);
@@ -56,18 +60,10 @@ const Headings = () => {
           <br />
           <img src={img3} alt="" />
         </div>
-				<div className={`${classes.line_border_lb} ${classes.line_border_lb_red}`}>
-					<span className={`${classes.dotted}`}></span>
-				</div>
-				<div className={`${classes.line_border_rb} ${classes.line_border_rb_gray}`}>
-					<span className={`${classes.dotted}`}></span>
-				</div>
-				<div className={`${classes.line_border_rt} ${classes.line_border_rt_red}`}>
-					<span className={`${classes.dotted}`}></span>
-				</div>
-				<div className={`${classes.line_border_lt} ${classes.line_border_lt_gray}`}>
-					<span className={`${classes.dotted}`}></span>
-				</div>
+					<BorderLB/>
+					<BorderRB/>
+					<BorderRT/>
+					<BorderLT/>
       </div>
 	)
 }

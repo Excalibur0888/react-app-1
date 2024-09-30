@@ -58,7 +58,7 @@ const RegisterForm = () => {
             setErrorMessage('Пароли должны совпадать');
         } else {
             setVisible(true);
-            setErrorMessage('Пароль должен содержать не менее 8 символов');
+            setErrorMessage('Пароль содержит менее 8 символов');
         }
     };
 

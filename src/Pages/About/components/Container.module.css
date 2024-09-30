@@ -1,0 +1,233 @@
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 130vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1; /* Чтобы быть выше видео */
+}
+
+.about__container::after {
+	content: '';
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  background: url(../../../img/zm-promo_bottom.png) no-repeat top center;
+  height: 236px;
+  width: 100%;
+}
+
+.about__container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Видео на заднем фоне */
+}
+
+.about__heading {
+  padding: 1% 20%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+	margin-top: 5%;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.about__heading span span:first-child {
+  color: #FF0000;
+}
+
+.about__contact {
+  background-color: #110f16;
+  width: 330px;
+  height: 50px;
+	padding-left: 40px;
+	margin-top: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid #FF0000;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about__contact::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/zm-promo2.png);
+  width: 48px;
+  height: 51px;
+}
+
+.about__contact::after {
+  content: "";
+  position: absolute;
+  right: 52px;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/zm-promo1.png);
+  width: 75px;
+  height: 51px;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.promo__video {
+  position: relative;
+	background: no-repeat url('../img/vwgolf.jpg');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	top: 30px;
+  border: 1px solid #f60102;
+	width: 50%;
+	height: 55%;
+  margin: 0 auto;
+}
+
+.video__preview {
+	position: absolute;
+  left: -37px;
+  top: -5px;
+  width: 320px;
+}
+
+.play__btn {
+	position: relative;
+	margin: 0 auto;
+	width: 110px;
+	left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+	transition: all 0.5s ease;
+}
+
+.play__btn:hover {
+	transform: scale(1.15);
+}
+
+.container__promo {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  left: -542px;
+  transform: rotate(5deg);
+	z-index: 2;
+}
+
+.container__phone {
+  font-size: 27px;
+  color: #FFF;
+  position: absolute;
+  bottom: 0px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.container__phone:before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -95px;
+  background: url(../img/call.png) no-repeat;
+  width: 209px;
+  height: 61px;
+}
+
+.container__phone span {
+  display: inline-block;
+  font-size: 59px;
+	font-weight: 600;
+}
+
+.social {
+	position: absolute;
+  display: flex;
+  align-items: center;
+	bottom: 50px;
+	right: 200px;
+  transform: rotate(-5deg);
+}
+
+.social li {
+	list-style: none; 
+  padding: 0 5px;
+}
+
+.social li span {
+	font-size: 10px;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.social li a{
+  display: inline-block;
+    transition: all ease .3s;
+    -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.social li a:hover{
+    -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: headShake;
+  animation-name: headShake;
+}
+
+@keyframes headShake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  6.5% {
+    -webkit-transform: translateX(-6px) rotateY(-9deg);
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    -webkit-transform: translateX(5px) rotateY(7deg);
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    -webkit-transform: translateX(-3px) rotateY(-5deg);
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    -webkit-transform: translateX(2px) rotateY(3deg);
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

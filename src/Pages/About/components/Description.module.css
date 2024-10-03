@@ -7,11 +7,17 @@
 }
 
 .description {
+	position: relative;
 	padding: 50px;
 }
 
+.description__container {
+	position: relative;
+	padding: 0 20% 0 20%;
+	margin-bottom: 10%;
+}
+
 .about__title p {
-  margin: 0;
   font-size: 33px;
 	text-transform: uppercase;
   color: #FFF;
@@ -40,8 +46,28 @@
   position: relative;
   padding-left: 50px;
   line-height: 1.3;
-	margin-top: 40px;
+	margin: 40px 0 40px 0;
 	left: 18%;
+}
+
+.borderRT {
+	right: 20%;
+	top: 13%;
+}
+
+.borderRT2 {
+	top: -30%;
+	right: 18%;
+}
+
+.borderLB {
+	left: 17%;
+	bottom: -10%;
+}
+
+.borderRB {
+	bottom: -11%;
+	right: 18%;
 }
 
 .subtitle:before {
@@ -52,4 +78,74 @@
   background: #FF0000;
   left: -60px;
   top: 0;
+}
+
+.description__container p {
+	color: #FFF;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.description__container p b {
+	margin-bottom: 26px;
+}
+
+.description ul li {
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #fff;
+    list-style: circle;
+    margin-left: 20px;
+}
+
+.description__container::before {
+  content: '........................................................................';
+  position: absolute;
+  left: 170px;
+  bottom: 200px;
+  font-family: HRoman;
+  font-size: 9px;
+  color: #FF0000;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.description__container::after {
+  content: '......';
+  position: absolute;
+  left: 183px;
+  bottom: 200px;
+  height: 183px;
+  width: 4px;
+  color: #FF0000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 33px;
+  letter-spacing: 20px;
+}
+
+.description__utils {
+	position: relative;
+	display: flex;
+	margin-top: 26px;
+	top: 40px;
+	padding: 0 10% 0 10%;
+	width: 100%;
+}
+
+.description__promo {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: rotate(0deg);
+}
+
+.description__btn {
+	position: relative;
+	top: -30px;
+	right: 0;
+	bottom: 0;
+	left: 140px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Container.module.css';
 import PlaySvg from '../img/play.svg'
+import Promo from './Promo';
 
 function Container() {
 	return ( 
@@ -14,11 +15,7 @@ function Container() {
 				<img className={classes.video__preview} src={require('../img/zm-promo_youtube.webp')} alt=""/>
 				<img className={classes.play__btn} src={PlaySvg} alt=""/>
 			</div>
-			<div className={classes.container__promo}>
-				<a href="tel:+7 (910)575-65-14" className={classes.container__phone}>
-					+7 (910) <span>575-65-14</span>
-				</a>
-			</div>
+			<Promo/>
 			<ul className={classes.social}>
 				<li>
 					<span>Мы в социальных сетях</span>

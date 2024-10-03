@@ -1,0 +1,33 @@
+.container__promo {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  left: -542px;
+  transform: rotate(5deg);
+	z-index: 2;
+}
+
+.container__phone {
+  font-size: 27px;
+  color: #FFF;
+  position: absolute;
+  bottom: 0px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.container__phone:before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -95px;
+  background: url(../img/call.png) no-repeat;
+  width: 209px;
+  height: 61px;
+}
+
+.container__phone span {
+  display: inline-block;
+  font-size: 59px;
+	font-weight: 600;
+}

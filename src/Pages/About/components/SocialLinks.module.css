@@ -1,0 +1,82 @@
+.SocialLinks__container {
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.SocialLinks__container li {
+	width: 105px;
+	height: 105px;
+	border: 2px solid #72698e;
+	border-radius: 50%;
+	position: relative;
+}
+
+.SocialLinks__container li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -2px;
+	margin: auto;
+	background-image: url(../../../img/zm-social-figure.svg);
+	width: 19px;
+	height: 17px;
+	background-repeat: no-repeat;
+	z-index: 3;
+}
+
+.SocialLinks__container li:hover {
+	transition: all .2s linear;
+	transform: scale(1.1);
+}
+
+.wa__icon {
+	background-image: url(../../../img/whatsapp.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.yt__icon {
+	background-image: url(../../../img/yt.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.tg__icon {
+	background-image: url(../../../img/telegram.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: 45%;
+}
+
+.vk__icon {
+	background-image: url(../../../img/vk.svg);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.inst__icon {
+	background-image: url(../../../img/instagram.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.iconLabel {
+	display: block;
+	position: relative;
+	text-align: center;
+	color: white; /* Белый цвет для подписей */
+	font-size: 1em;
+	top: 100%;
+	margin-top: 10px;
+}

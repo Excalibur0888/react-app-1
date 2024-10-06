@@ -7,3 +7,16 @@
   animation: opacity 0.5s linear;
 	overflow-x: hidden;
 }
+
+.about__btn2 > * {
+	width: 100%;
+}
+
+.about__btn2 {
+	position: relative;
+	top: 30px;
+	right: 0;
+	bottom: 0;
+	width: 310px;
+	border: none;
+}

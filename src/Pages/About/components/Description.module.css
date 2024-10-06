@@ -8,7 +8,6 @@
 
 .description {
 	position: relative;
-	padding: 50px;
 }
 
 .description__container {
@@ -51,7 +50,7 @@
 }
 
 .borderRT {
-	right: 20%;
+	right: 18%;
 	top: 13%;
 }
 
@@ -90,18 +89,18 @@
 	margin-bottom: 26px;
 }
 
-.description ul li {
-    font-size: 16px;
-    line-height: 27.2px;
-    color: #fff;
-    list-style: circle;
-    margin-left: 20px;
+.description__list li {
+	font-size: 16px;
+	line-height: 27.2px;
+	color: #fff;
+	list-style: circle;
+	margin-left: 20px;
 }
 
 .description__container::before {
   content: '........................................................................';
   position: absolute;
-  left: 170px;
+  left: 180px;
   bottom: 200px;
   font-family: HRoman;
   font-size: 9px;
@@ -113,7 +112,7 @@
 .description__container::after {
   content: '......';
   position: absolute;
-  left: 183px;
+  left: 193px;
   bottom: 200px;
   height: 183px;
   width: 4px;
@@ -142,10 +141,11 @@
 	transform: rotate(0deg);
 }
 
-.description__btn {
+.description__btn1 {
 	position: relative;
 	top: -30px;
 	right: 0;
 	bottom: 0;
 	left: 140px;
 }
+

@@ -24,7 +24,7 @@ function Description() {
 					<b>С 1 октября 2009г. наше тюнинг-ателье с радостью предлагает вам <br/>
 					огромное количество вариантов доработки любимого автомобиля:</b>
 				</p>
-				<ul>
+				<ul className={classes.description__list}>
 						<li>Кузовной ремонт, окрас кузова;</li>
 						<li>Собственная лаборатория по подбору цвета и технолог - колорист; </li>
 						<li>Технический центр;</li>
@@ -67,7 +67,7 @@ function Description() {
 				<BorderRB className={classes.borderRB}/>
 				<div className={classes.description__utils}>
 					<Promo className={classes.description__promo}/>
-					<Button title="Написать нам" className={classes.description__btn}/>
+					<Button title="Написать нам" className={classes.description__btn1}/>
 				</div>
 			</div>
 		</div>

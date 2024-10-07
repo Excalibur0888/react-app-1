@@ -3,7 +3,7 @@
   z-index: 1;
 }
 
-.previews__title {
+.previews__title__d2 {
   margin-left: 360px;
   position: relative;
   width: 490px;
@@ -11,25 +11,6 @@
 
 .previews__title__yndx {
 	margin-left: 600px;
-}
-
-.previews__title span {
-  display: block;
-  font-size: 2em;
-  color: #e00104;
-  font-weight: 400;
-  text-transform: uppercase;
-	z-index: 1;
-}
-
-.previews__title b {
-  font-size: 4em;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin-top: 10px;
-  display: block;
-	z-index: 1;
 }
 
 .elipse-9 {

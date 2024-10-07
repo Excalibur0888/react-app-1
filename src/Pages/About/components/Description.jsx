@@ -5,13 +5,12 @@ import BorderLB from '../../../components/LineBorders/BorderLB'
 import BorderRB from '../../../components/LineBorders/BorderRB'
 import Promo from './Promo';
 import Button from '../../../components/Button'
+import Title from '../../../components/Title/Title';
 
 function Description() {
 	return ( 
 		<div className={classes.description}>
-			<h2 class={classes.about__title}>
-    		<p>О НАШЕЙ <b><span>СТУДИИ</span></b></p>
-    	</h2>
+			<Title title="О нашей" subtitle="Студии" className={classes.description__title}/>
 			<div className={classes.subtitle}>И команде</div>
 			<BorderRT className={classes.borderRT}/>
 			<div className={classes.description__container}>
@@ -45,9 +44,7 @@ function Description() {
 				<BorderLB className={classes.borderLB}/>
 				<BorderRB className={classes.borderRB}/>
 			</div>
-			<h2 class={classes.about__title}>
-    		<p>МЫ<b><span>НАХОДИМСЯ</span></b></p>
-    	</h2>
+			<Title title="Мы" subtitle="Находимся" className={classes.description__title}/>
 			<div className={classes.subtitle}>По адресу:</div>
 			
 			<div className={classes.description__container}>

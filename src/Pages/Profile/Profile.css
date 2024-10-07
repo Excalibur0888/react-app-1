@@ -4,14 +4,4 @@
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: 100vh;
-	animation: opacity 0.5s linear;
-}
-
-@keyframes opacity {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }

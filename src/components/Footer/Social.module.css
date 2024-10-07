@@ -1,0 +1,82 @@
+.social {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-top: 40px;
+}
+
+.social li {
+	list-style: none;
+}
+
+.icon {
+	position: relative;
+  -webkit-background-size: 60%;
+  background-size: 60%;
+	margin-right: 5px;
+	width: 45px;
+  height: 45px;
+  border: 2px solid #de0108;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.65);
+  background-repeat: no-repeat;
+  background-position: center;
+	transition: all ease .3s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.icon:hover {
+	-webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: headShake;
+  animation-name: headShake;
+}
+
+@keyframes headShake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  6.5% {
+    -webkit-transform: translateX(-6px) rotateY(-9deg);
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    -webkit-transform: translateX(5px) rotateY(7deg);
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    -webkit-transform: translateX(-3px) rotateY(-5deg);
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    -webkit-transform: translateX(2px) rotateY(3deg);
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.wa_icon {
+	background-image: url(../../img/whatsapp.svg);
+}
+
+.yt_icon {
+	background-image: url(../../img/yt.svg);
+}
+
+.tg_icon {
+	background-image: url(../../img/telegram.svg);
+}

@@ -1,9 +1,18 @@
-.about__title {
+.description__title {
   margin: 0;
   line-height: 1;
   position: relative;
   z-index: 10;
 	left: 11%;
+	margin-top: 50px;
+}
+
+.description__title span {
+	color: #fff;
+}
+
+.description__title b {
+	color: #e00104;
 }
 
 .description {
@@ -14,27 +23,6 @@
 	position: relative;
 	padding: 0 20% 0 20%;
 	margin-bottom: 10%;
-}
-
-.about__title p {
-  font-size: 33px;
-	text-transform: uppercase;
-  color: #FFF;
-  font-weight: normal;
-}
-
-.about__title p span {
-  color: #e00104;
-  display: inline-block;
-}
-
-.about__title b {
-  font-size: 60px;
-  color: #FFF;
-  font-weight: 900;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 16px;
 }
 
 .subtitle {

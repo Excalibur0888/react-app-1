@@ -2,22 +2,12 @@
 	box-sizing: border-box;
 }
 
-.Gallery {
+.Gallery__container {
 	background: black;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: 50%;
-	background-repeat: no-repeat;
-	font-family: Arial, Helvetica, sans-serif;
-	animation: opacity 0.5s linear;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+	overflow-x: hidden;
 	min-height: 100vh;
-}
-
-@keyframes opacity {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }

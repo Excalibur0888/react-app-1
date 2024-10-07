@@ -1,14 +1,11 @@
 import React from "react";
 import './Gallery.css';
 import Header from "../../components/Header";
-import Containers from "./components/Containers/Containers";
 
 const Gallery = () => {
 	return (
-	<div className="Gallery">
-		<Header>
-		</Header>
-		<Containers/>
+	<div className="Gallery__container">
+		<Header/>
 	</div>
 	);
 }

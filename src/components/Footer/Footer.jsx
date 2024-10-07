@@ -2,6 +2,7 @@ import React from "react";
 import classes from './Footer.module.css'
 import { Link } from "react-router-dom";
 import Button from '../../components/Button'
+import Social from "./Social";
 
 export default function Footer() {
 	return (
@@ -16,20 +17,7 @@ export default function Footer() {
 				<li><Link to='/reviews'>Отзывы</Link></li>
 				<li><Link to='/help'>Контакты</Link></li>
 			</ul>
-			<ul className={classes.social}>
-				<li>
-					<img src={require('./img/d2.webp')} alt="Drive2"/>
-				</li>
-				<li>
-					<i className={`${classes.icon} ${classes.wa_icon}`}></i>
-				</li>
-				<li>
-					<i className={`${classes.icon} ${classes.yt_icon}`}></i>
-				</li>
-				<li>
-					<i className={`${classes.icon} ${classes.tg_icon}`}></i>
-				</li>
-			</ul>
+			<Social/>
 			<div className={classes.pay}>
 				<Button title="Найти нас на Яндекс.Картах" className={classes.footer__btn}/>
 				<span>Принимаем к оплате:<br/>

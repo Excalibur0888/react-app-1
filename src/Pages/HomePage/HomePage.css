@@ -1,15 +1,5 @@
 .HomePage {
 	background: black;
 	position: relative;
-	animation: opacity 0.5s linear;
 	overflow-x: hidden;
-}
-
-@keyframes opacity {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }

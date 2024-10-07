@@ -1,0 +1,76 @@
+.help__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	background: #000 url(../../img/contacts_new_section_1_bg.png) center no-repeat;
+	z-index: 1;
+	min-height: 200vh;
+	overflow: hidden;
+}
+
+.help__title {
+	align-self: flex-start;
+	margin-bottom: 12px;
+  margin-top: 80px;
+	margin-left: 300px;
+}
+
+.contact_new_section_1_ellipse {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 426px;
+	height: 885px;
+	background: url(../../img/contact_new_section_1_ellipse.png) 0 0 no-repeat;
+}
+
+.inpage_img{
+	position: absolute;
+	height: 100%;
+	right: 0;
+	z-index: 1;
+	top: 95px;
+}
+
+.inpage_img img{
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+}
+
+.inpage_img:before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 100%;
+	background: url(../../img/pattern2.png) no-repeat;
+	width: 78px;
+	z-index: 3;
+}
+
+.inpage_img:after{
+	content: "";
+	display: block;
+	position: absolute;
+	background: url(../../img/pattern3.png) no-repeat;
+	width: 401px;
+	height: 100%;
+	top: -10px;
+	z-index: 1;
+	right: 0;
+}
+
+.help__btn2 > * {
+	width: 100%;
+}
+
+.help__btn2 {
+	align-self: flex-start;
+	position: relative;
+	top: 30px;
+	right: 0;
+	bottom: 0;
+	width: 310px;
+	border: none;
+}

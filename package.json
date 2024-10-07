@@ -37,7 +37,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev": "npm-run-all --parallel start proxy proxyveg proxyServices proxyReviews",
+    "dev": "npm start",
     "proxy": "node my-proxy-server/proxy.js",
     "proxyveg": "node my-proxy-server/proxyveg.js",
     "proxyServices": "node my-proxy-server/proxyServices.js",

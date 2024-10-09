@@ -1,0 +1,203 @@
+.crew__container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	margin-top: 100px;
+}
+
+.crew__ellipse {
+	background: url(../../img/team_ellipse.png) 0 0 no-repeat;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 413px;
+	height: 882px;
+}
+
+.grid__container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 60%;
+}
+
+.crew__container::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	background: url(../../img/new_template_dots.png) 0 0 no-repeat;
+	width: 124px;
+	height: 225px;
+}
+
+.crew__container::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	background: url(../../img/new_template_dots2.png) 0 0 no-repeat;
+	width: 124px;
+	height: 225px;
+}
+
+.crew__title {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.crew__title::before {
+	content: '';
+	position: absolute;
+	display: block;
+	left: 200px;
+	top: 35px;
+	width: 70px;
+	height: 5px;
+	background-color: #f00000;
+}
+
+.crew__title::after {
+	content: '';
+	position: absolute;
+	display: block;
+	left: 200px;
+	top: 55px;
+	width: 70px;
+	height: 5px;
+	background-color: #f00000;
+}
+
+.crew__title span {
+	position: relative;
+	color: #fff;
+}
+
+.crew__item {
+	width: 100%;
+	max-width: 270px;
+	background: #000000;
+	position: relative;
+	padding: 2px;
+	margin-bottom: 50px;
+}
+
+.crew__item::before {
+	content: '';
+  display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	width: 94px;
+	height: 94px;
+}
+
+.crew__item::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	width: 94px;
+	height: 94px;
+}
+
+.crew__red__line {
+	height: 247px;
+	width: 100%;
+	background: #e00104;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.crew__item__container {
+	position: relative;
+	height: 100%;
+	background: #000 url(../../img/team_item_container_bg2.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 5px;
+	z-index: 2;
+}
+
+.crew__item__block {
+	filter: grayscale(100%);
+  transition: .3s all;
+}
+
+.crew__item:hover .crew__item__block {
+  filter: grayscale(0%);
+}
+
+.crew__item__block img {
+	width: 100%;
+  max-width: 100%;
+}
+
+.crew__item__socials {
+	position: absolute;
+	z-index: 2;
+	right: 10px;
+	top: 245px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.crew__text {
+	text-align: center;
+}
+
+.crew__text h2 {
+	font-size: 24px;
+	color: white;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.crew__text a {
+	font-size: 24px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #f00000;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+}
+
+.crew__text span {
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 40px;
+	text-align: center;
+}
+
+.crew__text ul {
+	min-height: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.crew__text ul li {
+	color: white;
+	list-style: none;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+	padding: 0 5px;
+}

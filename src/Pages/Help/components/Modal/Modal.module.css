@@ -5,6 +5,7 @@
 	position: relative;
 	z-index: 6;
 	margin-bottom: 150px;
+	overflow: hidden;
 }
 
 .modal__container::before{

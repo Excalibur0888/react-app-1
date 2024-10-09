@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
-import './Links.css'
+import './StickyLinks.css'
 
-export default function Links() {
+export default function StickyLinks() {
 	const stickySocialBtnRef = useRef(null);
   const stickySocialRef = useRef(null);
 

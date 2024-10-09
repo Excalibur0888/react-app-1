@@ -29,8 +29,8 @@ function Modal() {
 						</a>
 					</div>
 					<div className={classes.modal__desc2}>
-						GPS координаты для навигаторов:
-						<span>55.736486, 37.711339</span>
+						GPS координаты для навигаторов: 
+						<span> 55.736486, 37.711339</span>
 					</div>
 					<div className={classes.modal__socials}>
 						<Social/>

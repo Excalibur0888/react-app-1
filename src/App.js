@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
-import Links from './components/Links/Links';
+import StickyLinks from './components/StickyLinks/StickyLinks';
 import HomePage from "./Pages/HomePage/HomePage";
 import About from "./Pages/About/About";
 import AuthPage from "./Pages/Auth/AuthPage";
@@ -43,7 +43,7 @@ function App() {
     <div>
       <div ref={followerRef} className="cursor-follower"></div>
       <div ref={cursorRef} className="cursor"></div>
-      <Links />
+      <StickyLinks />
       <MouseUp />
       <Routes>
         <Route exact path="/" element={<HomePage />} />

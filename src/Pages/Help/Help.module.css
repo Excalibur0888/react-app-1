@@ -1,4 +1,5 @@
 .help {
 	position: relative;
 	background: black;
+	overflow-x: hidden;
 }

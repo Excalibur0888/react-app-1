@@ -1,0 +1,110 @@
+.custom_swiper_button_prev,
+.custom_swiper_button_next {
+	position: absolute;
+	bottom: -50px;
+	top: 50%;
+	left: 30px;
+	display: block;
+	margin-top: -20px;
+	text-indent: 110%;
+	white-space: nowrap;
+	border: 0;
+	outline: none;
+	font-size: 0;
+	background: none;
+	height: 54px;
+	z-index: 5;
+}
+
+.custom_swiper_button_prev::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background: url(./img/arrow-r.png) no-repeat;
+	width: 32px;
+	height: 19px;
+	right: 16px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: rotate(-180deg);
+	transition: all ease .3s;
+}
+
+.custom_swiper_button_prev span {
+	background: url(./img/partners-left.png) no-repeat;
+	width: 72px;
+	height: 54px;
+	display: block;
+}
+
+.custom_swiper_button_prev span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 11px;
+	height: 45px;
+	background: #202021;
+	transform: skew(28deg) rotate(20deg);
+	z-index: -1;
+	right: -4px;
+	top: 4px;
+	transition: all ease .3s;
+}
+
+.custom_swiper_button_next {
+	left: auto;
+	right: 30px;
+}
+
+.custom_swiper_button_next::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background: url(./img/arrow-r.png) no-repeat;
+	width: 32px;
+	height: 19px;
+	left: 16px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transition: all ease .3s;
+}
+
+.custom_swiper_button_next span {
+	background: url(./img/partners-right.png) no-repeat;
+	width: 72px;
+	height: 54px;
+	left: 110px;
+	display: block;
+}
+
+.custom_swiper_button_next span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 11px;
+	height: 45px;
+	background: #202021;
+	transform: skew(-28deg) rotate(-20deg);
+	z-index: -1;
+	left: -4px;
+	top: 4px;
+	transition: all ease .3s;
+}
+
+.custom_swiper_button_next:hover span::after{
+  transform: skew(-28deg) rotate(-29deg) translate(5px,0);
+}
+
+.custom_swiper_button_prev:hover span::after{
+  transform: skew(28deg) rotate(29deg) translate(-5px,0);
+}
+
+.custom_swiper_button_next:hover::before{
+  transform: translate(8px,0)
+}
+
+.custom_swiper_button_prev:hover::before{
+  transform: translate(-8px,0) rotate(-180deg);
+}

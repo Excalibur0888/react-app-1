@@ -18,11 +18,11 @@
 	background: url(../../img/work-backpng.png) no-repeat top center;
 }
 
-.contacts-swiper {
+.contacts_swiper {
 	width: 70%;
 }
 
-.contacts-slide {
+.contacts_slide {
   display: flex;
   justify-content: center;
 }
@@ -136,3 +136,4 @@
   height: 379px;
 	bottom: -100px;
 }
+

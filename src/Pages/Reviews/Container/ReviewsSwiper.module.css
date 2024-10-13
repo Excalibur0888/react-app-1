@@ -1,0 +1,13 @@
+.slider__reviews__item {
+  position: relative;
+  outline: none;
+}
+
+.slider__reviews__item img {
+  display: block;
+  border-radius: 10px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  position: relative;
+  z-index: 1;
+}

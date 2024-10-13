@@ -4,7 +4,8 @@
 	text-align: center;
 	background: #111111;
 	padding: 20px 20px 20px 50px;
-	margin-top: 1%;
+	margin: 1% auto;
+	margin-bottom: 7%;
 	position: relative;
 	z-index: 6;
 }
@@ -36,23 +37,9 @@
 
 .reviews__title {
 	margin-top: 7%;
-	margin-left: 18%;
+	margin-left: 15%;
 	align-self: flex-start;
-	z-index: 3;
-}
-
-.slider_reviews__item {
-  position: relative;
-  outline: none;
-}
-
-.slider_reviews__item img {
-  display: block;
-  border-radius: 10px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  position: relative;
-  z-index: 1;
+	z-index: 5;
 }
 
 .reviews__container__text {

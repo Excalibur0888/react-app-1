@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -29,6 +30,37 @@
 	border-radius: 10px;
 }
 
+h1 {
+	display: block;
+	margin-left: 17%;
+	font-size: 5rem;
+	color: #fff; /* Основной цвет текста */
+	font-style: italic;
+	font-family: 'Oleo Script', cursive;
+	user-select: none;
+	position: relative;
+	background: linear-gradient(90deg, #fff 0%, #fff 40%, rgba(255,255,255,0.5) 50%, #fff 60%, #fff 100%);
+	background-size: 200%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent; /* Делаем текст прозрачным, чтобы был виден градиент */
+	animation: shine 4s infinite linear; /* Анимация блеска */
+}
+
+@keyframes shine {
+	0% {
+		background-position: 200%;
+	}
+	100% {
+		background-position: -200%;
+	}
+}
+
+
+h1::first-letter {
+	color: #FF0000;
+}
+
 @keyframes opacity {
 	from {
 		opacity: 0;
@@ -36,4 +68,10 @@
 	to {
 		opacity: 1;
 	}
+}
+
+.auth__social {
+	width: 20%;
+	margin-top: 30%;
+	margin-left: 15%;
 }

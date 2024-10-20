@@ -4,6 +4,7 @@
 
 .reviews {
 	position: relative;
+	overflow-x: hidden;
 }
 
 .inpage__img {

@@ -60,6 +60,7 @@
 	font-family: 'Oleo Script', cursive;
 	text-decoration: none;
 	text-shadow: -1.5px 1.5px 0px #FF0000;
+	user-select: none;
 }
 
 .header__name::first-letter {

@@ -10,6 +10,7 @@ const Header = (props) => {
 			<header className={classes.header}>	
 			<Link className={classes.header__name} to='/'>4Motion</Link>
 			<nav className={classes.navbar}>
+				<Link to='/'>Главная</Link>
 				<Link to='/about'>О нас</Link>
 				<Link to='/gallery'>Выставочный зал</Link>
 				<Link to='/services'>Услуги</Link>
@@ -28,6 +29,7 @@ const Header = (props) => {
 			<header className={classes.header}>	
 			<Link className={classes.header__name} to='/'>4Motion</Link>
 			<nav className={classes.navbar}>
+				<Link to='/'>Главная</Link>
 				<Link to='/about'>О нас</Link>
 				<Link to='/gallery'>Выставочный зал</Link>
 				<Link to='/services'>Услуги</Link>

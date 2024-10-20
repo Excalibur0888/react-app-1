@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Social.module.css';
 
-function Social({ drive2, whatsapp, youtube, telegram }) {
+function Social({ drive2, whatsapp, youtube, telegram, className }) {
 	const noPropsProvided = drive2 === undefined && whatsapp === undefined && youtube === undefined && telegram === undefined;
 
 	return (
-		<ul className={classes.social}>
+		<ul className={`${classes.social} ${className}`}>
 			{(drive2 || noPropsProvided) && (
 				<li>
 					<img src={require('./img/d2.webp')} alt="Drive2" />

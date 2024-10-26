@@ -18,7 +18,7 @@ const AuthPage = () => {
       <Header />
       <div className={classes.background}></div>
       <div className={classes.container}>
-				<h1>4Motion</h1>
+				<h1 className={classes.auth__h1}>4Motion</h1>
 				<Social className={classes.auth__social}/>
         <BorderLB />
         <BorderLT />

@@ -76,7 +76,7 @@
 .about__contact::after {
   content: "";
   position: absolute;
-  right: 52px;
+  right: 48px;
   top: 0;
   background-repeat: no-repeat;
   background-size: contain;

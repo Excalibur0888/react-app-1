@@ -23,7 +23,6 @@ export default function Contacts() {
         modules={[Navigation]}
         className={classes.contacts_swiper}
         onInit={(swiper) => {
-          // Инициализация навигации после того, как Swiper будет готов
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
           swiper.navigation.init();

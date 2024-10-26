@@ -30,11 +30,11 @@
 	border-radius: 10px;
 }
 
-h1 {
+.auth__h1 {
 	display: block;
 	margin-left: 17%;
 	font-size: 5rem;
-	color: #fff; /* Основной цвет текста */
+	color: #fff;
 	font-style: italic;
 	font-family: 'Oleo Script', cursive;
 	user-select: none;
@@ -43,8 +43,8 @@ h1 {
 	background-size: 200%;
 	background-clip: text;
 	-webkit-background-clip: text;
-	color: transparent; /* Делаем текст прозрачным, чтобы был виден градиент */
-	animation: shine 4s infinite linear; /* Анимация блеска */
+	color: transparent;
+	animation: shine 4s infinite linear;
 }
 
 @keyframes shine {
@@ -57,7 +57,7 @@ h1 {
 }
 
 
-h1::first-letter {
+.auth__h1::first-letter {
 	color: #FF0000;
 }
 

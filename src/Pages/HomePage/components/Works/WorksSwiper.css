@@ -1,11 +1,11 @@
 .works-swiper {
-  width: 90%;
-  height: 500px;
-	margin-top: 5%;
+  width: 90% !important;
+  height: 500px !important;
+	margin-top: 5% !important;
 }
 
 .works-slide {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
@@ -140,7 +140,7 @@
   z-index: 99;
 }
 
-.works__line_plus:before {
+.works__line_plus::before {
   content: '';
   position: absolute;
   left: 70px;
@@ -152,7 +152,7 @@
   transition-delay: .3s;
 }
 
-.works__line_plus:after {
+.works__line_plus::after {
   content: '';
   position: absolute;
   left: 136px;
@@ -164,12 +164,12 @@
   z-index: 2;
 }
 
-.works__item:hover .works__line_plus:after{
+.works__item:hover .works__line_plus::after{
   transform: rotate(90deg);
   background: #ff0000;
 }
 
-.works__item:hover .works__line_plus:before{
+.works__item:hover .works__line_plus::before{
   transform: rotate(90deg);
   background: #ff0000;
 }
@@ -204,21 +204,22 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #fff;
-	cursor: none;
+  color: #fff !important;
+	cursor: none !important;
 }
 
 .swiper-button-next {
-	right: 0;
+	right: 0 !important;
 }
 
 .swiper-button-prev {
-	position: absolute;
-  background: none;
-  border: none;
-	left: 0;
-  overflow: visible;
-  border-radius: 50%;
+	position: absolute !important;
+  background: none !important;
+  border: none !important;
+	left: 0 !important;
+	color: transparent !important;
+  overflow: visible !important;
+  border-radius: 50% !important;
   transition: all ease .3s;
   -webkit-animation-duration: .4s;
   animation-duration: .4s;
@@ -228,16 +229,16 @@
 
 .swiper-button-prev:active,
 .swiper-button-next:active{
- animation-name: shadow
+ animation-name: shadow !important;
 }
 
-.swiper-button-prev:after {
-  width: 0;
-  height: 0;
+.swiper-button-prev::after {
+  width: 0 !important;
+  height: 0 !important;
   border-top: 15px solid transparent;
   border-right: 30px solid red;
   border-bottom: 15px solid transparent;
-  position: absolute;
+  position: absolute !important;
   content: '';
   top: 5px;
   left: 0px;
@@ -250,9 +251,9 @@
           animation-iteration-count: infinite;
 }
 
-.swiper-button-prev:before {
-  content: '';
-  position: absolute;
+.swiper-button-prev::before {
+  content: '' !important;
+  position: absolute !important;
   top: 10px;
   left: 7px;
   width: 0;
@@ -330,11 +331,11 @@
   }
 }
 
-.swiper-button-prev:hover:before{
+.swiper-button-prev:hover::before{
   animation-name: slide9
 }
 
-.swiper-button-prev:hover:after{
+.swiper-button-prev:hover::after{
   animation-name: slide8
 }
 
@@ -354,7 +355,7 @@
   animation-fill-mode: both;
 }
 
-.swiper-button-next:after {
+.swiper-button-next::after {
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
@@ -372,7 +373,7 @@
           animation-iteration-count: infinite;
 }
 
-.swiper-button-next:before {
+.swiper-button-next::before {
   content: '';
   position: absolute;
   top: 10px;
@@ -393,11 +394,11 @@
           animation-iteration-count: infinite;
 }
 
-.swiper-button-next:hover:before{
+.swiper-button-next:hover::before{
   animation-name: slide10;
 }
 
-.swiper-button-next:hover:after{
+.swiper-button-next:hover::after{
   animation-name: slide11;
 }
 

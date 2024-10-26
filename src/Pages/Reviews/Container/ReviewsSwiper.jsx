@@ -15,8 +15,8 @@ function ReviewsSwiper() {
 		<Swiper
 				modules={[Navigation]}
 				navigation={{
-					nextEl: `.${styles.custom_swiper_button_next}`, // Привязка к CSS классу кнопки next
-					prevEl: `.${styles.custom_swiper_button_prev}`, // Привязка к CSS классу кнопки prev
+					nextEl: `.${styles.custom_swiper_button_next}`,
+					prevEl: `.${styles.custom_swiper_button_prev}`,
 				}}
 				loop={true}
 				centeredSlides={true}

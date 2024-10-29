@@ -1,5 +1,5 @@
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { setUser, removeUser } from "./store/slices/userSlice"; // действия для работы с пользователем
+import { setUser, removeUser } from "./store/slices/userSlice";
 
 export const initAuthListener = (store) => {
   const auth = getAuth();

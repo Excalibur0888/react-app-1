@@ -3,5 +3,5 @@
 	background: black;
 	background-attachment: fixed;
 	background-size: cover;
-	min-height: 100vh;
+	background-image: url('../../img/login_bg.webp');
 }

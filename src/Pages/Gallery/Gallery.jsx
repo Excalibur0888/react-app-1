@@ -6,6 +6,7 @@ const Gallery = () => {
 	return (
 	<div className="Gallery__container">
 		<Header/>
+		
 	</div>
 	);
 }

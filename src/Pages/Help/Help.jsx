@@ -3,7 +3,6 @@ import classes from "./Help.module.css";
 import Header from "../../components/Header";
 import Container from "./components/Container/Container";
 import Crew from "./components/Crew/Crew";
-import Contacts from "../../components/Contacts/Contacts";
 import Footer from "../../components/Footer/Footer";
 
 const Help = () => {

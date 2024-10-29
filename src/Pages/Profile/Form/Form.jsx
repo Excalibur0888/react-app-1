@@ -21,7 +21,7 @@ import { useSelector } from "react-redux";
 const Form = () => {
   const { profile, file, fileURL } = useSelector((state) => state.form);
   const [isLoading, setIsLoading] = useState(true);
-  const [buttonText, setButtonText] = useState("Save Changes");
+  const [buttonText, setButtonText] = useState("Сохранить изменения");
   const loading_style = `${isLoading ? classes.loading : null}`;
 
   const auth = getAuth();
@@ -39,7 +39,7 @@ const Form = () => {
         })
         .finally(() => setIsLoading(false));
     }
-  }, []);
+  }, [email]);
 
   const handleFileChange = async (e) => {
     const selectedFile = e.target.files[0];
@@ -65,10 +65,10 @@ const Form = () => {
         newProfileData.photoURL = fileURL;
       }
       updateUserProfile(uid, newProfileData)
-        .then(() => setButtonText("Success!"))
-        .catch(() => setButtonText("An Error Occured"));
+        .then(() => setButtonText("Сохранено!"))
+        .catch(() => setButtonText("Возникла ошибка, попробуйте позже"));
     } else {
-      setButtonText("Nothing Changed");
+      setButtonText("Изменений не обнаружено");
     }
   };
 
@@ -79,7 +79,7 @@ const Form = () => {
       </div>
       <div className={classes.container}>
         <div className={classes.description}>
-          <h1>My profile</h1>
+          <h1>Профиль</h1>
           <label
             className={classes.photo}
             style={{
@@ -93,7 +93,7 @@ const Form = () => {
               onChange={handleFileChange}
             />
           </label>
-          <h3>Your email:</h3>
+          <h3>Ваш email:</h3>
           <span>{email}</span>
           <button
             className={classes.logout}
@@ -101,14 +101,14 @@ const Form = () => {
               dispatch(removeUser(), push("/"));
             }}
           >
-            Log out
+            Выйти
           </button>
         </div>
         <div className={classes.logregbox}>
           <div className={classes.formbox}>
             <form>
               <div className={classes.inputbox}>
-                <label>First name:</label>
+                <label>Имя:</label>
                 <input
                   type="text"
                   value={profile?.firstName || ""}
@@ -121,7 +121,7 @@ const Form = () => {
                 />
               </div>
               <div className={classes.inputbox}>
-                <label>Last name:</label>
+                <label>Фамилия:</label>
                 <input
                   type="text"
                   value={profile?.lastName || ""}
@@ -135,7 +135,7 @@ const Form = () => {
                 <div className={classes.inputbox}></div>
               </div>
               <div className={classes.inputbox}>
-                <label>Date of birth:</label>
+                <label>Дата рождения:</label>
                 <input
                   type="date"
                   value={profile?.dateOfBirth || ""}
@@ -147,7 +147,7 @@ const Form = () => {
                 />
               </div>
               <div className={classes.inputbox}>
-                <label>Age:</label>
+                <label>Возраст:</label>
                 <input
                   type="number"
                   value={profile?.age || ""}
@@ -158,20 +158,20 @@ const Form = () => {
                 />
               </div>
               <div className={classes.inputbox}>
-                <label>Gender:</label>
+                <label>Пол:</label>
                 <select
                   value={profile?.gender || ""}
-                  onChange={(e) =>
+                  onChangeй={(e) =>
                     dispatch(setProfile({ ...profile, gender: e.target.value }))
                   }
                 >
-                  <option value="">Select Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+                  <option value="">Выбрать пол</option>
+                  <option value="male">Мужчина</option>
+                  <option value="female">Женщина</option>
                 </select>
               </div>
               <div className={classes.inputbox}>
-                <label>Country:</label>
+                <label>Страна:</label>
                 <input
                   type="text"
                   value={profile?.country || ""}

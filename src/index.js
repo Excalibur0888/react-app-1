@@ -5,6 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { store } from './store';
 import App from './App';
 import './firebase';
+import { initAuthListener } from "./authListener";
+
+initAuthListener(store);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

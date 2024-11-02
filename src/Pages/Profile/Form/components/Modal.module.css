@@ -59,11 +59,6 @@
   cursor: pointer;
 }
 
-.garageList {
-	height: auto;
-	
-}
-
 .vehicleItem button {
   background: none;
 	color: #ccc;

@@ -15,14 +15,14 @@ const Garage = ({ vehicles, onGarageUpdate }) => {
   const handleAddVehicle = (vehicleData) => {
     const updatedGarage = [...garage, vehicleData];
     setGarage(updatedGarage);
-    onGarageUpdate(updatedGarage); // Обновляем данные в profile при добавлении ТС
+    onGarageUpdate(updatedGarage);
     setIsModalOpen(false);
   };
 
   const handleDeleteVehicle = (index) => {
     const updatedGarage = garage.filter((_, i) => i !== index);
     setGarage(updatedGarage);
-    onGarageUpdate(updatedGarage); // Обновляем данные в profile при удалении ТС
+    onGarageUpdate(updatedGarage);
   };
 
   return (

@@ -41,9 +41,10 @@
 }
 
 .logout {
-	margin-left: 30%;
 	padding: 0 20px;
 	width: auto;
+	position: absolute;
+	right: 52%;
 }
 
 .formHeader {

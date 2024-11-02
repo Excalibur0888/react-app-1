@@ -30,8 +30,8 @@ button, a {
 	}
 }
 
-button, a {
-	cursor: none;
+*, button, a, input {
+	cursor: none !important;
 }
 
 .cursor {

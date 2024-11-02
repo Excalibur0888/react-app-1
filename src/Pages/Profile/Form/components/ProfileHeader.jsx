@@ -6,38 +6,42 @@ import { useDispatch } from "react-redux";
 import { removeUser } from "../../../../store/slices/userSlice";
 import { useNavigate } from "react-router-dom";
 
-const ProfileHeader = ({ email, fileURL, profile, handleFileChange }) => {
+const ProfileHeader = ({ email, fileURL, profile, handleFileChange, onGarageUpdate }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   return (
     <div className={classes.description}>
       <h1>Профиль</h1>
-      <label
-        className={classes.photo}
-        style={{
-          backgroundImage: `url(${fileURL || profile?.photoURL || user})`,
-        }}
-      >
-        <input
-          type="file"
-          name="profilePhoto"
-          accept="image/*"
-          onChange={handleFileChange}
-        />
-      </label>
-      <h3>Ваш email:</h3>
-      <span>{email}</span>
-      <button
-        className={classes.logout}
-        onClick={() => {
-          dispatch(removeUser());
-          navigate("/");
-        }}
-      >
-        Выйти
-      </button>
-      <Garage />
+      <div className={classes.formHeader}>
+        <label
+          className={classes.photo}
+          style={{
+            backgroundImage: `url(${fileURL || profile?.photoURL || user})`,
+          }}
+        >
+          <input
+            type="file"
+            name="profilePhoto"
+            accept="image/*"
+            onChange={handleFileChange}
+          />
+        </label>
+        <div>
+          <span>Ваш email:</span>
+          <span>{email}</span>
+        </div>
+        <button
+          className={classes.logout}
+          onClick={() => {
+            dispatch(removeUser());
+            navigate("/");
+          }}
+        >
+          Выйти
+        </button>
+      </div>
+      <Garage vehicles={profile?.vehicles || []} onGarageUpdate={onGarageUpdate} />
     </div>
   );
 };

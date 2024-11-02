@@ -5,6 +5,7 @@ import ProfileForm from "./components/ProfileForm";
 import { getAuth } from "firebase/auth";
 import { useAuth } from "../../../hooks/use-auth";
 import { useDispatch, useSelector } from "react-redux";
+import BorderRT from '../../../components/LineBorders/BorderRT'
 import {
   setProfile,
   setFile,
@@ -74,24 +75,33 @@ const Form = () => {
   };
 
   const handleSaveChanges = async (e) => {
-    e.preventDefault();
-    if (profile) {
-      let newProfileData = { ...profile };
-      if (file) {
-        const downloadURL = await uploadFileAndGetURL(file);
-        dispatch(setFileURL(downloadURL));
-        newProfileData.photoURL = downloadURL;
-      }
-      if (fileURL) {
-        newProfileData.photoURL = fileURL;
-      }
-      updateUserProfile(uid, newProfileData)
-        .then(() => setButtonText("Сохранено!"))
-        .catch(() => setButtonText("Возникла ошибка, попробуйте позже"));
-    } else {
-      setButtonText("Изменений не обнаружено");
-    }
-  };
+		e.preventDefault();
+		if (profile) {
+			let newProfileData = { ...profile };
+			if (file) {
+				const downloadURL = await uploadFileAndGetURL(file);
+				dispatch(setFileURL(downloadURL));
+				newProfileData.photoURL = downloadURL;
+			}
+			if (fileURL) {
+				newProfileData.photoURL = fileURL;
+			}
+			
+			newProfileData.vehicles = profile.vehicles || [];
+	
+			updateUserProfile(uid, newProfileData)
+				.then(() => setButtonText("Сохранено!"))
+				.catch(() => setButtonText("Возникла ошибка, попробуйте позже"));
+		} else {
+			setButtonText("Изменений не обнаружено");
+		}
+	};
+
+	const handleGarageUpdate = (updatedGarage) => {
+		if (JSON.stringify(profile.vehicles) !== JSON.stringify(updatedGarage)) {
+			dispatch(setProfile({ ...profile, vehicles: updatedGarage }));
+		}
+	};
 
   return (
     <div className={classes.Form}>
@@ -99,11 +109,13 @@ const Form = () => {
         <div></div>
       </div>
       <div className={classes.container}>
+				<BorderRT/>
         <ProfileHeader
           email={email}
           fileURL={fileURL}
           profile={profile}
           handleFileChange={handleFileChange}
+					onGarageUpdate={handleGarageUpdate}
         />
         <ProfileForm
           profile={profile}

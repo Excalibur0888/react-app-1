@@ -1,25 +1,32 @@
-// Form/components/Garage.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Modal.module.css";
 import Modal from "./Modal";
 import VehicleModal from "./VehicleModal";
 
-const Garage = () => {
-  const [garage, setGarage] = useState([]);
+const Garage = ({ vehicles, onGarageUpdate }) => {
+  const [garage, setGarage] = useState(vehicles || []);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVehicle, setSelectedVehicle] = useState(null);
 
+  useEffect(() => {
+    setGarage(vehicles || []);
+  }, [vehicles]);
+
   const handleAddVehicle = (vehicleData) => {
-    setGarage([...garage, vehicleData]);
+    const updatedGarage = [...garage, vehicleData];
+    setGarage(updatedGarage);
+    onGarageUpdate(updatedGarage); // Обновляем данные в profile при добавлении ТС
     setIsModalOpen(false);
   };
 
   const handleDeleteVehicle = (index) => {
-    setGarage(garage.filter((_, i) => i !== index));
+    const updatedGarage = garage.filter((_, i) => i !== index);
+    setGarage(updatedGarage);
+    onGarageUpdate(updatedGarage); // Обновляем данные в profile при удалении ТС
   };
 
   return (
-    <div>
+    <div className={classes.garage}>
       <h2>Гараж</h2>
       <button className={classes.addButton} onClick={() => setIsModalOpen(true)}>
         Добавить ТС
@@ -34,7 +41,7 @@ const Garage = () => {
             {vehicle.brand} {vehicle.model} ({vehicle.year})
             <button
               onClick={(e) => {
-                e.stopPropagation(); 
+                e.stopPropagation();
                 handleDeleteVehicle(index);
               }}
             >
@@ -48,7 +55,10 @@ const Garage = () => {
         <Modal onClose={() => setIsModalOpen(false)} onSave={handleAddVehicle} />
       )}
       {selectedVehicle && (
-        <VehicleModal vehicle={selectedVehicle} onClose={() => setSelectedVehicle(null)} />
+        <VehicleModal
+          vehicle={selectedVehicle}
+          onClose={() => setSelectedVehicle(null)}
+        />
       )}
     </div>
   );

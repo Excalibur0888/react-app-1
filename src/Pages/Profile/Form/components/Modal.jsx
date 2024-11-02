@@ -1,4 +1,3 @@
-// Form/components/Modal.js
 import React, { useState } from "react";
 import classes from "./Modal.module.css";
 
@@ -25,7 +24,8 @@ const Modal = ({ onClose, onSave }) => {
 
   const handleSave = () => {
     if (isFormValid) {
-      onSave(vehicleData);
+      onSave(vehicleData); // Передаем данные ТС в onSave Garage
+  	  onClose();
     }
   };
 
@@ -70,7 +70,7 @@ const Modal = ({ onClose, onSave }) => {
         <button
           className={classes.saveButton}
           onClick={handleSave}
-          disabled={!isFormValid} // Блокируем кнопку, если форма не валидна
+          disabled={!isFormValid}
         >
           Сохранить
         </button>

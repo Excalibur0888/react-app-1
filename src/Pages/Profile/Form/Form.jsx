@@ -5,7 +5,8 @@ import ProfileForm from "./components/ProfileForm";
 import { getAuth } from "firebase/auth";
 import { useAuth } from "../../../hooks/use-auth";
 import { useDispatch, useSelector } from "react-redux";
-import BorderRT from '../../../components/LineBorders/BorderRT'
+import BorderRT from '../../../components/LineBorders/BorderRT';
+import BorderRB from '../../../components/LineBorders/BorderRB';
 import {
   setProfile,
   setFile,
@@ -110,6 +111,7 @@ const Form = () => {
       </div>
       <div className={classes.container}>
 				<BorderRT/>
+				<BorderRB/>
         <ProfileHeader
           email={email}
           fileURL={fileURL}

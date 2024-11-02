@@ -122,15 +122,21 @@ option {
 	color: black;
 }
 
+.inputbox:focus-within label,
+.inputbox.filled label,
+.inputbox.alwaysTransform label {
+  transform: translateY(-50%);
+}
+
 .inputbox label {
-	position: absolute;
-	left: 0;
-	transform: translateY(-50%);
-	font-size: 16px;
-	font-weight: 700;
-	pointer-events: none;
-	transition: .5s ease;
-	text-shadow: 0 0 5px black;
+  position: absolute;
+  left: 0;
+  transform: translateY(100%);
+  font-size: 16px;
+  font-weight: 700;
+  pointer-events: none;
+  transition: .5s ease;
+  text-shadow: 0 0 5px black;
 }
 
 button {

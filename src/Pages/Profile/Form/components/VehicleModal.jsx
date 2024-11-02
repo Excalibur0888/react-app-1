@@ -16,7 +16,7 @@ const VehicleModal = ({ vehicle, onClose }) => {
           <li><strong>Стоковая мощность двигателя:</strong> {vehicle.enginePower}</li>
         </ul>
         <button className={classes.closeButton} onClick={onClose}>
-          Закрыть
+				✖
         </button>
       </div>
     </div>

@@ -1,9 +1,8 @@
-// Form/components/ProfileInput.js
 import React from "react";
 import classes from "../Form.module.css";
 
-const ProfileInput = ({ label, type, value, onChange, placeholder }) => (
-  <div className={classes.inputbox}>
+const ProfileInput = ({ label, type, value, onChange, placeholder, alwaysTransform }) => (
+  <div className={`${classes.inputbox} ${value ? classes.filled : ""} ${alwaysTransform ? classes.alwaysTransform : ""}`}>
     <label>{label}</label>
     <input
       type={type}

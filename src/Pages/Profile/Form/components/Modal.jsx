@@ -75,7 +75,7 @@ const Modal = ({ onClose, onSave }) => {
           Сохранить
         </button>
         <button className={classes.closeButton} onClick={onClose}>
-          Закрыть
+				✖
         </button>
       </div>
     </div>

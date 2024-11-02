@@ -1,4 +1,3 @@
-// Form/components/ProfileForm.js
 import React from "react";
 import classes from "../Form.module.css";
 import ProfileInput from "./ProfileInput";
@@ -30,6 +29,7 @@ const ProfileForm = ({
           type="date"
           value={profile?.dateOfBirth}
           onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
+          alwaysTransform
         />
         <ProfileInput
           label="Возраст:"
@@ -42,7 +42,8 @@ const ProfileForm = ({
           type="tel"
           value={profile?.phone}
           onChange={handlePhoneChange}
-          placeholder="+7 (___) ___-__-__"
+					placeholder="+7 (___) ___-__-__"
+          alwaysTransform
         />
         <ProfileInput
           label="Страна:"

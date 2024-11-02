@@ -25,6 +25,32 @@
 	backdrop-filter: blur(30px);
 }
 
+.modalContent h2 {
+	margin-left: 50px;
+}
+
+.modalContent h2::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  width: 40px;
+  height: 5px;
+  background: #FF0000;
+  z-index: 10;
+}
+
+.modalContent h2::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  width: 40px;
+  height: 5px;
+  background: #FF0000;
+  z-index: 10;
+}
+
 .inputbox:focus-within label,
 .inputbox.filled label {
   transform: translateY(-100%);
@@ -107,7 +133,7 @@
 }
 
 .vehicleInfo li {
- 	height: 35px;
+	margin-top: 20px;
 }
 
 .garageList {
@@ -118,7 +144,7 @@
   list-style: none;
 }
 
-.garage h2 {
+.garage__title {
 	color: #fff;
 	margin: 15px;
 }

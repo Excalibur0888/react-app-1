@@ -24,7 +24,7 @@ const Modal = ({ onClose, onSave }) => {
 
   const handleSave = () => {
     if (isFormValid) {
-      onSave(vehicleData); // Передаем данные ТС в onSave Garage
+      onSave(vehicleData);
   	  onClose();
     }
   };

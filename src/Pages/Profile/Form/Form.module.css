@@ -30,6 +30,7 @@
 	border: 2px solid #ff0000;
 	width: 100px;
 	height: 100px;
+	margin-left: 15px;
 	border-radius: 80%;
 	background-size: cover;
 	cursor: none;

@@ -27,7 +27,7 @@ const Garage = ({ vehicles, onGarageUpdate }) => {
 
   return (
     <div className={classes.garage}>
-      <h2>Гараж</h2>
+      <h2 className={classes.garage__title}>Гараж</h2>
       <button className={classes.addButton} onClick={() => setIsModalOpen(true)}>
         Добавить ТС
       </button>

@@ -1,4 +1,13 @@
 .reviews__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.reviews__container__gray {
 	width: 65%;
 	color: #fff;
 	text-align: center;
@@ -10,7 +19,7 @@
 	z-index: 6;
 }
 
-.reviews__container::before {
+.reviews__container__gray::before {
 	content: '........................................................................';
   position: absolute;
   left: -77px;
@@ -21,7 +30,7 @@
   transform: rotate(90deg);
 }
 
-.reviews__container::after {
+.reviews__container__gray::after {
 	content: '......';
   position: absolute;
   left: -60px;
@@ -48,7 +57,7 @@
 	align-items: center;
 }
 
-.reviews__container a {
+.reviews__container__gray a {
 	font-size: 1.5em;
 	margin-top: 50px;
 	display: block;
@@ -56,7 +65,7 @@
 	text-decoration-color: #ff0000;
 }
 
-.reviews__container span {
+.reviews__container__gray span {
 	font-size: 1.5em;
 }
 

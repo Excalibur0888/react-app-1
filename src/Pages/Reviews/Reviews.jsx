@@ -8,9 +8,6 @@ import Footer from '../../components/Footer/Footer'
 const Reviews = () => {
 	return (
 		<div className="reviews">
-			<div className="inpage__img">
-        <img src={require("./img/dodgeBG.webp")} alt="background"/>
-      </div>
 		<Header/>
 		<Container/>
 		<Contacts/>

@@ -42,7 +42,7 @@ const RegisterForm = () => {
                             token: user.accessToken,
                         })
                     );
-                    push("/");
+                    push("/profile");
                 })
                 .catch((error) => {
                     // Установите текст ошибки в зависимости от кода ошибки

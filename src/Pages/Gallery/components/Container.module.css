@@ -1,0 +1,10 @@
+.gallery__title {
+	margin-top: 7%;
+	margin-left: 13%;
+	align-self: flex-start;
+	z-index: 5;
+}
+
+.gallery__title span {
+	color: #fff;
+}

@@ -35,7 +35,7 @@ const LoginForm = () => {
 					id: user.uid,
 					token: user.accessToken,
 				}));
-				push('/');
+				push('/profile');
 			})
 			.catch((error) => {
 				console.error(error);

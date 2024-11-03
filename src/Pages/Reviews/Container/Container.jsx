@@ -2,13 +2,15 @@ import React from "react";
 import classes from "./Container.module.css";
 import Title from "../../../components/Title/Title";
 import ReviewsSwiper from "./ReviewsSwiper";
+import InpageImg from "../../../components/InpageImg/InpageImg";
 
 function Container() {
   return (
-    <>
+    <div className={classes.reviews__container}>
+      <InpageImg bg={require("../img/dodgeBG.webp")} />
       <Title subtitle="Отзывы" className={classes.reviews__title} />
-      <div className={classes.reviews__container}>
-				<ReviewsSwiper/>
+      <div className={classes.reviews__container__gray}>
+        <ReviewsSwiper />
         <a href="https://www.drive2.ru/" target="_blank" rel="noreferrer">
           Все отзывы с Drive2 можно прочитать здесь
         </a>
@@ -27,7 +29,7 @@ function Container() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

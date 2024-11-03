@@ -6,38 +6,3 @@
 	position: relative;
 	overflow-x: hidden;
 }
-
-.inpage__img {
-	position: absolute;
-	right: 0;
-	top: -10px;
-}
-
-.inpage__img img {
-	position: relative;
-	display: inline-block;
-	z-index: 2;
-	height: 87vh;
-}
-
-.inpage__img::before{
-	content: "";
-	display: block;
-	position: absolute;
-	height: 100%;
-	background: url(../Help/img/pattern2.png) no-repeat;
-	width: 78px;
-	z-index: 3;
-}
-
-.inpage__img::after{
-	content: "";
-	display: block;
-	position: absolute;
-	background: url(../Help/img/pattern3.png) no-repeat;
-	width: 401px;
-	height: 100%;
-	top: -10px;
-	z-index: 1;
-	right: 0;
-}

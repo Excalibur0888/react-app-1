@@ -2,12 +2,8 @@
 	box-sizing: border-box;
 }
 
-.Gallery__container {
+.gallery {
 	background: black;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
 	overflow-x: hidden;
 	min-height: 100vh;
 }

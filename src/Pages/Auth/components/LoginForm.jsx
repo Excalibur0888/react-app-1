@@ -43,9 +43,8 @@ const LoginForm = () => {
 					setIsErrorVisible(true);
 					setErrorType('login');
 
-					// Сброс поля пароля и установка фокуса
-					dispatch(setPassword('')); // Очищаем состояние пароля
-					passwordInputRef.current.focus(); // Устанавливаем фокус на поле пароля
+					dispatch(setPassword(''));
+					passwordInputRef.current.focus();
 				} else if (error.code.includes('auth/quota-exceeded') || error.code.includes('auth/too-many-requests')) {
 					setIsErrorVisible(true);
 					setErrorType('quota');

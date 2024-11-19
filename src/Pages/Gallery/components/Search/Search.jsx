@@ -10,9 +10,9 @@ function Search({ onSearchChange }) {
 				placeholder='Введите название работы'
 				onChange={onSearchChange}
 			/>
-			<button className={classes.search__btn}>
+			<div className={classes.search__btn}>
 				<span className={classes.search__line}></span>
-			</button>
+			</div>
 		</div>
 	);
 }

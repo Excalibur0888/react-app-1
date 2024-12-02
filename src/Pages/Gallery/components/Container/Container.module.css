@@ -33,3 +33,33 @@
 .pagination .active {
 	color: #ff0000;
 }
+
+.brand__list {
+	margin: 30px 0;
+}
+
+.brand__list li {
+  cursor: pointer;
+	font-weight: 300;
+	position: relative;
+  margin: 5px 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.brand__list li:not(:last-child)::after {
+	content: " ";
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #650D00;
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+.activeBrand {
+	text-decoration: underline;
+  color: #ff0000;
+  font-weight: bold;
+}

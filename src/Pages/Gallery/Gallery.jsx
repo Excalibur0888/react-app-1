@@ -10,7 +10,8 @@ const Gallery = () => {
 	<div className="gallery">
 		<Header/>
 		<Container/>
-
+		<Contacts/>
+		<Footer/>
 	</div>
 	);
 }

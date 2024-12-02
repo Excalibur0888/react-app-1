@@ -6,14 +6,28 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 import items from "../GalleryItemData";
 import Search from "../Search/Search";
 
+const brands = [
+  "Все", "Toyota", "BMW", "Mercedes-Benz", "Audi", "Ford", "Chevrolet", "Volkswagen",
+  "Honda", "Nissan", "Hyundai", "Kia", "Subaru", "Porsche", "Mazda", "Lexus",
+  "Volvo", "Jaguar", "Land Rover", "Tesla", "Ferrari", "Lamborghini", "Bentley",
+  "Rolls-Royce", "Bugatti", "McLaren", "Peugeot", "Renault", "Fiat", "Suzuki",
+  "Mitsubishi", "RAM", "Dodge", "Opel", "Lotus", "Skoda", "Genesis", "Alfa Romeo", 
+	"Aston Martin", "Hummer", "Infiniti", "Cadillac", "Chery", "Maserati", "Seat", "Tank"
+].sort((a, b) => (a === "Все" ? -1 : a.localeCompare(b)));
+
 function Container() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState("Все");
   const itemsPerPage = 10;
 
-  const filteredItems = items.filter((item) =>
-    item.text.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredItems = items.filter((item) => {
+    const matchesSearch = item.text.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesBrand = selectedBrand === "Все"
+      ? true
+      : item.text.toLowerCase().includes(selectedBrand.toLowerCase());
+    return matchesSearch && matchesBrand;
+  });
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentItems = filteredItems.slice(
@@ -32,6 +46,11 @@ function Container() {
     setCurrentPage(1);
   };
 
+  const handleBrandClick = (brand) => {
+    setSelectedBrand(brand);
+    setCurrentPage(1);
+  };
+
   return (
     <div className={classes.gallery__container}>
       <InpageImg bg={require("../../img/BentleyBG.webp")} />
@@ -41,8 +60,16 @@ function Container() {
         className={classes.gallery__title}
       />
       <div className={classes.gallery__container__gray}>
-        <ul>
-          <li></li>
+        <ul className={classes.brand__list}>
+          {brands.map((brand, index) => (
+            <li
+              key={index}
+              onClick={() => handleBrandClick(brand)}
+              className={selectedBrand === brand ? classes.activeBrand : ""}
+            >
+              {brand}
+            </li>
+          ))}
         </ul>
         <Search onSearchChange={handleSearchChange} />
 

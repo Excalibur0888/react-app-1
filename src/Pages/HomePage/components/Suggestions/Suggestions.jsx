@@ -43,7 +43,7 @@ export default function Suggestions() {
 
       <PairContainer
         align="left"
-        videoSrc="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2024/Models/Tourbillon/03_Technique/comp/Bugatti_Tourbillon_03c_engine_d.mp4"
+        videoSrc="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2023/Bugatti-Models/Super-Sport/engine-chiron-supersport-desktop.mp4"
         title="Увеличение мощности"
         text="Новейшие технические решения, качественная диагностика и опытная команда — ваш ключ к непревзойденной динамике и скорости. Превратите свой двигатель в настоящее произведение инженерного искусства."
         videoClass={classes.videoItem1}

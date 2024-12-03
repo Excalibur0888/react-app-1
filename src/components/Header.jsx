@@ -13,7 +13,6 @@ const Header = (props) => {
 				<Link to='/'>Главная</Link>
 				<Link to='/about'>О нас</Link>
 				<Link to='/gallery'>Выставочный зал</Link>
-				<Link to='/services'>Услуги</Link>
 				<Link to='/reviews'>Отзывы</Link>
 				<Link to='/help'>Контакты</Link>
 			</nav>
@@ -32,7 +31,6 @@ const Header = (props) => {
 				<Link to='/'>Главная</Link>
 				<Link to='/about'>О нас</Link>
 				<Link to='/gallery'>Выставочный зал</Link>
-				<Link to='/services'>Услуги</Link>
 				<Link to='/reviews'>Отзывы</Link>
 				<Link to='/help'>Контакты</Link>
 			</nav>

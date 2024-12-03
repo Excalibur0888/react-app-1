@@ -6,7 +6,6 @@ import About from "./Pages/About/About";
 import AuthPage from "./Pages/Auth/AuthPage";
 import Help from "./Pages/Help/Help";
 import Gallery from "./Pages/Gallery/Gallery";
-import Services from "./Pages/Services/Services";
 import Reviews from "./Pages/Reviews/Reviews";
 import Profile from "./Pages/Profile/Profile";
 import "./App.css";
@@ -52,7 +51,6 @@ function App() {
         <Route exact path="/auth/:authType" element={<AuthPage />} />
         <Route exact path="/help" element={<Help />} />
         <Route exact path="/profile" element={<Profile />} />
-        <Route exact path="/services" element={<Services />} />
         <Route exact path="/reviews" element={<Reviews />} />
       </Routes>
     </div>

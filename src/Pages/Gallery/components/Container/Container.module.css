@@ -9,6 +9,10 @@
 	color: #fff;
 }
 
+.gallery__container {
+	overflow-x: hidden;
+}
+
 .gallery__container__gray {
 	width: 65%;
 	color: #fff;

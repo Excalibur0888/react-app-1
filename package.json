@@ -9,17 +9,10 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.6.8",
-    "boxicons": "^2.1.4",
-    "cors": "^2.8.5",
-    "express": "^4.18.3",
+    "babel-jest": "^24.9.0",
     "firebase": "^10.13.1",
-    "http-proxy-middleware": "^2.0.6",
     "js-cookie": "^3.0.5",
-    "jsdom": "^21.1.2",
-    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-helmet": "^6.1.0",
@@ -62,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "npm-run-all": "^4.1.5"
   }
 }

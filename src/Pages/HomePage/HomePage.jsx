@@ -12,7 +12,7 @@ import Footer from '../../components/Footer/Footer';
 
 const HomePage = () => {
   return (
-    <div className="HomePage">
+    <section className="HomePage">
       <Helmet>
         <title>4MOTION</title>
 				<link rel="icon" type="image/png" href={logo} />
@@ -24,7 +24,7 @@ const HomePage = () => {
 			<HomeReviews/>
 			<Contacts/>
 			<Footer/>
-    </div>
+    </section>
   );
 };
 

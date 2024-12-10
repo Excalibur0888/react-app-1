@@ -14,7 +14,7 @@ const AuthPage = () => {
   const { authType } = useParams();
   
   return (
-    <div className={classes.AuthPage}>
+    <section className={classes.AuthPage}>
       <Header />
       <div className={classes.background}></div>
       <div className={classes.container}>
@@ -26,7 +26,7 @@ const AuthPage = () => {
         <BorderRT />
         {authType === 'login' ? <LoginForm /> : <RegisterForm />}
       </div>
-    </div>
+    </section>
   );
 };
 

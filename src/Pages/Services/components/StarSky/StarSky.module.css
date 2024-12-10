@@ -1,0 +1,169 @@
+.StarSky {
+	position: relative;
+	background: black;
+	overflow-x: hidden;
+}
+
+.StarSky__container {
+	padding-top: 210px;
+	overflow-y: hidden;
+	background: url('../../img/sky_video_section_bg.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+	height: 105vh;
+	z-index: 2;
+}
+
+.StarSky__container::after {
+	content: '';
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  background: url(../../../../img/zm-promo_bottom.png) no-repeat top center;
+  height: 236px;
+  width: 100%;
+}
+
+.StarSky__subtitle {
+	color: white;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.StarSky__title {
+	color: white;
+	text-transform: uppercase;
+	font-size: 90px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.StarSky__description {
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin-bottom: 300px;
+}
+
+.StarSky__advantages {
+	color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 120%;
+  margin: 50px auto;
+}
+
+.StarSky__advantages span b {
+	font-weight: 700;
+}
+
+.StarSky__advantages span {
+	font-weight: 400;
+	position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.StarSky__advantages span::before {
+	content: "";
+  width: 122px;
+  height: 36px;
+  background-image: url(../../img/zm_head_left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 37px;
+  left: -154px;
+}
+
+.StarSky__advantages span::after {
+	content: "";
+  width: 122px;
+  height: 36px;
+  background-image: url(../../img/zm_head_right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 37px;
+  right: -154px;
+}
+
+.StarSkyContainers {
+	display: grid;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	justify-items: center;
+  grid-template-columns: repeat(4, 2fr);
+}
+
+.StarSkyStars {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url('../../img/sky_star_left.png') no-repeat left top;
+  width: 372px;
+  height: 584px;
+  z-index: 0;
+}
+
+.StarSkyBlock {
+	border: 2px solid #486fdc;
+	padding: 4px;
+	position: relative;
+	width: 100%;
+	max-width: 270px;
+}
+
+.StarSkyBlock::before {
+	content: '';
+	height: 287px;
+	width: 2px;
+	background: #a71f1f;
+	display: block;
+	position: absolute;
+	left: -2px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.StarSkyBlock::after {
+	content: '';
+	height: 287px;
+	width: 2px;
+	background: #a71f1f;
+	display: block;
+	position: absolute;
+	right: -2px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.StarSkyBlock .img__block img {
+	width: 100%;
+  max-width: 100%;
+}
+
+.text__block {
+	position: absolute;
+	bottom: 6px;
+	left: 0;
+	width: 100%;
+	height: 96px;
+	background: rgba(0, 0, 0, .3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+}

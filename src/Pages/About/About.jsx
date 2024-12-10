@@ -11,7 +11,7 @@ import SocialLinks from "./components/SocialLinks";
 
 const About = () => {
 	return (
-	<div className={classes.about}>
+	<section className={classes.about}>
 		<Header/>
 		<Container/>
 		<Description/>
@@ -20,7 +20,7 @@ const About = () => {
 		<SocialLinks/>
 		<Contacts/>
 		<Footer/>
-	</div>
+	</section>
 	);
 }
 export default About;

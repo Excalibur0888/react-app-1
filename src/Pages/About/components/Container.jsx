@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Container.module.css';
 import PlaySvg from '../img/play.svg'
-import Promo from './Promo';
+import PromoMain from './PromoMain';
 
 function Container() {
 	return ( 
@@ -15,24 +15,7 @@ function Container() {
 				<img className={classes.video__preview} src={require('../img/zm-promo_youtube.webp')} alt=""/>
 				<img className={classes.play__btn} src={PlaySvg} alt=""/>
 			</div>
-			<Promo/>
-			<ul className={classes.social}>
-				<li>
-					<span>Мы в социальных сетях</span>
-				</li>
-				<li>
-					<a href="https://drive2.ru" target='_blank' rel="noreferrer"><img src={require('../../../img/drive2.webp')} alt=""/></a>
-				</li>
-				<li>
-					<a href="https://youtube.com" target='_blank' rel="noreferrer"><img src={require('../../../img/yt.webp')} alt=""/></a>
-				</li>
-				<li>
-					<a href="https://vk.com" target='_blank' rel="noreferrer"><img src={require('../../../img/vk.webp')} alt=""/></a>
-				</li>
-				<li>
-					<a href="https://t.me" target='_blank' rel="noreferrer"><img src={require('../../../img/tg.png')} alt=""/></a>
-				</li>        				
-			</ul>
+			<PromoMain/>
     </div>
 	 );
 }

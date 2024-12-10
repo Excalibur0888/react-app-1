@@ -7,12 +7,12 @@ import Footer from '../../components/Footer/Footer'
 
 const Reviews = () => {
 	return (
-		<div className="reviews">
+	<section className="reviews">
 		<Header/>
 		<Container/>
 		<Contacts/>
 		<Footer/>
-	</div>
+	</section>
 	);
 }
 export default Reviews;

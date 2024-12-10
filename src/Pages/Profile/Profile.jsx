@@ -11,13 +11,13 @@ const Profile = () => {
 	});
 
 	return (
-		<div className="Profile">
+		<section className="Profile">
 			<Helmet>
 			<title>Profile</title>
 		</Helmet>
 			<Header/>
 			<Form/>
-		</div>
+		</section>
 	);
 };
 

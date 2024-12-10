@@ -7,12 +7,12 @@ import Footer from '../../components/Footer/Footer'
 
 const Gallery = () => {
 	return (
-	<div className="gallery">
+	<section className="gallery">
 		<Header/>
 		<Container/>
 		<Contacts/>
 		<Footer/>
-	</div>
+	</section>
 	);
 }
 export default Gallery;

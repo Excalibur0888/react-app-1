@@ -14,6 +14,7 @@ export default function Footer() {
 				<li><Link to='/'>Главная</Link></li>
 				<li><Link to='/about'>О нас</Link></li>
 				<li><Link to='/gallery'>Выставочный зал</Link></li>
+				<li><Link to='/services'>Услуги</Link></li>
 				<li><Link to='/reviews'>Отзывы</Link></li>
 				<li><Link to='/help'>Контакты</Link></li>
 			</ul>

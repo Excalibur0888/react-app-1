@@ -7,7 +7,7 @@
   width: 100%;
   overflow: hidden;
   text-align: center;
-  z-index: 1; /* Чтобы быть выше видео */
+  z-index: 1;
 }
 
 .about__container::after {

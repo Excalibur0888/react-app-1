@@ -77,7 +77,7 @@ export default function Suggestions() {
         refElement={(el) => (pairRef.current[3] = el)}
       />
 
-      <Link className={classes.link} to='/help' ref={(el) => (pairRef.current[4] = el)}>
+      <Link className={classes.link} to='/services' ref={(el) => (pairRef.current[4] = el)}>
         <Button className={classes.V16Button} title="ПОЛНЫЙ КАТАЛОГ" />
       </Link>
     </div>

@@ -10,6 +10,7 @@ import Reviews from "./Pages/Reviews/Reviews";
 import Profile from "./Pages/Profile/Profile";
 import "./App.css";
 import MouseUp from "./components/MouseUP/MouseUP";
+import Services from "./Pages/Services/Services";
 
 function App() {
   const cursorRef = useRef(null);
@@ -48,6 +49,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/gallery" element={<Gallery />} />
+				<Route exact path="/services" element={<Services />} />
         <Route exact path="/auth/:authType" element={<AuthPage />} />
         <Route exact path="/help" element={<Help />} />
         <Route exact path="/profile" element={<Profile />} />
@@ -55,6 +57,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+}	
 
 export default App;

@@ -7,12 +7,12 @@ import Footer from "../../components/Footer/Footer";
 
 const Help = () => {
 	return (
-  <div className={classes.help}>
+  <section className={classes.help}>
 		<Header />
 		<Container/>
 		<Crew/>
 		<Footer/>
-  </div>
+  </section>
 	)
 };
 export default Help;

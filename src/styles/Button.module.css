@@ -99,6 +99,7 @@
 
 .btn p {
   margin: 0;
+	text-decoration: none;
   position: relative;
   z-index: 10;
   -webkit-transition: 0.7s;

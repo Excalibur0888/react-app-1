@@ -1,0 +1,37 @@
+.CarShowcaseBtns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	position: absolute;
+	top: 190px;
+	z-index: 2;
+}
+
+.CarShowcaseBtn__container {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.CarShowcaseBtn__btn {
+	width: 220px;
+	height: 51px;
+	margin-bottom: 10px;
+	background-color: #17151d;
+	border: 1px solid #de0208;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	font-weight: 300;
+	transition: .3s ease-out;
+	cursor: pointer;
+	user-select: none;
+}
+
+.CarShowcaseBtn__btn:hover {
+	border: 1px solid #7a9d35;
+}

@@ -1,0 +1,98 @@
+.Modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #000;
+	border: 2px solid red;
+	width: 80%;
+	max-width: 700px;
+	border-radius: 12px;
+	padding: 30px 0;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+	z-index: 50;
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
+	color: #fff; /* Белый текст */
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+			opacity: 0;
+			transform: translate(-50%, -45%);
+	}
+	to {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+	}
+}
+
+.Modal__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.Modal__title {
+	font-size: 1.5rem;
+	width: 50%;
+	text-align: left;
+	font-weight: 600;
+	color: #fff; /* Белый цвет для заголовка */
+	margin: 0;
+}
+
+.Modal__price {
+	font-size: 1.7rem;
+	font-weight: 700;
+}
+
+.CloseButton {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	color: #fff;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.CloseButton:hover {
+	color: #ff0000;
+}
+
+.Modal__body {
+	display: flex;
+	flex-direction: row;
+	padding: 16px;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.Modal__img img {
+	width: 200px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.Modal__content {
+	flex: 1;
+	font-size: 1rem;
+	text-align: left;
+	line-height: 1.6;
+	color: #ddd;
+	display: flex;
+	align-items: center;
+}
+
+.Modal__btn {
+	position: relative;
+	z-index: 101;
+}

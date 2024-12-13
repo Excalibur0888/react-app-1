@@ -1,0 +1,60 @@
+.WorkProcessSwiper {
+	position: absolute;
+  right: 0;
+	top: 60px;
+  width: 750px;
+}
+
+.WorkProcessSwiper__container {
+	position: relative;
+}
+
+.WorkProcessSwiper__title {
+	position: absolute;
+  background-color: #21144aa6;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 13px 27px;
+  top: 450px;
+  z-index: 2;
+  left: 214px;
+  height: 51px;
+}
+
+.WorkProcessSwiper__slider {
+	position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.WorkProcessSwiper__slider * img {
+	max-width: 100%;
+  width: 100%;
+  height: 464px;
+  object-fit: cover;
+}
+
+.WorkProcessSwiper__arrow {
+	position: absolute;
+  display: block;
+  white-space: nowrap;
+	top: 450px;
+  border: 0;
+  outline: none;
+  z-index: 5;
+  font-size: 0;
+	width: 80px;
+  height: 51px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.WorkProcessSwiper__arrowPrev {
+	left: 55px;
+	background-image: url('../../img/zm-left2.png');
+}
+
+.WorkProcessSwiper__arrowNext {
+	left: 142px;
+	background-image: url('../../img/zm-right2.png');
+}

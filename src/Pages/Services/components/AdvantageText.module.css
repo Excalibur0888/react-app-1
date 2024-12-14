@@ -1,0 +1,44 @@
+.AdvantageText {
+	color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 120%;
+  margin: 50px auto;
+	margin-top: 100px;
+}
+
+.AdvantageText span b {
+	font-weight: 700;
+}
+
+.AdvantageText span {
+	font-weight: 400;
+	position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.AdvantageText span::before {
+	content: "";
+  width: 122px;
+  height: 36px;
+  background-image: url(../img/zm_head_left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 37px;
+  left: -154px;
+}
+
+.AdvantageText span::after {
+	content: "";
+  width: 122px;
+  height: 36px;
+  background-image: url(../img/zm_head_right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 37px;
+  right: -154px;
+}

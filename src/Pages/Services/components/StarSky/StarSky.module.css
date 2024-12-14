@@ -51,51 +51,6 @@
 	margin-bottom: 300px;
 }
 
-.StarSky__advantages {
-	color: #ffffff;
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 120%;
-  margin: 50px auto;
-	margin-top: 100px;
-}
-
-.StarSky__advantages span b {
-	font-weight: 700;
-}
-
-.StarSky__advantages span {
-	font-weight: 400;
-	position: relative;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.StarSky__advantages span::before {
-	content: "";
-  width: 122px;
-  height: 36px;
-  background-image: url(../../img/zm_head_left.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 37px;
-  left: -154px;
-}
-
-.StarSky__advantages span::after {
-	content: "";
-  width: 122px;
-  height: 36px;
-  background-image: url(../../img/zm_head_right.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 37px;
-  right: -154px;
-}
-
 .StarSkyContainers {
 	display: grid;
 	width: 80%;

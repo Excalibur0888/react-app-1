@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './StarSky.module.css';
 import PromoMain from '../../../About/components/PromoMain';
 import StarSkyContainers from './StarSkyContainers';
+import AdvantageText from '../AdvantageText';
 
 function StarSky({bg, text}) {
 
@@ -17,12 +18,7 @@ function StarSky({bg, text}) {
 				</div>
 				<PromoMain/>
 			</div>
-			<div className={classes.StarSky__advantages}>
-				<span>
-					Особенности<br/>
-					<b>Нашего</b><br/><b>Звёздного неба</b>
-				</span>
-			</div>
+			<AdvantageText subtitle='Особенности' title='Нашего звездного неба'/>
 			<StarSkyContainers/>
 		</div>
 	);

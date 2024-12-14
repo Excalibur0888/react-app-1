@@ -44,8 +44,8 @@ export default function Suggestions() {
       <PairContainer
         align="left"
         videoSrc="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2023/Bugatti-Models/Super-Sport/engine-chiron-supersport-desktop.mp4"
-        title="Увеличение мощности"
-        text="Новейшие технические решения, качественная диагностика и опытная команда — ваш ключ к непревзойденной динамике и скорости. Превратите свой двигатель в настоящее произведение инженерного искусства."
+        title="Техническое обслуживание"
+        text="Новейшие технические решения, качественная диагностика и опытная команда — ключ к непревзойденной динамике и скорости. Превратите свой двигатель в настоящее произведение инженерного искусства."
         videoClass={classes.videoItem1}
         refElement={(el) => (pairRef.current[0] = el)}
       />
@@ -62,8 +62,8 @@ export default function Suggestions() {
       <PairContainer
         align="left"
         videoSrc="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2024/Models/Tourbillon/04_Form_follows_performance/comp/Bugatti_Tourbillon_04b_aerodynamics_d.mp4"
-        title="Улучшение аэродинамики"
-        text="Усовершенствуйте аэродинамику вашего автомобиля для максимальной скорости и экономии топлива. Наши решения уменьшают сопротивление и улучшают управляемость, делая каждую поездку более плавной и эффективной."
+        title="Детейлинг"
+        text="Почувствуйте, как ваш автомобиль расцветает в руках профессионалов. Тщательная очистка и восстановление каждой детали вернут ему первозданный вид, обеспечивая непревзойденную чистоту и блеск, который не останется незамеченным."
         videoClass={classes.videoItem3}
         refElement={(el) => (pairRef.current[2] = el)}
       />

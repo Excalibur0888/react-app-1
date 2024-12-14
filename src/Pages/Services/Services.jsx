@@ -3,6 +3,8 @@ import './Services.css';
 import Header from '../../components/Header';
 import StarSky from './components/StarSky/StarSky';
 import Maintenance from './components/Maintenance/Maintenance';
+import Contacts from '../../components/Contacts/Contacts';
+import Footer from '../../components/Footer/Footer';
 
 function Services() {
 	return ( 
@@ -10,6 +12,8 @@ function Services() {
 			<Header/>
 			<StarSky/>
 			<Maintenance/>
+			<Contacts/>
+			<Footer/>
 		</section>
 	 );
 }

@@ -1,0 +1,64 @@
+.DetFeatures {
+	width: 100%;
+	background-image: url('../../img/zm-quality-bg2.png');
+	background-repeat: no-repeat;
+}
+
+.DetFeatures__blocks {
+	height: 600px;
+  width: 630px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.DetFeatures__block {
+	position: absolute;
+}
+
+.DetFeatures__block__title {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 40px;
+}
+
+.block_1 {
+	left: 0;
+	top: 0;
+}
+
+.block_2 {
+	left: 215px;
+	top: 0;
+}
+
+.block_3 {
+	top: 0;
+	right: 0;
+}
+
+.block_4 {
+	left: 109px;
+	top: 186px;
+}
+
+.block_5 {
+	left: 323px;
+	top: 186px;
+}
+
+.block_6 {
+	left: 216px;
+	top: 371px;
+}
+
+.DetFeatures__btn {
+	position: relative;
+}

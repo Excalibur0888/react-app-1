@@ -1,0 +1,78 @@
+.DetGallery {
+	width: 100%;
+}
+
+.DetGallery__blocks {
+	display: flex;
+  flex-wrap: wrap;
+  padding-left: 75px;
+  padding-right: 75px;
+  margin-bottom: 39px;
+}
+
+.DetGallery__ritems {
+	position: relative;
+	display: flex;
+  flex-wrap: wrap;
+  width: 56%;
+}
+
+.DetGallery__litem {
+	position: relative;
+	width: 44%;
+	margin-bottom: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.DetGallery__litem:hover .DetGallery__item__plus {
+	transform: rotate(180deg);
+}
+
+.DetGallery__ritem {
+	position: relative;
+	padding-left: 15px;
+	margin-bottom: 30px;
+  padding-right: 15px;
+  width: 50%;
+}
+
+.DetGallery__ritem:hover .DetGallery__item__plus {
+	transform: rotate(180deg);
+}
+
+.DetGallery__item__img {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.DetGallery__item__title {
+	position: absolute;
+  left: 15px;
+  bottom: 32px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #21144a94;
+  line-height: 120%;
+  padding: 13px 16px;
+}
+
+.DetGallery__item__plus {
+	position: absolute;
+  right: 21px;
+  bottom: 82px;
+  transition: 0.5s;
+}
+
+.DetGallery__item__plus span {
+	width: 118px;
+  height: 4px;
+  border-radius: 5px;
+  display: block;
+  background: #fff;
+}
+
+.DetGallery__item__plus span:last-child {
+	transform: rotate(90deg);
+}

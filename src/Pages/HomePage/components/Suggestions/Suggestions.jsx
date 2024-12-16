@@ -71,7 +71,7 @@ export default function Suggestions() {
       <PairContainer
         align="right"
         videoSrc="https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2024/Models/Tourbillon/05_Interior/comp/Bugatti_Tourbillon_05ab_entry_material_d.mp4"
-        title="Отделку салона"
+        title="Пошив салона"
         text="Преобразите интерьер вашего автомобиля с помощью премиум обшивки и отделки. Элегантные материалы и умелые руки создадут уют и стиль, подчеркивая индивидуальность и комфорт в каждой поездке."
         videoClass={classes.videoItem4}
         refElement={(el) => (pairRef.current[3] = el)}

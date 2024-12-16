@@ -5,19 +5,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import classes from './WorkProcessSwiper.module.css';
 
-import img1 from '../../img/proc1.webp';
-import img2 from '../../img/proc2.webp';
-import img3 from '../../img/proc3.webp';
-import img4 from '../../img/proc4.webp';
-
-function WorkProcessSwiper() {
+function WorkProcessSwiper({images, swtitle, classSwiper}) {
 	const prevRef = useRef(null);
 	const nextRef = useRef(null);
 
 	return (
-		<div className={classes.WorkProcessSwiper}>
+		<div className={`${classes.WorkProcessSwiper} ${classSwiper}`}>
 			<div className={classes.WorkProcessSwiper__container}>
-				<h1 className={classes.WorkProcessSwiper__title}>Рабочий процесс</h1>
+				<h1 className={classes.WorkProcessSwiper__title}>{swtitle}</h1>
 				<div className={classes.WorkProcessSwiper__arrows}>
 					<div ref={prevRef} className={`${classes.WorkProcessSwiper__arrow} ${classes.WorkProcessSwiper__arrowPrev}`}>
 					</div>
@@ -41,18 +36,11 @@ function WorkProcessSwiper() {
 					}}
 					className={classes.WorkProcessSwiper__slider}
 				>
-					<SwiperSlide>
-						<img src={img1} alt="Шаг 1" className={classes.SlideImage} />
+					{images.map((img, index) => (
+						<SwiperSlide key={index}>
+						<img src={require(`../../img/${img}`)} alt={`Шаг ${index}`} className={classes.SlideImage} />
 					</SwiperSlide>
-					<SwiperSlide>
-						<img src={img2} alt="Шаг 2" className={classes.SlideImage} />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src={img3} alt="Шаг 3" className={classes.SlideImage} />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src={img4} alt="Шаг 4" className={classes.SlideImage} />
-					</SwiperSlide>
+					))}
 				</Swiper>
 			</div>
 		</div>

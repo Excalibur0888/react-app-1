@@ -1,0 +1,12 @@
+.Interior {
+	width: 100%;
+	position: relative;
+}
+
+.InteriorProcess {
+	left: 0;
+}
+
+.InteriorText {
+	margin-left: 630px;
+}

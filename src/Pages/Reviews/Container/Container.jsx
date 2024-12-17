@@ -10,7 +10,9 @@ function Container() {
       <InpageImg bg={require("../img/dodgeBG.webp")} />
       <Title subtitle="Отзывы" className={classes.reviews__title} />
       <div className={classes.reviews__container__gray}>
-        <ReviewsSwiper />
+        <ReviewsSwiper images={Array.from({ length: 8 }, (_, i) =>
+						require(`../img/reviews${i + 1}.webp`)
+					)}/>
         <a href="https://www.drive2.ru/" target="_blank" rel="noreferrer">
           Все отзывы с Drive2 можно прочитать здесь
         </a>
@@ -28,6 +30,9 @@ function Container() {
             alt="Yandex"
           />
         </div>
+				<ReviewsSwiper images={Array.from({ length: 1 }, (_, i) =>
+						require(`../img/reviews${i + 1}.webp`)
+					)}/>
       </div>
     </div>
   );

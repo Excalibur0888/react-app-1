@@ -8,6 +8,7 @@ import Contacts from '../../components/Contacts/Contacts'
 import Footer from '../../components/Footer/Footer'
 import Button from '../../components/Button'
 import SocialLinks from "./components/SocialLinks";
+import HomeReviews from "../HomePage/components/HomeReviews/HomeReviews";
 
 const About = () => {
 	return (
@@ -15,6 +16,7 @@ const About = () => {
 		<Header/>
 		<Container/>
 		<Description/>
+		<HomeReviews/>
 		<YMAP/>
 		<Button title="Проложить к нам путь в Яндекс.Навигаторе" className={classes.about__btn2}/>
 		<SocialLinks/>

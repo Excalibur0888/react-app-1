@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Interior.module.css'
 import WorkProcess from '../Maintenance/WorkProcess';
-import WhyBlock from './WhyBlock';
+import Why from './Why';
 
 function Interior() {
 	return ( 
@@ -22,7 +22,7 @@ function Interior() {
 				swtitle='Примеры работ'
 				images={['s1.webp', 's2.webp', 's3.webp', 's4.webp', 's5.webp', 's6.webp', 's7.webp']}
 			/>
-			<WhyBlock/>
+			<Why/>
 		</div>
 	 );
 }

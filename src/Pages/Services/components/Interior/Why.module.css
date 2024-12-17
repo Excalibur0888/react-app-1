@@ -1,0 +1,102 @@
+.Why {
+	position: relative;
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.Why::after {
+	content: '';
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  background: url(../../../../img/zm-promo_bottom.png) no-repeat top center;
+  height: 236px;
+  width: 100%;
+}
+
+
+.Why::before {
+	content: url(../../img/zm-figure1.png);
+  position: absolute;
+  transform: rotate(180deg);
+  right: -12px;
+  top: 280px;
+}
+
+.WhyContainer {
+	background-image: url(../../img/zm-why-bg_3.png);
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 10px;
+  padding-bottom: 150px;
+}
+
+.WhyBlock {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 770px;
+  margin: 0 auto;
+  padding-top: 22px;
+}
+
+.WhyItem {
+	flex: 50%;
+  position: relative;
+  margin-bottom: -5px;
+  align-self: flex-start;
+}
+
+.WhyItem i {
+	position: absolute;
+  top: calc(50% - 21px);
+  right: -19px;
+}
+
+.WhyItem i::before {
+	content: "";
+  position: absolute;
+  right: 29px;
+  top: 20px;
+  background-color: #b20e16;
+  height: 1px;
+  width: 74px;
+}
+
+.WhyItem:hover svg path {
+	fill: #e00104;
+}
+
+.WhyItem svg path {
+	stroke-width: 2px;
+  stroke: #e00104;
+  transition: 0.2s;
+}
+
+.WhyItem:nth-child(odd) {
+  text-align: right;
+}
+.WhyItem:nth-child(even) {
+  margin-top: 91px;
+}
+.WhyItem:nth-child(even) span {
+    float: right;
+}
+.WhyItem:nth-child(even) i {
+  left: -19px;
+}
+.WhyItem:nth-child(even) i:before {
+  left: 29px;
+}
+
+.WhyItem span {
+	color: #ffffff;
+  font-size: 16px;
+  line-height: 26px;
+  width: 270px;
+  display: block;
+  background-color: #000000;
+  padding: 10px;
+  border: 1px solid rgba(224, 1, 4, 0.65);
+}

@@ -1,3 +1,7 @@
+.slider__reviews {
+	margin-bottom: 50px;
+}
+
 .slider__reviews__item {
   position: relative;
   outline: none;

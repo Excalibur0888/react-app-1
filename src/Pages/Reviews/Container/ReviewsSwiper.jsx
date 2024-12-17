@@ -6,11 +6,7 @@ import classes from "./ReviewsSwiper.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
 
-function ReviewsSwiper() {
-	const images = Array.from({ length: 8 }, (_, i) =>
-    require(`../img/reviews${i + 1}.webp`)
-  );
-
+function ReviewsSwiper({images}) {
 	return ( 
 		<Swiper
 				modules={[Navigation]}

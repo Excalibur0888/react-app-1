@@ -30,8 +30,8 @@ function Container() {
             alt="Yandex"
           />
         </div>
-				<ReviewsSwiper images={Array.from({ length: 1 }, (_, i) =>
-						require(`../img/reviews${i + 1}.webp`)
+				<ReviewsSwiper images={Array.from({ length: 5 }, (_, i) =>
+						require(`../img/yr${i + 1}.png`)
 					)}/>
       </div>
     </div>

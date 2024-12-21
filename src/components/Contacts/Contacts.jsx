@@ -9,8 +9,6 @@ import 'swiper/css/navigation';
 
 export default function Contacts() {
   const images = Array.from({ length: 8 }, (_, i) => require(`./img/person${i + 1}.webp`));
-
-  // Рефы для кнопок
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
